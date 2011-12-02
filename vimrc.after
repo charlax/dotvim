@@ -65,4 +65,9 @@ inoremap jj <ESC>
 " <leader>P is for vim-preview (markdown)
 " https://github.com/greyblake/vim-preview
 
+" Markdown to textile in clipboard
+command Markdown2Textile call <SID>Markdow2Textile2Clipboard()
+function! <SID>Markdow2Textile2Clipboard()
+  let @+=system("pandoc -f markdown -t textile", join(getline(1,line("$")), "\n"))
+endfunction
 
