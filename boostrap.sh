@@ -19,5 +19,5 @@ ln -s $HOME/.vimrc-perso/gvimrc.after $HOME/.gvimrc.after
 
 
 # Clone dotvim into .vimrc-perso
-git clone -b experimental git@github.com:charlax/dotvim.git $HOME/.vimrc-perso \
+git clone git@github.com:charlax/dotvim.git $HOME/.vimrc-perso \
   || die "Could not clone the repository to ${HOME}/.vim"
