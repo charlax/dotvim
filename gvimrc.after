@@ -1,0 +1,13 @@
+set guifont=Menlo:h14
+
+color pyte
+
+" Changing the color for invisible characters
+hi NonText guifg=#c0c0c0 guibg=NONE
+hi SpecialKey guifg=#c0c0c0 guibg=NONE
+
+macm Window.Select\ Previous\ Tab  key=<D-A-Left>
+macm Window.Select\ Next\ Tab    key=<D-A-Right>
+
+" Remove toolbar
+set guioptions=-t
