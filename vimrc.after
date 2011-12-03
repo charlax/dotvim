@@ -73,3 +73,8 @@ endfunction
 
 " Change tab label to just filename
 set guitablabel=%f
+
+" show list instead of just completing
+set wildmenu
+" command <Tab> completion, list matches, then longest common part, then all.
+set wildmode=list:longest,full
