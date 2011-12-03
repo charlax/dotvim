@@ -10,4 +10,4 @@ macm Window.Select\ Previous\ Tab  key=<D-A-Left>
 macm Window.Select\ Next\ Tab    key=<D-A-Right>
 
 " Remove toolbar
-set guioptions=-t
+set guioptions=egmrt

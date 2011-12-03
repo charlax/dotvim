@@ -71,3 +71,5 @@ function! <SID>Markdow2Textile2Clipboard()
   let @+=system("pandoc -f markdown -t textile", join(getline(1,line("$")), "\n"))
 endfunction
 
+" Change tab label to just filename
+set guitablabel=%f
