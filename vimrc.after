@@ -23,11 +23,12 @@ set gdefault
 
 set showmatch
 
-" Long lines handling
-set textwidth=79
+" Hardwrap lines longer than textwidth (not always useful)
+" set textwidth=79
+
 set wrap
 set formatoptions=qrn1
-set colorcolumn=85
+set colorcolumn=80
 
 " Showing invisible characters with the same characters that TextMate uses
 set list
