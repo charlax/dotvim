@@ -21,11 +21,8 @@ vnoremap / /\v
 " no need to type /g at the end of a substitutions
 set gdefault
 
-set showmatch
-
 " Hardwrap lines longer than textwidth (not always useful)
 " set textwidth=79
-
 set wrap
 set formatoptions=qrn1
 set colorcolumn=80
@@ -79,3 +76,10 @@ set guitablabel=%f
 set wildmenu
 " command <Tab> completion, list matches, then longest common part, then all.
 set wildmode=list:longest,full
+
+" Cmd Shift T opens new tab
+nmap <D-T> :tabnew<CR>:CommandT<CR>
+imap <D-T> <Esc>:tabnew<CR>:CommantT<CR>
+
+" Cmd Shit T in CommandT plugin opens a new tab
+let g:CommandTAcceptSelectionTabMap = '<D-T>'
