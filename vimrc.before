@@ -1,1 +1,4 @@
 let mapleader = ","
+
+" Disable pep8 plugin, too slow
+call janus#disable_plugin('pep8')
