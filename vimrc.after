@@ -21,8 +21,8 @@ vnoremap / /\v
 " no need to type /g at the end of a substitutions
 set gdefault
 
-" Hardwrap lines longer than textwidth (not always useful)
-" set textwidth=79
+" Prevent hardwraping, use softwrap
+set textwidth=0
 set wrap
 set formatoptions=qrn1
 set colorcolumn=80
