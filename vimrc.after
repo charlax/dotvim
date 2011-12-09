@@ -1,8 +1,16 @@
+" change directory to current file directory
+" :cd %:p:h
+" Automatically change directory to current file (some plugin may not work)
+" set autochdir
+
+" Soft tab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
+" Custom filetypes
 au BufRead,BufNewFile *.json set filetype=json
+au BufRead,BufNewFile *.txt set filetype=md
 
 " Prettify json
 map <leader>jt  <Esc>:%!json_xs -f json -t json-pretty<CR>
