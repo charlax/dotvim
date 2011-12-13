@@ -1,25 +1,23 @@
-# Add .old to any existing Vim file in the home directory
-
 function die()
 {
     echo "${@}"
     exit 1
 }
 
-for i in $HOME/.vimrc.before $HOME/.vimrc.after $HOME/.gvimrc.before $HOME/.gvimrc.after; do
+# Backup old configuration files
+for i in $HOME/.vimrc $HOME/.gvimrc; do
   if [[ ( -e $i ) || ( -h $i ) ]]; then
     echo "${i} has been renamed to ${i}.old"
     mv "${i}" "${i}.old" || die "Could not move ${i} to ${i}.old"
   fi
 done
 
-ln -s $HOME/.vimrc-perso/vimrc.before $HOME/.vimrc.before
-ln -s $HOME/.vimrc-perso/vimrc.after $HOME/.vimrc.after
-ln -s $HOME/.vimrc-perso/gvimrc.after $HOME/.gvimrc.after
+ln -s $HOME/.vim/vimrc $HOME/.vimrc
+ln -s $HOME/.vim/gvimrc $HOME/.gvimrc
 
 
 # Clone dotvim into .vimrc-perso
-git clone git@github.com:charlax/dotvim.git $HOME/.vimrc-perso \
+git clone git@github.com:charlax/dotvim.git $HOME/.vim \
   || die "Could not clone the repository to ${HOME}/.vim"
 
 # Installing vim-preview

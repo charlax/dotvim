@@ -1,12 +1,34 @@
+" Vi is useless
+set nocompatible
+
+syntax enable
+set encoding=utf-8
+let mapleader = ","
+
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+
+" display incomplete commands
+set showcmd
+" load file type plugins + indentation
+filetype plugin indent on
+
 " change directory to current file directory
 " :cd %:p:h
 " Automatically change directory to current file (some plugin may not work)
 " set autochdir
 
-" Soft tab
-set tabstop=4
-set shiftwidth=4
+" Whitespace
+set nowrap
+set tabstop=4 shiftwidth=4
 set softtabstop=4
+set backspace=indent,eol,start " backspace through everything in insert mode
+
+" Searching
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
 
 " Custom filetypes
 au BufRead,BufNewFile *.json set filetype=json
@@ -91,3 +113,4 @@ imap <D-T> <Esc>:tabnew<CR>:CommantT<CR>
 
 " Cmd Shit T in CommandT plugin opens a new tab
 let g:CommandTAcceptSelectionTabMap = '<D-T>'
+
