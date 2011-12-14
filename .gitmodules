@@ -55,3 +55,6 @@
 [submodule "bundle/preview"]
 	path = bundle/preview
 	url = git://github.com/greyblake/vim-preview.git
+[submodule "bundle/surround"]
+	path = bundle/surround
+	url = git://github.com/tpope/vim-surround.git
