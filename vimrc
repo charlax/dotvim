@@ -21,7 +21,8 @@ filetype plugin indent on
 " Whitespace
 set nowrap
 set tabstop=4 shiftwidth=4
-set softtabstop=4
+set softtabstop=4 " makes the spaces feel like real tabs
+set expandtab
 set backspace=indent,eol,start " backspace through everything in insert mode
 
 " Searching
