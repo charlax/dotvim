@@ -116,3 +116,7 @@ imap <D-T> <Esc>:tabnew<CR>:CommantT<CR>
 " Cmd Shit T in CommandT plugin opens a new tab
 let g:CommandTAcceptSelectionTabMap = '<D-T>'
 
+" where to put backup files.
+set backupdir=~/.vim/_backup
+" where to put swap files.
+set directory=~/.vim/_temp
