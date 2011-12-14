@@ -34,6 +34,7 @@ set smartcase
 " Custom filetypes
 au BufRead,BufNewFile *.json set filetype=json
 au BufRead,BufNewFile *.txt set filetype=md
+au BufRead,BufNewFile *.applescript setf applescript
 
 " Prettify json
 map <leader>jt  <Esc>:%!json_xs -f json -t json-pretty<CR>
