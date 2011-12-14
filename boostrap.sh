@@ -20,6 +20,6 @@ ln -s $HOME/.vim/gvimrc $HOME/.gvimrc
 git clone git@github.com:charlax/dotvim.git $HOME/.vim \
   || die "Could not clone the repository to ${HOME}/.vim"
 
-# Installing vim-preview
-cd $HOME/.vim
-git submodule add git://github.com/greyblake/vim-preview.git janus/vim/custom/preview
+mkdir $HOME/.vim/_temp
+mkdir $HOME/.vim/_backup
+
