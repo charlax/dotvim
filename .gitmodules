@@ -52,3 +52,6 @@
 [submodule "bundle/applescript"]
 	path = bundle/applescript
 	url = https://github.com/vim-scripts/applescript.vim.git
+[submodule "bundle/preview"]
+	path = bundle/preview
+	url = git://github.com/greyblake/vim-preview.git
