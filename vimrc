@@ -52,7 +52,7 @@ endfunction
 
 " Custom filetypes
 au BufRead,BufNewFile *.json set filetype=json
-au BufRead,BufNewFile *.txt set filetype=md
+au BufRead,BufNewFile *.txt set filetype=markdown
 
 " Custom initialization
 au BufRead,BufNewFile *.applescript setf applescript
