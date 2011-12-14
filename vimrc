@@ -31,10 +31,34 @@ set incsearch
 set ignorecase
 set smartcase
 
+" Tab completion
+set wildmode=list:longest,list:full
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+
+" Status bar
+set laststatus=2
+set statusline=%t\ %y\ \ [%c,%l]
+
+function s:setupWrapping()
+  set wrap
+  set wrapmargin=2
+  set textwidth=72
+endfunction
+
+function s:setupMarkup()
+  call s:setupWrapping()
+  map <buffer> <Leader>p :Hammer<CR>
+endfunction
+
 " Custom filetypes
 au BufRead,BufNewFile *.json set filetype=json
 au BufRead,BufNewFile *.txt set filetype=md
+
+" Custom initialization
 au BufRead,BufNewFile *.applescript setf applescript
+au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
+au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
+au BufRead,BufNewFile *.txt call s:setupWrapping()
 
 " Prettify json
 map <leader>jt  <Esc>:%!json_xs -f json -t json-pretty<CR>
@@ -120,3 +144,20 @@ let g:CommandTAcceptSelectionTabMap = '<D-T>'
 set backupdir=~/.vim/_backup
 " where to put swap files.
 set directory=~/.vim/_temp
+
+" Command-T configuration
+let g:CommandTMaxHeight=20
+
+" Remember last location in file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal g'\"" | endif
+endif
+
+" Opens an edit command with the path of the currently edited file filled in
+" Normal mode: <Leader>e
+map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+
+" Opens a tab edit command with the path of the currently edited file filled in
+" Normal mode: <Leader>t
+map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
