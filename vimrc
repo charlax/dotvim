@@ -39,26 +39,39 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 set laststatus=2
 set statusline=%t\ %y\ \ [%c,%l]
 
+" Provide some context when editing
+set scrolloff=5
+
 function s:setupWrapping()
-  set wrap
-  set wrapmargin=2
-  set textwidth=72
+    set wrap
+    set wrapmargin=2
+    set textwidth=72
 endfunction
 
 function s:setupMarkup()
-  call s:setupWrapping()
-  map <buffer> <Leader>p :Hammer<CR>
+    call s:setupWrapping()
+    map <buffer> <Leader>p :Hammer<CR>
 endfunction
 
-" Custom filetypes
-au BufRead,BufNewFile *.json set filetype=json
-au BufRead,BufNewFile *.txt set filetype=markdown
+if has("autocmd")
 
-" Custom initialization
-au BufRead,BufNewFile *.applescript setf applescript
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
-au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
-au BufRead,BufNewFile *.txt call s:setupWrapping()
+    " Custom filetypes
+    au BufRead,BufNewFile *.json set filetype=json
+    au BufRead,BufNewFile *.txt set filetype=markdown
+
+    " Custom initialization
+    au BufRead,BufNewFile *.applescript setf applescript
+    au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
+    au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
+    au BufRead,BufNewFile *.txt call s:setupWrapping()
+
+    " make Python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
+    au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
+
+    " In Makefiles, use real tabs, not tabs expanded to spaces
+    au FileType make set noexpandtab
+
+endif
 
 " Prettify json
 map <leader>jt  <Esc>:%!json_xs -f json -t json-pretty<CR>
@@ -97,6 +110,11 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 
+
+" 
+" Keyboard shortcuts
+"
+
 " Movement by screen line instead of file line
 nnoremap j gj
 nnoremap k gk
@@ -113,6 +131,12 @@ nnoremap <leader>v V`]
 " Exit back to normal mode
 inoremap jj <ESC>
 
+" Easier navigation between split windows
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
 " Open a new vertical split and switch over to it
 " nnoremap <leader>w <C-w>v<C-w>l
 
@@ -122,7 +146,7 @@ inoremap jj <ESC>
 " Markdown to textile in clipboard
 command Markdown2Textile call <SID>Markdow2Textile2Clipboard()
 function! <SID>Markdow2Textile2Clipboard()
-  let @+=system("pandoc -f markdown -t textile", join(getline(1,line("$")), "\n"))
+    let @+=system("pandoc -f markdown -t textile", join(getline(1,line("$")), "\n"))
 endfunction
 
 " Change tab label to just filename
@@ -150,8 +174,8 @@ let g:CommandTMaxHeight=20
 
 " Remember last location in file
 if has("autocmd")
-  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-    \| exe "normal g'\"" | endif
+    au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+                \| exe "normal g'\"" | endif
 endif
 
 " Opens an edit command with the path of the currently edited file filled in
