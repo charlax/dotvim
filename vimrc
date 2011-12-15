@@ -16,7 +16,7 @@ filetype plugin indent on
 " change directory to current file directory
 " :cd %:p:h
 " Automatically change directory to current file (some plugin may not work)
-" set autochdir
+set autochdir
 
 " Whitespace
 set nowrap
