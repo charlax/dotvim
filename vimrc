@@ -71,6 +71,9 @@ if has("autocmd")
     " In Makefiles, use real tabs, not tabs expanded to spaces
     au FileType make set noexpandtab
 
+    " Use real tabs in Applescript
+    au FileType applescript set noexpandtab
+
 endif
 
 " Prettify json
