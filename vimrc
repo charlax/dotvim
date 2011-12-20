@@ -37,6 +37,9 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 set laststatus=2
 set statusline=%t\ %y\ \ [%c,%l]
 
+" Show cursor line
+set cursorline
+
 " Provide some context when editing
 set scrolloff=5
 
@@ -73,6 +76,9 @@ if has("autocmd")
 
     " Use real tabs in Applescript
     au FileType applescript set noexpandtab
+
+    " Yaml
+    au FileType yaml set softtabstop=2 tabstop=2 shiftwidth=2 expandtab autoindent
 
     " Remember last location in file
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
