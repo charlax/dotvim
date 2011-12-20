@@ -24,9 +24,3 @@ end
 
 " Remove toolbar
 set guioptions=egmrt
-
-" Remove Cmd Shift T shortcut
-macm File.Open\ Tab\.\.\. key=<nop>
-" Cmd Shift T opens new tab
-nmap <D-T> :tabnew<CR>:CommandT<CR>
-imap <D-T> <Esc>:tabnew<CR>:CommantT<CR>

@@ -1,4 +1,4 @@
-" Vi is useless
+" Must be first.
 set nocompatible
 
 syntax enable
@@ -10,8 +10,6 @@ call pathogen#infect()
 
 " display incomplete commands
 set showcmd
-" load file type plugins + indentation
-filetype plugin indent on
 
 " change directory to current file directory
 " :cd %:p:h
@@ -54,6 +52,8 @@ function s:setupMarkup()
 endfunction
 
 if has("autocmd")
+    " load file type plugins + indentation
+    filetype plugin indent on
 
     " Custom filetypes
     au BufRead,BufNewFile *.json set filetype=json
@@ -73,6 +73,10 @@ if has("autocmd")
 
     " Use real tabs in Applescript
     au FileType applescript set noexpandtab
+
+    " Remember last location in file
+    au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+                \| exe "normal g'\"" | endif
 
 endif
 
@@ -160,13 +164,6 @@ set wildmenu
 " command <Tab> completion, list matches, then longest common part, then all.
 set wildmode=list:longest,full
 
-" Cmd Shift T opens new tab
-nmap <D-T> :tabnew<CR>:CommandT<CR>
-imap <D-T> <Esc>:tabnew<CR>:CommantT<CR>
-
-" Cmd Shit T in CommandT plugin opens a new tab
-let g:CommandTAcceptSelectionTabMap = '<D-T>'
-
 " where to put backup files.
 set backupdir=~/.vim/_backup
 " where to put swap files.
@@ -174,12 +171,6 @@ set directory=~/.vim/_temp
 
 " Command-T configuration
 let g:CommandTMaxHeight=20
-
-" Remember last location in file
-if has("autocmd")
-    au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-                \| exe "normal g'\"" | endif
-endif
 
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e
