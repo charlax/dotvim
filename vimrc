@@ -14,7 +14,7 @@ set showcmd
 " change directory to current file directory
 " :cd %:p:h
 " Automatically change directory to current file (some plugin may not work)
-set autochdir
+" set autochdir
 
 " Whitespace
 set nowrap
@@ -35,7 +35,11 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 
 " Status bar
 set laststatus=2
-set statusline=%t\ %y\ \ [%c,%l]
+set statusline=%t                     " filename
+set statusline+=%h%m%r                " flags
+set statusline+=\ %y                  " filetype
+set statusline+=%=                    " right-align
+set statusline+=%c,\ %l/%L\ %P\ \     " cursor column, line, total lines, %
 
 " Show cursor line
 set cursorline
@@ -89,9 +93,6 @@ endif
 " Prettify json
 map <leader>jt  <Esc>:%!json_xs -f json -t json-pretty<CR>
 
-" Fast saving
-nmap <leader>w :w!<cr>
-
 " Relative numbering of lines
 set relativenumber
 
@@ -113,6 +114,15 @@ set colorcolumn=80
 set list
 set listchars=tab:▸\ ,eol:¬
 
+
+" 
+" Keyboard shortcuts
+"
+
+
+" Fast saving
+nmap <leader>w :w!<cr>
+
 " To do things right
 nnoremap <up> <nop>
 nnoremap <down> <nop>
@@ -122,11 +132,6 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
-
-
-" 
-" Keyboard shortcuts
-"
 
 " Movement by screen line instead of file line
 nnoremap j gj
