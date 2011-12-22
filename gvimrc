@@ -4,6 +4,9 @@ set guifont=Menlo:h14
 set antialias
 set linespace=2
 
+" Show cursor line
+set cursorline
+
 " Changing the color for invisible characters
 hi NonText guifg=#c0c0c0 guibg=NONE
 hi SpecialKey guifg=#c0c0c0 guibg=NONE

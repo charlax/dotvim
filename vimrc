@@ -41,9 +41,6 @@ set statusline+=\ %y                  " filetype
 set statusline+=%=                    " right-align
 set statusline+=%c,\ %l/%L\ %P\ \     " cursor column, line, total lines, %
 
-" Show cursor line
-set cursorline
-
 " Provide some context when editing
 set scrolloff=5
 
@@ -83,6 +80,10 @@ if has("autocmd")
 
     " Yaml
     au FileType yaml set softtabstop=2 tabstop=2 shiftwidth=2 expandtab autoindent
+
+
+    " Json
+    au FileType json set softtabstop=2 tabstop=2 shiftwidth=2 expandtab autoindent
 
     " Remember last location in file
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
