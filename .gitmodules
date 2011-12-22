@@ -61,3 +61,6 @@
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = git://github.com/ervandew/supertab.git
+[submodule "bundle/jinja"]
+	path = bundle/jinja
+	url = git://github.com/uggedal/jinja-vim.git
