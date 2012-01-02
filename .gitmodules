@@ -64,3 +64,6 @@
 [submodule "bundle/jinja"]
 	path = bundle/jinja
 	url = git://github.com/uggedal/jinja-vim.git
+[submodule "bundle/latex"]
+	path = bundle/latex
+	url = git://github.com/jcf/vim-latex.git
