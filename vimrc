@@ -69,6 +69,9 @@ if has("autocmd")
     au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
     au BufRead,BufNewFile *.txt call s:setupWrapping()
 
+    " Use hardwrapping for LaTeX files
+    au FileType tex call s:setupMarkup()
+
     " make Python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
     au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
 
@@ -81,13 +84,17 @@ if has("autocmd")
     " Yaml
     au FileType yaml set softtabstop=2 tabstop=2 shiftwidth=2 expandtab autoindent
 
-
     " Json
     au FileType json set softtabstop=2 tabstop=2 shiftwidth=2 expandtab autoindent
 
     " Remember last location in file
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
                 \| exe "normal g'\"" | endif
+
+    " Disabling all folding in LaTeX files
+    let Tex_FoldedSections=""
+    let Tex_FoldedEnvironments=""
+    let Tex_FoldedMisc=""
 
 endif
 
