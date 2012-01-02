@@ -96,6 +96,9 @@ if has("autocmd")
     let Tex_FoldedEnvironments=""
     let Tex_FoldedMisc=""
 
+    " Turn off auto-comment for all file types
+    autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 endif
 
 " Prettify json
