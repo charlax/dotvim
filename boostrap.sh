@@ -15,11 +15,15 @@ done
 ln -s $HOME/.vim/vimrc $HOME/.vimrc
 ln -s $HOME/.vim/gvimrc $HOME/.gvimrc
 
-
-# Clone dotvim into .vimrc-perso
+# Clone dotvim
 git clone git@github.com:charlax/dotvim.git $HOME/.vim \
   || die "Could not clone the repository to ${HOME}/.vim"
 
+# Create folders (temporary and backup files used by Vim)
 mkdir $HOME/.vim/_temp
 mkdir $HOME/.vim/_backup
 
+# Update all submodules
+cd $HOME/.vim
+git submodule update --init --recursive
+gem install github-markup

@@ -1,3 +1,9 @@
+Installing Vim on Mac Os X
+==========================
+
+    $ brew install macvim --override-system-vim
+    $ brew linkapps
+
 Installation
 ============
 
