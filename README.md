@@ -32,6 +32,19 @@ Upgrading all plugins
 
     $ git submodule update --init --recursive
 
+How to try Vim
+==============
+
+If you want to try Vim, just follow these steps:
+
+1. Read [Seven habits of effective text editing](http://www.moolenaar.net/habits.html) by Bram Moolenaar (Vim's main author)
+2. Resist the urge to use a plugin or anyone else’s `vimrc`. [Really](http://mislav.uniqpath.com/2011/12/vim-revisited/).
+3. Use `vimtutor` to learn the basics.
+4. Along the way, add plugins and improve your `.vimrc` little
+   by little, making sure you understand and comment all your options.
+
+Feel free to read my article: [Why I use Vim](http://blog.d3in.org/post/14220797290/why-i-keep-on-using-vim-instead-of-going-back-to)
+
 Acknowledgments
 ===============
 
