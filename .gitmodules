@@ -22,9 +22,6 @@
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "bundle/csv"]
-	path = bundle/csv
-	url = https://github.com/vim-scripts/csv.vim.git
 [submodule "bundle/textile"]
 	path = bundle/textile
 	url = https://github.com/timcharper/textile.vim.git
