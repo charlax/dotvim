@@ -66,4 +66,4 @@
 	url = git://github.com/uggedal/jinja-vim.git
 [submodule "bundle/latex"]
 	path = bundle/latex
-	url = git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex
+	url = git://github.com/vim-scripts/LaTeX-Box.git

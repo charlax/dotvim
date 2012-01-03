@@ -4,6 +4,7 @@ set nocompatible
 syntax enable
 set encoding=utf-8
 let mapleader = ","
+let maplocalleader = ","
 
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
@@ -91,13 +92,14 @@ if has("autocmd")
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
                 \| exe "normal g'\"" | endif
 
-    " Disabling all folding in LaTeX files
-    let Tex_FoldedSections=""
-    let Tex_FoldedEnvironments=""
-    let Tex_FoldedMisc=""
-
     " Turn off auto-comment for all file types
     autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+    " Latex
+    " Skim is the default viewer
+    let g:LatexBox_viewer = 'skim'
+    " Auto-update when file has changed
+    let g:LatexBox_latexmk_options = '-pvc'
 
 endif
 
