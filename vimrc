@@ -3,19 +3,32 @@ set nocompatible
 
 syntax enable
 set encoding=utf-8
+
+" Mapping leader to comma
 let mapleader = ","
 let maplocalleader = ","
 
+" Using tpope's Pathogen to load all the plugins
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
+call pathogen#helptags()
 
 " display incomplete commands
 set showcmd
 
-" change directory to current file directory
-" :cd %:p:h
-" Automatically change directory to current file (some plugin may not work)
-" set autochdir
+" Store lots of :cmdline history
+set history=1000
+
+" Reload files changed outside vim
+set autoread
+
+" This makes vim act like all other editors, buffers can
+" exist in the background without being in a window. 
+" http://items.sjbach.com/319/configuring-vim-right
+set hidden
+
+" Sets the terminal title to Vim title
+set title
 
 " Whitespace
 set nowrap
@@ -24,15 +37,25 @@ set softtabstop=4 " makes the spaces feel like real tabs
 set expandtab
 set backspace=indent,eol,start " backspace through everything in insert mode
 
+" ============================================================
 " Searching
+" ============================================================
+
+" Highlight searches by default
 set hlsearch
+
+" Find the next match as we type the search
 set incsearch
 set ignorecase
 set smartcase
 
 " Tab completion
-set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+
+" show list instead of just completing
+set wildmenu
+" command <Tab> completion, list matches, then longest common part, then all.
+set wildmode=list:longest,full
 
 " Status bar
 set laststatus=2
@@ -128,10 +151,9 @@ set list
 set listchars=tab:▸\ ,eol:¬
 
 
-" 
+" ============================================================
 " Keyboard shortcuts
-"
-
+" ============================================================
 
 " Fast saving
 nmap <leader>w :w!<cr>
@@ -183,10 +205,7 @@ endfunction
 " Change tab label to just filename
 set guitablabel=%f
 
-" show list instead of just completing
-set wildmenu
-" command <Tab> completion, list matches, then longest common part, then all.
-set wildmode=list:longest,full
+
 
 " where to put backup files.
 set backupdir=~/.vim/_backup
