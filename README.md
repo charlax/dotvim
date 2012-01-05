@@ -32,6 +32,12 @@ Upgrading all plugins
 
     $ git submodule update --init --recursive
 
+List of plugins
+---------------
+
+* [MRU](http://www.vim.org/scripts/script.php?script_id=521): most recently
+  used files.
+
 How to try Vim
 ==============
 

@@ -64,3 +64,6 @@
 [submodule "bundle/latex"]
 	path = bundle/latex
 	url = git://github.com/vim-scripts/LaTeX-Box.git
+[submodule "bundle/mru"]
+	path = bundle/mru
+	url = git://github.com/vim-scripts/mru.vim.git

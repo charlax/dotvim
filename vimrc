@@ -237,3 +237,12 @@ map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
 " All folds open when open a file
 set foldlevelstart=20
+
+
+" ============================================================
+" Most recently used (MRU)
+" ============================================================
+
+let MRU_Exclude_Files = '^/tmp/.*\|^/var/tmp/.*'
+let MRU_Window_Height = 15
+let MRU_File = expand('~/.vim/.vim_mru_files')
