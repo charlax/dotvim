@@ -31,11 +31,41 @@ set hidden
 set title
 
 " Whitespace
-set nowrap
 set tabstop=4 shiftwidth=4
 set softtabstop=4 " makes the spaces feel like real tabs
 set expandtab
 set backspace=indent,eol,start " backspace through everything in insert mode
+
+
+" ============================================================
+" Wrapping, textwidth, text formatting
+" ============================================================
+
+function s:setup_wrapping_for_code()
+    " Softwrapping
+    set textwidth=0
+    set wrap
+    set colorcolumn=79
+
+    " Showing invisible characters with the same characters that TextMate uses
+    set list
+    set listchars=tab:▸\ ,eol:¬
+
+    " q: Allow formatting of comments with "gq".
+    " r: Automatically insert the current comment leader after hitting <Enter>
+    " c: Auto-wrap comments using textwidth
+    " n: When formatting text, recognize numbered lists.
+    " 1: Don't break a line after a one-letter word.
+    set formatoptions=qrcn1
+endfunction
+
+function s:setup_wrapping_for_prose()
+    set wrap linebreak nolist
+endfunction
+
+" Default
+call s:setup_wrapping_for_code()
+
 
 " ============================================================
 " Searching
@@ -69,14 +99,8 @@ set statusline+=line:\ %l/%L\ col:\ %c\ \     " cursor column, line, total lines
 " Provide some context when editing
 set scrolloff=5
 
-function s:setupWrapping()
-    set wrap
-    set wrapmargin=2
-    set textwidth=72
-endfunction
-
 function s:setupMarkup()
-    call s:setupWrapping()
+    call s:setup_wrapping_for_prose()
     map <buffer> <Leader>p :Hammer<CR>
 endfunction
 
@@ -92,7 +116,9 @@ if has("autocmd")
     au BufRead,BufNewFile *.applescript setf applescript
     au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
     au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
-    au BufRead,BufNewFile *.txt call s:setupWrapping()
+
+    " Prose
+    au BufRead,BufNewFile *.{txt,csv} call s:setup_wrapping_for_prose()
 
     " Use hardwrapping for LaTeX files
     au FileType tex call s:setupMarkup()
@@ -116,9 +142,6 @@ if has("autocmd")
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
                 \| exe "normal g'\"" | endif
 
-    " Turn off auto-comment for all file types
-    autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
     " Latex
     " Skim is the default viewer
     let g:LatexBox_viewer = 'skim'
@@ -140,16 +163,6 @@ vnoremap / /\v
 " Applies substitutions globally on lines,
 " no need to type /g at the end of a substitutions
 set gdefault
-
-" Prevent hardwraping, use softwrap
-set textwidth=0
-set wrap
-set formatoptions=qrn1
-set colorcolumn=80
-
-" Showing invisible characters with the same characters that TextMate uses
-set list
-set listchars=tab:▸\ ,eol:¬
 
 
 " ============================================================
@@ -205,8 +218,6 @@ endfunction
 
 " Change tab label to just filename
 set guitablabel=%f
-
-
 
 " where to put backup files.
 set backupdir=~/.vim/_backup
