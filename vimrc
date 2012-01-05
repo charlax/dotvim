@@ -62,8 +62,9 @@ set laststatus=2
 set statusline=%t                     " filename
 set statusline+=%h%m%r                " flags
 set statusline+=\ %y                  " filetype
+set statusline+=\ %P                  " %
 set statusline+=%=                    " right-align
-set statusline+=%c,\ %l/%L\ %P\ \     " cursor column, line, total lines, %
+set statusline+=line:\ %l/%L\ col:\ %c\ \     " cursor column, line, total lines, %
 
 " Provide some context when editing
 set scrolloff=5
