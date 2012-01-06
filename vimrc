@@ -204,18 +204,6 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" Open a new vertical split and switch over to it
-" nnoremap <leader>w <C-w>v<C-w>l
-
-" <leader>P is for vim-preview (markdown)
-" https://github.com/greyblake/vim-preview
-
-" Markdown to textile in clipboard
-command Markdown2Textile call <SID>Markdow2Textile2Clipboard()
-function! <SID>Markdow2Textile2Clipboard()
-    let @+=system("pandoc -f markdown -t textile", join(getline(1,line("$")), "\n"))
-endfunction
-
 " Change tab label to just filename
 set guitablabel=%f
 
@@ -246,3 +234,6 @@ set foldlevelstart=20
 let MRU_Exclude_Files = '^/tmp/.*\|^/var/tmp/.*'
 let MRU_Window_Height = 15
 let MRU_File = expand('~/.vim/.vim_mru_files')
+
+" My other functions
+source $HOME/.vim/my_functions.vim
