@@ -5,10 +5,12 @@ function! <SID>Markdow2Textile2Clipboard()
 endfunction
 
 " Prefix lines
-command PrefixLines call <SID>PrefixLines()
-
-function! <SID>PrefixLines()
-    substitute/^/input("Enter prefix text: ")/
+command! -range=% -bar Prepend <line1>,<line2>call PrefixLines()
+function! PrefixLines() range
+    call inputsave()
+    let t = input('Prefix: ')
+    call inputrestore()
+    exe a:firstline . ',' . a:lastline . 's/^/\=t'
 endfunction
 
 " Set working directory to the current file

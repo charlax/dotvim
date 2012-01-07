@@ -22,11 +22,6 @@ set history=1000
 " Reload files changed outside vim
 set autoread
 
-" This makes vim act like all other editors, buffers can
-" exist in the background without being in a window. 
-" http://items.sjbach.com/319/configuring-vim-right
-set hidden
-
 " Sets the terminal title to Vim title
 set title
 
@@ -36,6 +31,8 @@ set softtabstop=4 " makes the spaces feel like real tabs
 set expandtab
 set backspace=indent,eol,start " backspace through everything in insert mode
 
+" No bell
+set visualbell
 
 " ============================================================
 " Wrapping, textwidth, text formatting
