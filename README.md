@@ -27,6 +27,8 @@ Example: vim-latex
     $ git status # check if nothing else is staged for commit
     $ git commit -m "added vim-latex plugin"
 
+Don't forget to add it to the `README.markdown` file!
+
 Upgrading all plugins
 ---------------------
 
@@ -37,6 +39,9 @@ List of plugins
 
 * [MRU](http://www.vim.org/scripts/script.php?script_id=521): most recently
   used files.
+* [Cocoa](http://www.vim.org/scripts/script.php?script_id=2674): a collection
+  of scripts designed to make it easier to develop Cocoa/Objective-C
+  applications.
 
 How to try Vim
 ==============
