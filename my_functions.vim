@@ -1,5 +1,5 @@
 " Markdown to textile in clipboard
-command Markdown2Textile call <SID>Markdow2Textile2Clipboard()
+command! Markdown2Textile call <SID>Markdow2Textile2Clipboard()
 function! <SID>Markdow2Textile2Clipboard()
     let @+=system("pandoc -f markdown -t textile", join(getline(1,line("$")), "\n"))
 endfunction
@@ -14,4 +14,7 @@ function! PrefixLines() range
 endfunction
 
 " Set working directory to the current file
-command CdToCurrentFile exec 'lcd '.fnamemodify(resolve(expand('%')), ':p:h') 
+command! CdToCurrentFile cd %:p:h
+
+" Reload vimrc
+command! ReloadVimrc source $MYVIMRC

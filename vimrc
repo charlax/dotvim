@@ -38,30 +38,26 @@ set visualbell
 " Wrapping, textwidth, text formatting
 " ============================================================
 
-function s:setup_wrapping_for_code()
-    " Softwrapping
-    set textwidth=0
-    set wrap
-    set colorcolumn=79
+" Softwrapping
+set textwidth=0
+set wrap
+set colorcolumn=79
 
-    " Showing invisible characters with the same characters that TextMate uses
-    set list
-    set listchars=tab:▸\ ,eol:¬
+" Showing invisible characters with the same characters that TextMate uses
+set list
+set listchars=tab:▸\ ,eol:¬
 
-    " q: Allow formatting of comments with "gq".
-    " r: Automatically insert the current comment leader after hitting <Enter>
-    " c: Auto-wrap comments using textwidth
-    " n: When formatting text, recognize numbered lists.
-    " 1: Don't break a line after a one-letter word.
-    set formatoptions=qrcn1
-endfunction
+" q: Allow formatting of comments with "gq".
+" r: Automatically insert the current comment leader after hitting <Enter>
+" c: Auto-wrap comments using textwidth
+" n: When formatting text, recognize numbered lists.
+" 1: Don't break a line after a one-letter word.
+set formatoptions=qrcn1
 
-function s:setup_wrapping_for_prose()
+function! s:setup_wrapping_for_prose()
     set wrap linebreak nolist
+    set spell
 endfunction
-
-" Default
-call s:setup_wrapping_for_code()
 
 
 " ============================================================
@@ -96,7 +92,7 @@ set statusline+=line:\ %l/%L\ col:\ %c\ \     " cursor column, line, total lines
 " Provide some context when editing
 set scrolloff=5
 
-function s:setupMarkup()
+function! s:setupMarkup()
     call s:setup_wrapping_for_prose()
     map <buffer> <Leader>p :Hammer<CR>
 endfunction
@@ -116,6 +112,7 @@ if has("autocmd")
 
     " Prose
     au BufRead,BufNewFile *.{txt,csv} call s:setup_wrapping_for_prose()
+    au FileType tex set spell
 
     " Use hardwrapping for LaTeX files
     au FileType tex call s:setupMarkup()
@@ -219,6 +216,9 @@ map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 " Opens a tab edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>t
 map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
+
+" To prefix lines
+noremap <leader>i :s/^/\V
 
 " All folds open when open a file
 set foldlevelstart=20
