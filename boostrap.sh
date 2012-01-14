@@ -20,8 +20,8 @@ git clone git@github.com:charlax/dotvim.git $HOME/.vim \
   || die "Could not clone the repository to ${HOME}/.vim"
 
 # Create folders (temporary and backup files used by Vim)
-mkdir $HOME/.vim/_temp
-mkdir $HOME/.vim/_backup
+mkdir $HOME/.vim/temp/temp
+mkdir $HOME/.vim/temp/backup
 
 # Update all submodules
 cd $HOME/.vim
