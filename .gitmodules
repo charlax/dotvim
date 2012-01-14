@@ -25,6 +25,7 @@
 [submodule "bundle/textile"]
 	path = bundle/textile
 	url = https://github.com/timcharper/textile.vim.git
+    ignore = untracked
 [submodule "bundle/hammer"]
 	path = bundle/hammer
 	url = https://github.com/robgleeson/hammer.vim.git
@@ -64,9 +65,11 @@
 [submodule "bundle/latex"]
 	path = bundle/latex
 	url = git://github.com/vim-scripts/LaTeX-Box.git
+    ignore = untracked
 [submodule "bundle/mru"]
 	path = bundle/mru
 	url = git://github.com/vim-scripts/mru.vim.git
 [submodule "bundle/cocoa"]
 	path = bundle/cocoa
 	url = git://github.com/msanders/cocoa.vim.git
+    ignore = untracked
