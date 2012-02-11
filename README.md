@@ -23,25 +23,32 @@ Adding a plugin
 
 Example: vim-latex
 
-    $ git submodule add git://github.com/jcf/vim-latex.git bundle/latex
-    $ git status # check if nothing else is staged for commit
-    $ git commit -m "added vim-latex plugin"
-
-Don't forget to add it to the `README.markdown` file!
+1. `git submodule add git://github.com/jcf/vim-latex.git bundle/latex`
+2. Add the description in `README`
+3. Make sure nothing else is staged and commit: `git commit -m "added vim-latex plugin"`
 
 Upgrading all plugins
 ---------------------
 
     $ git submodule update --init --recursive
 
+Removing a plugin
+-----------------
+
+1. Remove submodule from `.gitmodules`
+2. Run `git rm --cached path_to_plugin`
+3. Remove the description in `README`
+4. Commit (including `.gitmodules`) and delete the files
+
 List of plugins
 ---------------
 
-* [MRU](http://www.vim.org/scripts/script.php?script_id=521): most recently
-  used files.
-* [Cocoa](http://www.vim.org/scripts/script.php?script_id=2674): a collection
-  of scripts designed to make it easier to develop Cocoa/Objective-C
-  applications.
+* [MRU](http://www.vim.org/scripts/script.php?script_id=521): most
+  recently used files.
+* [Cocoa](http://www.vim.org/scripts/script.php?script_id=2674):
+  a collection of scripts designed to make it easier to develop
+  Cocoa/Objective-C applications.
+* [pydoc](http://www.vim.org/scripts/script.php?script_id=910): allows you view the documentation of the word under the cursor by pressing `<leader>pw`
 
 How to try Vim
 ==============
