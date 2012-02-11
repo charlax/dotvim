@@ -117,14 +117,14 @@ if has("autocmd")
     " Use hardwrapping for LaTeX files
     au FileType tex call s:setupMarkup()
 
-    " make Python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
-    au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
+    " Setting up Vim for Python
+    autocmd BufRead,BufNewFile,FileReadPost *.py source $HOME/.vim/python.vim
 
     " In Makefiles, use real tabs, not tabs expanded to spaces
     au FileType make set noexpandtab
 
     " Use real tabs in Applescript
-    au FileType applescript set noexpandtab
+    au FileType applescript set noexpandtab smartindent
 
     " Yaml
     au FileType yaml set softtabstop=2 tabstop=2 shiftwidth=2 expandtab autoindent

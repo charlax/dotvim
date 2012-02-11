@@ -27,3 +27,8 @@ end
 
 " Remove toolbar
 set guioptions=egmrt
+
+" Keep undo history across sessions, by storing in file.
+" Only works in MacVim (gui) mode.
+set undodir=~/.vim/backups
+set undofile
