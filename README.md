@@ -30,7 +30,7 @@ Example: vim-latex
 Upgrading all plugins
 ---------------------
 
-    $ git submodule update --init --recursive
+    $ ./update.sh
 
 Removing a plugin
 -----------------
