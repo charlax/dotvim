@@ -13,6 +13,59 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
 
+" ============================================================
+" Filetype detection
+" ============================================================
+
+if has("autocmd")
+    " load file type plugins + indentation
+    filetype plugin indent on
+
+    " Custom filetypes
+    au BufRead,BufNewFile *.json set filetype=json
+    au BufRead,BufNewFile *.txt set filetype=markdown
+
+    " Custom initialization
+    au BufRead,BufNewFile *.applescript setf applescript
+    au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
+    au FileType {md,markdown} call s:setupMarkup()
+
+    " Prose
+    au BufRead,BufNewFile *.{txt,csv} call s:setup_for_prose()
+    au FileType tex set spell
+
+    " Use hardwrapping for LaTeX files
+    au FileType tex call s:setupMarkup()
+
+    " In Makefiles, use real tabs, not tabs expanded to spaces
+    au FileType make set noexpandtab
+
+    " Use tabs in Applescript
+    au FileType applescript set noexpandtab smartindent
+
+    " Yaml
+    au FileType yaml set softtabstop=2 tabstop=2 shiftwidth=2 expandtab autoindent
+
+    " Json
+    au FileType json set softtabstop=2 tabstop=2 shiftwidth=2 expandtab autoindent
+
+    " Remember last location in file
+    au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+                \| exe "normal g'\"" | endif
+
+    " Latex
+    " Skim is the default viewer
+    let g:LatexBox_viewer = 'skim'
+    " Auto-update when file has changed
+    let g:LatexBox_latexmk_options = '-pvc'
+
+endif
+
+
+" ============================================================
+" Vim UI configuration
+" ============================================================
+
 " display incomplete commands
 set showcmd
 
@@ -34,6 +87,7 @@ set backspace=indent,eol,start " backspace through everything in insert mode
 " No bell
 set visualbell
 
+
 " ============================================================
 " Wrapping, textwidth, text formatting
 " ============================================================
@@ -52,11 +106,14 @@ set listchars=tab:▸\ ,eol:¬
 " c: Auto-wrap comments using textwidth
 " n: When formatting text, recognize numbered lists.
 " 1: Don't break a line after a one-letter word.
-set formatoptions=qrcn1
+setlocal formatoptions=qrcn1
 
-function! s:setup_wrapping_for_prose()
-    set wrap linebreak nolist
-    set spell
+function! s:setup_for_prose()
+    set textwidth=79
+    setlocal nolist
+    setlocal spell
+    " For bulleted list to get correct indentation
+    setlocal autoindent
 endfunction
 
 
@@ -85,64 +142,16 @@ set laststatus=2
 set statusline=%t                     " filename
 set statusline+=%h%m%r                " flags
 set statusline+=\ %y                  " filetype
-set statusline+=\ %P                  " %
 set statusline+=%=                    " right-align
-set statusline+=line:\ %l/%L\ col:\ %c\ \     " cursor column, line, total lines, %
+set statusline+=line:\ %l/%L\ %P\ col:\ %c\ \     " cursor column, line, total lines, %
 
 " Provide some context when editing
 set scrolloff=5
 
 function! s:setupMarkup()
-    call s:setup_wrapping_for_prose()
-    map <buffer> <Leader>p :Hammer<CR>
+    call s:setup_for_prose()
 endfunction
 
-if has("autocmd")
-    " load file type plugins + indentation
-    filetype plugin indent on
-
-    " Custom filetypes
-    au BufRead,BufNewFile *.json set filetype=json
-    au BufRead,BufNewFile *.txt set filetype=markdown
-
-    " Custom initialization
-    au BufRead,BufNewFile *.applescript setf applescript
-    au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
-    au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
-
-    " Prose
-    au BufRead,BufNewFile *.{txt,csv} call s:setup_wrapping_for_prose()
-    au FileType tex set spell
-
-    " Use hardwrapping for LaTeX files
-    au FileType tex call s:setupMarkup()
-
-    " Setting up Vim for Python
-    autocmd BufRead,BufNewFile,FileReadPost *.py source $HOME/.vim/python.vim
-
-    " In Makefiles, use real tabs, not tabs expanded to spaces
-    au FileType make set noexpandtab
-
-    " Use real tabs in Applescript
-    au FileType applescript set noexpandtab smartindent
-
-    " Yaml
-    au FileType yaml set softtabstop=2 tabstop=2 shiftwidth=2 expandtab autoindent
-
-    " Json
-    au FileType json set softtabstop=2 tabstop=2 shiftwidth=2 expandtab autoindent
-
-    " Remember last location in file
-    au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-                \| exe "normal g'\"" | endif
-
-    " Latex
-    " Skim is the default viewer
-    let g:LatexBox_viewer = 'skim'
-    " Auto-update when file has changed
-    let g:LatexBox_latexmk_options = '-pvc'
-
-endif
 
 " Prettify json
 map <leader>jt  <Esc>:%!json_xs -f json -t json-pretty<CR>
@@ -218,6 +227,9 @@ noremap <leader>i :s/^/\V
 " All folds open when open a file
 set foldlevelstart=20
 
+" Re-indent file, keeping cursor position
+map <leader>i mzgg=G`z<CR>
+
 " ============================================================
 " Paths
 " ============================================================
@@ -239,3 +251,4 @@ let MRU_File = expand('~/.vim/temp/.vim_mru_files')
 
 " My other functions
 source $HOME/.vim/my_functions.vim
+source $HOME/.vim/abbreviations.vim

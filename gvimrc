@@ -21,8 +21,8 @@ set visualbell
 set guioptions-=T
 
 if has("gui_macvim")
-	" Fullscreen takes up entire screen
-	set fuoptions=maxhorz,maxvert
+    " Fullscreen takes up entire screen
+    set fuoptions=maxhorz,maxvert
 end
 
 " Remove toolbar

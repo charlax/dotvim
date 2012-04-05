@@ -3,6 +3,10 @@ Installation
 
     $ curl https://raw.github.com/charlax/dotvim/master/boostrap.sh -o- | sh
 
+You may need:
+
+* [Pandoc](http://johnmacfarlane.net/pandoc/):  a Haskell library for converting from one markup format to another.
+
 Installing Vim on Mac Os X
 ==========================
 
