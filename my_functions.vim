@@ -1,8 +1,3 @@
-" Markdown to textile in clipboard
-command! Markdown2Textile call <SID>Markdow2Textile2Clipboard()
-function! <SID>Markdow2Textile2Clipboard()
-    let @+=system("pandoc -f markdown -t textile", join(getline(1,line("$")), "\n"))
-endfunction
 
 " Prefix lines
 command! -range=% -bar Prepend <line1>,<line2>call PrefixLines()

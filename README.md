@@ -47,25 +47,37 @@ Removing a plugin
 List of plugins
 ---------------
 
-* [MRU](http://www.vim.org/scripts/script.php?script_id=521): most
-  recently used files.
-* [Cocoa](http://www.vim.org/scripts/script.php?script_id=2674):
-  a collection of scripts designed to make it easier to develop
-  Cocoa/Objective-C applications.
-* [pydoc](http://www.vim.org/scripts/script.php?script_id=910): allows you view the documentation of the word under the cursor by pressing `<leader>pw`
+* [MRU](http://www.vim.org/scripts/script.php?script_id=521): most recently
+  used files.
+* [Cocoa](http://www.vim.org/scripts/script.php?script_id=2674): a collection
+  of scripts designed to make it easier to develop Cocoa/Objective-C
+  applications.
+* [pydoc](http://www.vim.org/scripts/script.php?script_id=910): allows you view
+  Python documentation inside Vim
 
 How to try Vim
 ==============
 
 If you want to try Vim, just follow these steps:
 
-1. Read [Seven habits of effective text editing](http://www.moolenaar.net/habits.html) by Bram Moolenaar (Vim's main author)
-2. Resist the urge to use a plugin or anyone else’s `vimrc`. [Really](http://mislav.uniqpath.com/2011/12/vim-revisited/).
+1. Read [Seven habits of effective text
+   editing](http://www.moolenaar.net/habits.html) by Bram Moolenaar (Vim's main
+   author)
+2. Resist the urge to use a plugin or anyone else’s `vimrc`.
+   [Really](http://mislav.uniqpath.com/2011/12/vim-revisited/).
 3. Use `vimtutor` to learn the basics.
-4. Along the way, add plugins and improve your `.vimrc` little
-   by little, making sure you understand and comment all your options.
+4. Along the way, add plugins and improve your `.vimrc` little by little,
+   making sure you understand and comment all your options.
 
 Feel free to read my article: [Why I use Vim](http://blog.d3in.org/post/14220797290/why-i-keep-on-using-vim-instead-of-going-back-to)
+
+Reference card
+==============
+
+Keyboard shortcuts
+------------------
+
+* `<leader>pw`: show the Python documentation for the word under the cursor
 
 Acknowledgments
 ===============
