@@ -23,6 +23,7 @@ set guioptions-=T
 if has("gui_macvim")
     " Fullscreen takes up entire screen
     set fuoptions=maxhorz,maxvert
+    macmenu &Tools.Make key=<nop>
 end
 
 " Remove toolbar
