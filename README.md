@@ -40,20 +40,21 @@ Removing a plugin
 -----------------
 
 1. Remove submodule from `.gitmodules`
-2. Run `git rm --cached path_to_plugin`
-3. Remove the description in `README`
-4. Commit (including `.gitmodules`) and delete the files
+2. `git rm --cached path_to_plugin`
+3. `rm path_to_plugin`
+4. Remove the description in `README`
+5. Commit (including `.gitmodules`) and delete the files
 
 List of plugins
 ---------------
 
-* [MRU](http://www.vim.org/scripts/script.php?script_id=521): most recently
-  used files.
 * [Cocoa](http://www.vim.org/scripts/script.php?script_id=2674): a collection
   of scripts designed to make it easier to develop Cocoa/Objective-C
   applications.
-* [pydoc](http://www.vim.org/scripts/script.php?script_id=910): allows you view
-  Python documentation inside Vim
+* [pydoc](http://www.vim.org/scripts/script.php?script_id=910): allows you
+  view Python documentation inside Vim
+* [ctrlp](https://github.com/kien/ctrlp.vim): full path fuzzy file, buffer,
+  mru and tag finder
 
 How to try Vim
 ==============

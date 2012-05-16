@@ -210,8 +210,8 @@ nnoremap <c-l> <c-w>l
 " Change tab label to just filename
 set guitablabel=%f
 
-" Command-T configuration
-let g:CommandTMaxHeight=20
+" Most recently used files
+nnoremap <leader>mru :CtrlPMRUFiles<CR>
 
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e
@@ -240,14 +240,6 @@ set backupdir=~/.vim/temp/backup
 set directory=~/.vim/temp/temp
 " .netrwhist
 let g:netrw_home = expand('~/.vim/temp/')
-
-" ============================================================
-" Most recently used (MRU)
-" ============================================================
-
-let MRU_Exclude_Files = '^/tmp/.*\|^/var/tmp/.*'
-let MRU_Window_Height = 15
-let MRU_File = expand('~/.vim/temp/.vim_mru_files')
 
 " My other functions
 source $HOME/.vim/my_functions.vim
