@@ -21,6 +21,9 @@ if has("autocmd")
     " load file type plugins + indentation
     filetype plugin indent on
 
+    " Default filetype is txt
+    autocmd BufEnter * if &filetype == "" | setlocal ft=txt | endif
+
     " Custom filetypes
     au BufRead,BufNewFile *.json set filetype=json
     au BufRead,BufNewFile *.txt set filetype=markdown
@@ -28,14 +31,9 @@ if has("autocmd")
     " Custom initialization
     au BufRead,BufNewFile *.applescript setf applescript
     au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
-    au FileType {md,markdown} call s:setupMarkup()
 
     " Prose
-    au BufRead,BufNewFile *.{txt,csv} call s:setup_for_prose()
-    au FileType tex set spell
-
-    " Use hardwrapping for LaTeX files
-    au FileType tex call s:setupMarkup()
+    au FileType {md,markdown,tex,txt} call s:setup_for_prose()
 
     " In Makefiles, use real tabs, not tabs expanded to spaces
     au FileType make set noexpandtab
@@ -110,7 +108,7 @@ setlocal formatoptions=qrcn1
 
 function! s:setup_for_prose()
     set textwidth=79
-    setlocal nolist
+    setlocal nolist linebreak
     setlocal spell
     " For bulleted list to get correct indentation
     setlocal autoindent
@@ -147,11 +145,6 @@ set statusline+=line:\ %l/%L\ %P\ col:\ %c\ \     " cursor column, line, total l
 
 " Provide some context when editing
 set scrolloff=5
-
-function! s:setupMarkup()
-    call s:setup_for_prose()
-endfunction
-
 
 " Prettify json
 map <leader>jt  <Esc>:%!json_xs -f json -t json-pretty<CR>

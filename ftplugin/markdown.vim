@@ -1,5 +1,6 @@
 " Better linebreaks for markdown. Does not work with 'list' option
 setl nolist linebreak
+setl spell
 
 " Markdown to textile in clipboard
 command! Markdown2Textile2Clipboard call <SID>Markdow2Textile2Clipboard()
