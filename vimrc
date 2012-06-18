@@ -21,9 +21,6 @@ if has("autocmd")
     " load file type plugins + indentation
     filetype plugin indent on
 
-    " Default filetype is txt
-    autocmd BufEnter * if &filetype == "" | setlocal ft=txt | endif
-
     " Custom filetypes
     au BufRead,BufNewFile *.json set filetype=json
     au BufRead,BufNewFile *.txt set filetype=markdown
