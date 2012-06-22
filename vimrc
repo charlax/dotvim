@@ -220,6 +220,9 @@ set foldlevelstart=20
 " Re-indent file, keeping cursor position
 map <leader>i mzgg=G`z<CR>
 
+" Will toggle the Tagbar window
+nmap <F8> :TagbarToggle<CR>
+
 " ============================================================
 " Paths
 " ============================================================

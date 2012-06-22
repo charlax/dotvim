@@ -55,6 +55,8 @@ List of plugins
   view Python documentation inside Vim
 * [ctrlp](https://github.com/kien/ctrlp.vim): full path fuzzy file, buffer,
   mru and tag finder
+* [Tagbar](https://github.com/majutsushi/tagbar): Vim plugin that displays tags
+  in a window, ordered by class etc.
 
 How to try Vim
 ==============
