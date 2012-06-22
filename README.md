@@ -1,7 +1,7 @@
 Installation
 ============
 
-    $ curl https://raw.github.com/charlax/dotvim/master/boostrap.sh -o- | sh
+    $ curl https://raw.github.com/charlax/dotvim/master/install.sh -o- | sh
 
 You may need:
 
