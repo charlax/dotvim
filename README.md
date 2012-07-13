@@ -29,7 +29,7 @@ Example: vim-latex
 
 1. `git submodule add git://github.com/jcf/vim-latex.git bundle/latex`
 2. Add the description in `README`
-3. Make sure nothing else is staged and commit: `git commit -m "added vim-latex plugin"`
+3. Make sure nothing else is staged and commit: `git commit -m "Add vim-latex plugin"`
 
 Upgrading all plugins
 ---------------------
@@ -60,6 +60,8 @@ List of plugins
 * [Indent Text Objects](https://github.com/michaeljsmith/vim-indent-object):
   defines a new text object representing lines of code at the same indent
   level. Useful for python/vim scripts, etc.
+* [EasyTags](https://github.com/xolox/vim-easytags): automated tag file
+  generation and syntax highlighting of tags in Vim
 
 How to try Vim
 ==============
