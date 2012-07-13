@@ -73,3 +73,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
+[submodule "bundle/indent-object"]
+	path = bundle/indent-object
+	url = git://github.com/michaeljsmith/vim-indent-object.git

@@ -57,6 +57,9 @@ List of plugins
   mru and tag finder
 * [Tagbar](https://github.com/majutsushi/tagbar): Vim plugin that displays tags
   in a window, ordered by class etc.
+* [Indent Text Objects](https://github.com/michaeljsmith/vim-indent-object):
+  defines a new text object representing lines of code at the same indent
+  level. Useful for python/vim scripts, etc.
 
 How to try Vim
 ==============
