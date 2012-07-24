@@ -28,3 +28,4 @@ cd $HOME/.vim
 git submodule update --init --recursive
 sudo gem install github-markup
 brew install ctags
+sudo easy_install rope ropevim

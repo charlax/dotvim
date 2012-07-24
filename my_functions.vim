@@ -12,9 +12,17 @@ endfunction
 command! CdToCurrentFile cd %:p:h
 
 " Reload vimrc
-command! ReloadVimrc source $MYVIMRC
+if !exists("*ReloadVimrc")
+  function ReloadVimrc()
+      source $MYVIMRC
+      if has("gui_running")
+          source ~/.gvimrc
+      endif
+  endfunction
+  command! ReloadVimConfig call ReloadVimrc()
+endif
 
-""" FocusMode
+" FocusMode
 function! ToggleFocusMode()
     if (&foldcolumn != 12)
         set laststatus=0
@@ -31,5 +39,13 @@ function! ToggleFocusMode()
         set ruler
         execute 'colorscheme ' . g:colors_name
     endif
-endfunc
+endfunction
 nnoremap <leader>V  :call ToggleFocusMode()<cr>
+
+" To remove trailing whitespaces
+function! StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfunction

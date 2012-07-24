@@ -79,8 +79,18 @@ set softtabstop=4 " makes the spaces feel like real tabs
 set expandtab
 set backspace=indent,eol,start " backspace through everything in insert mode
 
+" Highlights trailing whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+au ColorScheme * highlight ExtraWhitespace guibg=red
+au BufEnter * match ExtraWhitespace /\s\+$/
+au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+au InsertLeave * match ExtraWhiteSpace /\s\+$/
+
 " No bell
 set visualbell
+
+" Leaving buffer goes into normal mode
+autocmd BufEnter * stopinsert
 
 
 " ============================================================
@@ -125,7 +135,7 @@ set ignorecase
 set smartcase
 
 " Tab completion
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,*.pyc,.svn,vendor/gems/*
 
 " show list instead of just completing
 set wildmenu
@@ -134,7 +144,7 @@ set wildmode=list:longest,full
 
 " Status bar
 set laststatus=2
-set statusline=%t                     " filename
+set statusline=%F                     " full path to file
 set statusline+=%h%m%r                " flags
 set statusline+=\ %y                  " filetype
 set statusline+=%=                    " right-align
@@ -152,11 +162,6 @@ set relativenumber
 " Fixing Vim's regex handling
 nnoremap / /\v
 vnoremap / /\v
-
-" Applies substitutions globally on lines,
-" no need to type /g at the end of a substitutions
-set gdefault
-
 
 " ============================================================
 " Keyboard shortcuts
@@ -197,11 +202,20 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" Change tab label to just filename
-set guitablabel=%f
+" Shows 20 lines of ctrlp
+let g:ctrlp_max_height = 20
 
-" Most recently used files
-nnoremap <leader>mru :CtrlPMRUFiles<CR>
+" CtrlPMixed (files + MRU + Buffers) is the default
+let g:ctrlp_cmd = 'CtrlPMixed'
+
+" CtrlPTags
+nnoremap <leader>t :CtrlPTag<CR>
+
+" C-\ - Open the definition in a new tab
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+
+" A-] - Open the definition in a vertical split
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e

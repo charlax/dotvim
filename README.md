@@ -25,8 +25,6 @@ I am using [Pathogen](https://github.com/tpope/vim-pathogen).
 Adding a plugin
 ---------------
 
-Example: vim-latex
-
 1. `git submodule add git://github.com/jcf/vim-latex.git bundle/latex`
 2. Add the description in `README`
 3. Make sure nothing else is staged and commit: `git commit -m "Add vim-latex plugin"`
@@ -35,6 +33,8 @@ Upgrading all plugins
 ---------------------
 
     $ ./update.sh
+    $ git add .
+    $ git commit -m "Update plugins"
 
 Removing a plugin
 -----------------

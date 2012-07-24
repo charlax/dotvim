@@ -20,14 +20,14 @@ set visualbell
 " Start without the toolbar
 set guioptions-=T
 
+" Change tab label to just filename
+set guitablabel=%t
+
 if has("gui_macvim")
     " Fullscreen takes up entire screen
     set fuoptions=maxhorz,maxvert
     macmenu &Tools.Make key=<nop>
 end
-
-" Remove toolbar
-set guioptions=egmrt
 
 " Keep undo history across sessions, by storing in file.
 " Only works in MacVim (gui) mode.
