@@ -1,10 +1,11 @@
 Installation
 ============
 
-    $ curl https://raw.github.com/charlax/dotvim/master/install.sh -o- | sh
+    $ curl https://raw.github.com/charlax/dotvim/master/install.sh -o- | zsh
 
 You may need:
 
+* ZSH
 * [Pandoc](http://johnmacfarlane.net/pandoc/):  a Haskell library for converting from one markup format to another.
 
 Installing Vim on Mac Os X
