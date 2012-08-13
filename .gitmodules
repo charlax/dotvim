@@ -35,9 +35,6 @@
 [submodule "bundle/snipmate-snippets"]
 	path = bundle/snipmate-snippets
 	url = https://github.com/honza/snipmate-snippets.git
-[submodule "bundle/vim-indent-object"]
-	path = bundle/vim-indent-object
-	url = https://github.com/michaeljsmith/vim-indent-object.git
 [submodule "bundle/css-color"]
 	path = bundle/css-color
 	url = https://github.com/skammer/vim-css-color.git
@@ -64,18 +61,15 @@
 	path = bundle/cocoa
 	url = git://github.com/msanders/cocoa.vim.git
     ignore = untracked
-[submodule "bundle/pydoc"]
-	path = bundle/pydoc
-	url = git://github.com/fs111/pydoc.vim.git
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
-[submodule "bundle/indent-object"]
-	path = bundle/indent-object
-	url = git://github.com/michaeljsmith/vim-indent-object.git
 [submodule "bundle/easytags"]
 	path = bundle/easytags
 	url = git://github.com/xolox/vim-easytags.git
+[submodule "bundle/flake8"]
+	path = bundle/flake8
+	url = git://github.com/nvie/vim-flake8.git

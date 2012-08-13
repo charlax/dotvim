@@ -48,6 +48,10 @@ if has("autocmd")
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
                 \| exe "normal g'\"" | endif
 
+
+    " Automatically strip trailing whitespace
+    autocmd FileType c,cpp,java,php,python,javascript autocmd BufWritePre <buffer> :call StripTrailingWhitespaces()
+
     " Latex
     " Skim is the default viewer
     let g:LatexBox_viewer = 'skim'

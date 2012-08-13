@@ -27,6 +27,11 @@ if has("gui_macvim")
     " Fullscreen takes up entire screen
     set fuoptions=maxhorz,maxvert
     macmenu &Tools.Make key=<nop>
+
+    " Cmd+S save and goes to normal mode
+    macmenu &File.Save key=<nop>
+    inoremap <D-s> <ESC>:w<CR>
+    nnoremap <D-s> :w<CR>
 end
 
 " Keep undo history across sessions, by storing in file.

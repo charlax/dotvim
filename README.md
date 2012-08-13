@@ -52,17 +52,14 @@ List of plugins
 * [Cocoa](http://www.vim.org/scripts/script.php?script_id=2674): a collection
   of scripts designed to make it easier to develop Cocoa/Objective-C
   applications.
-* [pydoc](http://www.vim.org/scripts/script.php?script_id=910): allows you
-  view Python documentation inside Vim
 * [ctrlp](https://github.com/kien/ctrlp.vim): full path fuzzy file, buffer,
   mru and tag finder
 * [Tagbar](https://github.com/majutsushi/tagbar): Vim plugin that displays tags
   in a window, ordered by class etc.
-* [Indent Text Objects](https://github.com/michaeljsmith/vim-indent-object):
-  defines a new text object representing lines of code at the same indent
-  level. Useful for python/vim scripts, etc.
 * [EasyTags](https://github.com/xolox/vim-easytags): automated tag file
   generation and syntax highlighting of tags in Vim
+* [Flake8](https://github.com/nvie/vim-flake8): runs the currently open file
+  through Flake8, a static syntax and style checker for Python source code.
 
 How to try Vim
 ==============
