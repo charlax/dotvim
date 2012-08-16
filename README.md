@@ -43,7 +43,7 @@ Removing a plugin
 1. Remove submodule from `.gitmodules`
 2. `git rm --cached path_to_plugin`
 3. `rm path_to_plugin`
-4. Remove the description in `README`
+4. Remove the description in `README`, and look for other mention of the plugin 
 5. Commit (including `.gitmodules`) and delete the files
 
 List of plugins
@@ -83,7 +83,8 @@ Reference card
 Keyboard shortcuts
 ------------------
 
-* `<leader>pw`: show the Python documentation for the word under the cursor
+* `<leader>pw`: show the Python documentation for the word under the cursor.
+* `<F7>` runs `flake8` on the current file.
 
 Acknowledgments
 ===============

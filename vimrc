@@ -252,6 +252,13 @@ set directory=~/.vim/temp/temp
 " .netrwhist
 let g:netrw_home = expand('~/.vim/temp/')
 
+" ============================================================
+" Plugin-specific configuration
+" ============================================================
+
+" Disable automatic highlighting
+let b:easytags_auto_highlight = 0
+
 " My other functions
 source $HOME/.vim/my_functions.vim
 source $HOME/.vim/abbreviations.vim
