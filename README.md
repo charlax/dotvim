@@ -63,6 +63,8 @@ List of plugins
   generation and syntax highlighting of tags in Vim
 * [Flake8](https://github.com/nvie/vim-flake8): runs the currently open file
   through Flake8, a static syntax and style checker for Python source code.
+* [CoffeeScript](https://github.com/kchmck/vim-coffee-script): CoffeeScript
+  support for Vim.
 
 How to try Vim
 ==============
