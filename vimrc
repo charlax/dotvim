@@ -48,9 +48,8 @@ if has("autocmd")
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
                 \| exe "normal g'\"" | endif
 
-
-    " Automatically strip trailing whitespace
     autocmd FileType c,cpp,java,php,python,javascript autocmd BufWritePre <buffer> :call StripTrailingWhitespaces()
+    autocmd FileType c,cpp,java,php,python,javascript autocmd BufWritePre <buffer> :call TrimEndLines()
 
     " Latex
     " Skim is the default viewer
@@ -96,6 +95,8 @@ set visualbell
 " Leaving buffer goes into normal mode
 autocmd BufEnter * stopinsert
 
+" Files to hide in netrw
+let g:netrw_list_hide= '.*\.swp$,.*\.pyc$'
 
 " ============================================================
 " Wrapping, textwidth, text formatting

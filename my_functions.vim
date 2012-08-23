@@ -42,10 +42,16 @@ function! ToggleFocusMode()
 endfunction
 nnoremap <leader>V  :call ToggleFocusMode()<cr>
 
-" To remove trailing whitespaces
+" Remove trailing whitespaces
 function! StripTrailingWhitespaces()
-    let l = line(".")
-    let c = col(".")
+    let save_cursor = getpos(".")
     %s/\s\+$//e
-    call cursor(l, c)
+    call setpos('.', save_cursor)
+endfunction
+
+" Trim end lines
+function! TrimEndLines()
+    let save_cursor = getpos(".")
+    :silent! %s#\($\n\s*\)\+\%$##
+    call setpos('.', save_cursor)
 endfunction

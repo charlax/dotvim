@@ -1,12 +1,15 @@
 Installation
 ============
 
-    $ curl https://raw.github.com/charlax/dotvim/master/install.sh -o- | zsh
+    $ wget https://raw.github.com/charlax/dotvim/master/install.py
+    $ python install.py
 
-You may need:
+You should read the script before executing it.
 
-* ZSH
-* [Pandoc](http://johnmacfarlane.net/pandoc/):  a Haskell library for converting from one markup format to another.
+Prerequisites
+=============
+
+Tested on Mac Os X 10.6 and Ubuntu 12.04.
 
 Installing Vim on Mac Os X
 ==========================
@@ -43,7 +46,7 @@ Removing a plugin
 1. Remove submodule from `.gitmodules`
 2. `git rm --cached path_to_plugin`
 3. `rm path_to_plugin`
-4. Remove the description in `README`, and look for other mention of the plugin 
+4. Remove the description in `README`, and look for other mention of the plugin
 5. Commit (including `.gitmodules`) and delete the files
 
 List of plugins
