@@ -2,10 +2,14 @@
 # -*- coding: utf-8 -*-
 
 import os
+import platform
 import shutil
 import sys
 
 REPOSITORY = "git@github.com:charlax/dotvim.git"
+FILES = {
+    "~/.vim/vimrc": "~/.vimrc",
+    "~/.vim/gvimrc": "~/.gvimrc", }
 
 
 def die(msg):
@@ -17,11 +21,10 @@ def die(msg):
 def install():
     """Install the vimrc files."""
 
-    # Backup and link the files
-    for orig, dest in {
-            "~/.vim/vimrc": "~/.vimrc",
-            "~/.vim/gvimrc": "~/.gvimrc", }:
+    system = platform.system()
 
+    # Backup and link the files
+    for orig, dest in FILES.items():
         orig, dest = map(os.path.expanduser, (orig, dest))
 
         # Backup
@@ -41,16 +44,22 @@ def install():
 
     for d in ("~/.vim/temp/temp", "~/.vim/temp/backup"):
         d = os.path.expanduser(d)
-        os.mkdir(d)
+        if not os.path.exists(d):
+            os.makedirs(d)
 
     os.system("cd ~/.vim && git submodule update --init --recursive")
 
     if system == "Darwin":
         os.system("brew install ctags pandoc")
+        os.system("pip install flake8")
 
     if system == "Linux":
-        os.system("sudo aptitude install ctags pandoc")
+        os.system("sudo aptitude install exuberant-ctags pandoc")
+        os.system("sudo pip install flake8")
 
-    os.system("pip install flake8")
     os.system("sudo gem install github-markup")
     os.system("sudo easy_install rope ropevim")
+
+
+if __name__ == '__main__':
+    install()
