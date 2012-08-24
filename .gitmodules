@@ -35,9 +35,6 @@
 [submodule "bundle/snipmate-snippets"]
 	path = bundle/snipmate-snippets
 	url = https://github.com/honza/snipmate-snippets.git
-[submodule "bundle/css-color"]
-	path = bundle/css-color
-	url = https://github.com/skammer/vim-css-color.git
 [submodule "bundle/applescript"]
 	path = bundle/applescript
 	url = https://github.com/vim-scripts/applescript.vim.git
