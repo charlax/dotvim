@@ -11,6 +11,8 @@ Prerequisites
 
 Tested on Mac Os X 10.6 and Ubuntu 12.04.
 
+On Mac Os X: needs [Homebrew](http://mxcl.github.com/homebrew/).
+
 Installing Vim on Mac Os X
 ==========================
 
@@ -65,6 +67,8 @@ List of plugins
   through Flake8, a static syntax and style checker for Python source code.
 * [CoffeeScript](https://github.com/kchmck/vim-coffee-script): CoffeeScript
   support for Vim.
+* [Mako](https://github.com/sophacles/vim-bundle-mako): A collection of vim
+  scripts for the mako templating engine.
 
 How to try Vim
 ==============

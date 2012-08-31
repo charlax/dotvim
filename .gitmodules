@@ -73,3 +73,6 @@
 [submodule "bundle/coffee-script"]
 	path = bundle/coffee-script
 	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/mako"]
+	path = bundle/mako
+	url = git://github.com/sophacles/vim-bundle-mako.git
