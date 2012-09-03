@@ -51,12 +51,11 @@ def install():
 
     if system == "Darwin":
         os.system("brew install ctags pandoc")
-        os.system("pip install flake8")
 
     if system == "Linux":
         os.system("sudo aptitude install exuberant-ctags pandoc")
-        os.system("sudo pip install flake8")
 
+    os.system("sudo pip install flake8")
     os.system("sudo gem install github-markup")
     os.system("sudo easy_install rope ropevim")
 

@@ -48,8 +48,8 @@ if has("autocmd")
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
                 \| exe "normal g'\"" | endif
 
-    autocmd FileType c,cpp,java,php,python,javascript autocmd BufWritePre <buffer> :call StripTrailingWhitespaces()
-    autocmd FileType c,cpp,java,php,python,javascript autocmd BufWritePre <buffer> :call TrimEndLines()
+    autocmd FileType c,cpp,java,php,python,javascript,coffee,eco,html,css,mako autocmd BufWritePre <buffer> :call StripTrailingWhitespaces()
+    autocmd FileType c,cpp,java,php,python,javascript,coffee,eco,html,css,mako autocmd BufWritePre <buffer> :call TrimEndLines()
 
     " Latex
     " Skim is the default viewer
@@ -80,14 +80,9 @@ set title
 set tabstop=4 shiftwidth=4
 set softtabstop=4 " makes the spaces feel like real tabs
 set expandtab
-set backspace=indent,eol,start " backspace through everything in insert mode
 
-" Highlights trailing whitespace
-highlight ExtraWhitespace ctermbg=red guibg=red
-au ColorScheme * highlight ExtraWhitespace guibg=red
-au BufEnter * match ExtraWhitespace /\s\+$/
-au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-au InsertLeave * match ExtraWhiteSpace /\s\+$/
+" backspace through everything in insert mode
+set backspace=indent,eol,start
 
 " No bell
 set visualbell
@@ -197,9 +192,6 @@ nnoremap <leader>q gqip
 
 " Reselect the text that was just pasted
 nnoremap <leader>v V`]
-
-" Exit back to normal mode
-inoremap jj <ESC>
 
 " Easier navigation between split windows
 nnoremap <c-j> <c-w>j

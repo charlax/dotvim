@@ -1,4 +1,3 @@
-
 " Prefix lines
 command! -range=% -bar Prepend <line1>,<line2>call PrefixLines()
 function! PrefixLines() range
