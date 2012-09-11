@@ -44,18 +44,12 @@ if has("autocmd")
     " Json
     au FileType json set softtabstop=2 tabstop=2 shiftwidth=2 expandtab autoindent
 
-    " Remember last location in file
-    au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-                \| exe "normal g'\"" | endif
+    " Remember last location in file, except in Git commit message
+    au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
+          \| exe "normal! g`\"" | endif
 
     autocmd FileType c,cpp,java,php,python,javascript,coffee,eco,html,css,mako autocmd BufWritePre <buffer> :call StripTrailingWhitespaces()
     autocmd FileType c,cpp,java,php,python,javascript,coffee,eco,html,css,mako autocmd BufWritePre <buffer> :call TrimEndLines()
-
-    " Latex
-    " Skim is the default viewer
-    let g:LatexBox_viewer = 'skim'
-    " Auto-update when file has changed
-    let g:LatexBox_latexmk_options = '-pvc'
 
 endif
 
@@ -92,6 +86,9 @@ autocmd BufEnter * stopinsert
 
 " Files to hide in netrw
 let g:netrw_list_hide= '.*\.swp$,.*\.pyc$'
+
+" All folds open when open a file
+set foldlevelstart=20
 
 " ============================================================
 " Wrapping, textwidth, text formatting
@@ -135,7 +132,7 @@ set ignorecase
 set smartcase
 
 " Tab completion
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,*.pyc,.svn,vendor/gems/*
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,*.pyc,.svn,vendor/gems/*,*/build/*
 
 " show list instead of just completing
 set wildmenu
@@ -153,86 +150,12 @@ set statusline+=line:\ %l/%L\ %P\ col:\ %c\ \     " cursor column, line, total l
 " Provide some context when editing
 set scrolloff=5
 
-" Prettify json
-map <leader>jt  <Esc>:%!json_xs -f json -t json-pretty<CR>
-
 " Relative numbering of lines
 set relativenumber
 
 " Fixing Vim's regex handling
 nnoremap / /\v
 vnoremap / /\v
-
-" ============================================================
-" Keyboard shortcuts
-" ============================================================
-
-" Fast saving
-nmap <leader>w :w!<cr>
-
-" To do things right
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-
-" Movement by screen line instead of file line
-nnoremap j gj
-nnoremap k gk
-
-" Strip all trailing whitespace in the current file
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
-
-" Re-hardwrap paragraphs of text
-nnoremap <leader>q gqip
-
-" Reselect the text that was just pasted
-nnoremap <leader>v V`]
-
-" Easier navigation between split windows
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
-
-" Shows 20 lines of ctrlp
-let g:ctrlp_max_height = 20
-
-" CtrlPMixed (files + MRU + Buffers) is the default
-let g:ctrlp_cmd = 'CtrlPMixed'
-
-" CtrlPTags
-nnoremap <leader>t :CtrlPTag<CR>
-
-" C-\ - Open the definition in a new tab
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-
-" A-] - Open the definition in a vertical split
-map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
-
-" Opens an edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>e
-map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
-
-" Opens a tab edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>t
-map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
-
-" To prefix lines
-noremap <leader>i :s/^/\V
-
-" All folds open when open a file
-set foldlevelstart=20
-
-" Re-indent file, keeping cursor position
-map <leader>i mzgg=G`z<CR>
-
-" Will toggle the Tagbar window
-nmap <F8> :TagbarToggle<CR>
 
 " ============================================================
 " Paths
@@ -245,13 +168,11 @@ set directory=~/.vim/temp/temp
 " .netrwhist
 let g:netrw_home = expand('~/.vim/temp/')
 
-" ============================================================
-" Plugin-specific configuration
-" ============================================================
-
-" Disable automatic highlighting
-let b:easytags_auto_highlight = 0
-
 " My other functions
+
 source $HOME/.vim/my_functions.vim
 source $HOME/.vim/abbreviations.vim
+" Plugin-specific configuration
+source $HOME/.vim/pluginsrc.vim
+" Keyboard shortcuts
+source $HOME/.vim/keys.vim
