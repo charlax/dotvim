@@ -58,3 +58,6 @@ map <leader>jt  <Esc>:%!json_xs -f json -t json-pretty<CR>
 
 " Use :W! to write to a file using sudo if you forgot to 'sudo vim file'
 cmap W! %!sudo tee > /dev/null %
+
+" Preview file
+nmap <Leader>P :Preview<CR>
