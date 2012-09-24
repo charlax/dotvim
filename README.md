@@ -67,8 +67,9 @@ List of plugins
   through Flake8, a static syntax and style checker for Python source code.
 * [CoffeeScript](https://github.com/kchmck/vim-coffee-script): CoffeeScript
   support for Vim.
-* [Mako](https://github.com/sophacles/vim-bundle-mako): A collection of vim
+* [Mako](https://github.com/sophacles/vim-bundle-mako): a collection of vim
   scripts for the mako templating engine.
+* [nerdtree](https://github.com/scrooloose/nerdtree): a tree explorer plugin.
 
 How to try Vim
 ==============

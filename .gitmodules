@@ -76,3 +76,6 @@
 [submodule "bundle/mako"]
 	path = bundle/mako
 	url = git://github.com/sophacles/vim-bundle-mako.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
