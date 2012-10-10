@@ -54,3 +54,19 @@ function! TrimEndLines()
     :silent! %s#\($\n\s*\)\+\%$##
     call setpos('.', save_cursor)
 endfunction
+
+function! EnableDisplayWrapping()
+  if !&wrap
+    setlocal wrap
+    nnoremap j gj
+    nnoremap k gk
+  endif
+endfunction
+
+function! DisableDisplayWrapping()
+  if &wrap
+    setlocal nowrap
+    nunmap <buffer> j
+    nunmap <buffer> k
+  endif
+endfunction

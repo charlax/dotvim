@@ -54,7 +54,7 @@ noremap <leader>i :s/^/\V
 map <leader>i mzgg=G`z<CR>
 
 " Prettify json
-map <leader>jt  <Esc>:%!json_xs -f json -t json-pretty<CR>
+map <leader>js  <Esc>:%!python -mjson.tool<CR>
 
 " Use :W! to write to a file using sudo if you forgot to 'sudo vim file'
 cmap W! %!sudo tee > /dev/null %
