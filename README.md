@@ -70,6 +70,7 @@ List of plugins
 * [Mako](https://github.com/sophacles/vim-bundle-mako): a collection of vim
   scripts for the mako templating engine.
 * [nerdtree](https://github.com/scrooloose/nerdtree): a tree explorer plugin.
+* [json](https://github.com/elzr/vim-json): JSON highlighting script.
 
 How to try Vim
 ==============

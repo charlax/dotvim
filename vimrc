@@ -21,10 +21,6 @@ if has("autocmd")
     " load file type plugins + indentation
     filetype plugin indent on
 
-    " Custom filetypes
-    au BufRead,BufNewFile *.json set filetype=json
-    au BufRead,BufNewFile *.txt set filetype=markdown
-
     " Custom initialization
     au BufRead,BufNewFile *.applescript setf applescript
     au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
@@ -48,8 +44,8 @@ if has("autocmd")
     au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
           \| exe "normal! g`\"" | endif
 
-    autocmd FileType c,cpp,java,php,python,javascript,coffee,eco,html,css,mako autocmd BufWritePre <buffer> :call StripTrailingWhitespaces()
-    autocmd FileType c,cpp,java,php,python,javascript,coffee,eco,html,css,mako autocmd BufWritePre <buffer> :call TrimEndLines()
+    autocmd FileType c,cpp,java,php,python,javascript,coffee,eco,html,css,mako,sql,json autocmd BufWritePre <buffer> :call StripTrailingWhitespaces()
+    autocmd FileType c,cpp,java,php,python,javascript,coffee,eco,html,css,mako,sql,json autocmd BufWritePre <buffer> :call TrimEndLines()
 
 endif
 
