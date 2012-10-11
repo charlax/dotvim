@@ -82,9 +82,6 @@
 [submodule "bundle/json"]
 	path = bundle/json
 	url = git://github.com/elzr/vim-json.git
-[submodule "bundle/yankring"]
-	path = bundle/yankring
-	url = git://github.com/vim-scripts/YankRing.vim.git
 [submodule "bundle/repeat"]
 	path = bundle/repeat
 	url = git://github.com/tpope/vim-repeat.git
