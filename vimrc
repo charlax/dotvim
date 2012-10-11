@@ -127,6 +127,9 @@ set incsearch
 set ignorecase
 set smartcase
 
+" Clearing highlighted searches
+nmap <silent> ,/ :nohlsearch<CR>
+
 " Tab completion
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,*.pyc,.svn,vendor/gems/*,*/build/*
 

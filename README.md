@@ -71,6 +71,10 @@ List of plugins
   scripts for the mako templating engine.
 * [nerdtree](https://github.com/scrooloose/nerdtree): a tree explorer plugin.
 * [json](https://github.com/elzr/vim-json): JSON highlighting script.
+* [repeat](https://github.com/tpope/vim-repeat): enable repeating supported
+  plugin maps with "."
+* [YankRing](https://github.com/vim-scripts/YankRing.vim): maintains a history
+  of previous yanks, changes and deletes
 
 How to try Vim
 ==============
