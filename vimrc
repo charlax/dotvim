@@ -54,6 +54,14 @@ endif
 " Vim UI configuration
 " ============================================================
 
+colorscheme solarized
+
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
+
 " display incomplete commands
 set showcmd
 
@@ -94,6 +102,7 @@ set foldlevelstart=20
 set textwidth=0
 set wrap
 set colorcolumn=79
+highlight ColorColumn guibg=#eeeeee
 
 " Showing invisible characters with the same characters that TextMate uses
 set list

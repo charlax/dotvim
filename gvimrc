@@ -1,5 +1,3 @@
-color pyte
-
 set guifont=Menlo:h14
 set antialias
 set linespace=2

@@ -73,8 +73,8 @@ List of plugins
 * [json](https://github.com/elzr/vim-json): JSON highlighting script.
 * [repeat](https://github.com/tpope/vim-repeat): enable repeating supported
   plugin maps with "."
-* [YankRing](https://github.com/vim-scripts/YankRing.vim): maintains a history
-  of previous yanks, changes and deletes
+* [Solarized](https://github.com/altercation/vim-colors-solarized): precision
+  colorscheme for the vim text editor
 
 How to try Vim
 ==============
