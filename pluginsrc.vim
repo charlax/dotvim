@@ -1,6 +1,3 @@
-" Disable automatic highlighting
-let b:easytags_auto_highlight = 0
-
 " Will toggle the Tagbar window
 nmap <F8> :TagbarToggle<CR>
 

@@ -64,9 +64,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
-[submodule "bundle/easytags"]
-	path = bundle/easytags
-	url = git://github.com/xolox/vim-easytags.git
 [submodule "bundle/flake8"]
 	path = bundle/flake8
 	url = git://github.com/nvie/vim-flake8.git
@@ -91,3 +88,6 @@
 [submodule "bundle/search_complete"]
 	path = bundle/search_complete
 	url = git://github.com/vim-scripts/SearchComplete.git
+[submodule "bundle/autotag"]
+	path = bundle/autotag
+	url = git://github.com/vim-scripts/AutoTag.git

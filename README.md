@@ -61,8 +61,6 @@ List of plugins
   mru and tag finder
 * [Tagbar](https://github.com/majutsushi/tagbar): Vim plugin that displays tags
   in a window, ordered by class etc.
-* [EasyTags](https://github.com/xolox/vim-easytags): automated tag file
-  generation and syntax highlighting of tags in Vim
 * [Flake8](https://github.com/nvie/vim-flake8): runs the currently open file
   through Flake8, a static syntax and style checker for Python source code.
 * [CoffeeScript](https://github.com/kchmck/vim-coffee-script): CoffeeScript
@@ -77,6 +75,8 @@ List of plugins
   colorscheme for the vim text editor
 * [SearchComplete](https://github.com/vim-scripts/SearchComplete): tab
   completion of words inside of a search
+* [AutoTag](https://github.com/vim-scripts/AutoTag): updates entries in a tags
+  file automatically when saving
 
 How to try Vim
 ==============
