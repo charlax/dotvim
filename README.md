@@ -75,6 +75,8 @@ List of plugins
   plugin maps with "."
 * [Solarized](https://github.com/altercation/vim-colors-solarized): precision
   colorscheme for the vim text editor
+* [SearchComplete](https://github.com/vim-scripts/SearchComplete): tab
+  completion of words inside of a search
 
 How to try Vim
 ==============
