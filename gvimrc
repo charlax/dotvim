@@ -19,7 +19,7 @@ set visualbell
 set guioptions-=T
 
 " Change tab label to just filename
-set guitablabel=%t
+set guitablabel=%t%m
 
 if has("gui_macvim")
     " Fullscreen takes up entire screen
