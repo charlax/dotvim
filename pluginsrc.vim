@@ -15,3 +15,6 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 
 " Filter out .pyc files in NERDTree
 let NERDTreeIgnore = ['\.pyc$']
+
+" Only the test file is prefixed with 'test_'
+let PyUnitTestsStructure = "disabled"

@@ -77,6 +77,8 @@ List of plugins
   completion of words inside of a search
 * [AutoTag](https://github.com/vim-scripts/AutoTag): updates entries in a tags
   file automatically when saving
+* [PyUnit](https://github.com/charlax/vim-pyunit): plugin enabling advanced unit
+  test support inside your favorite editor.
 
 How to try Vim
 ==============

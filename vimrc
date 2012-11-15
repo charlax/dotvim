@@ -152,6 +152,7 @@ set laststatus=2
 set statusline=%F                     " full path to file
 set statusline+=%h%m%r                " flags
 set statusline+=\ %y                  " filetype
+set statusline+=\ %{fugitive#statusline()} " Current branch
 set statusline+=%=                    " right-align
 set statusline+=line:\ %l/%L\ %P\ col:\ %c\ \     " cursor column, line, total lines, %
 
