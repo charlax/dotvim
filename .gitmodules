@@ -91,3 +91,9 @@
 [submodule "bundle/autotag"]
 	path = bundle/autotag
 	url = git://github.com/vim-scripts/AutoTag.git
+[submodule "bundle/pyunit"]
+	path = bundle/pyunit
+	url = git@github.com:charlax/vim-pyunit.git
+[submodule "eco"]
+	path = eco
+	url = git://github.com/AndrewRadev/vim-eco.git

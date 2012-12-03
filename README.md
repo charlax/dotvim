@@ -79,6 +79,8 @@ List of plugins
   file automatically when saving
 * [PyUnit](https://github.com/charlax/vim-pyunit): plugin enabling advanced unit
   test support inside your favorite editor.
+* [Eco](https://github.com/AndrewRadev/vim-eco): eco (embedded coffee-script)
+  support for Vim
 
 How to try Vim
 ==============
