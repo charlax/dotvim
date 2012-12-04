@@ -21,6 +21,9 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " Re-hardwrap paragraphs of text
 nnoremap <leader>q gqip
 
+" Re-indent file, keeping cursor position
+map <leader>= mzgg=G`z<CR>
+
 " Reselect the text that was just pasted
 nnoremap <leader>v V`]
 
@@ -49,9 +52,6 @@ map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
 " To prefix lines
 noremap <leader>i :s/^/\V
-
-" Re-indent file, keeping cursor position
-map <leader>i mzgg=G`z<CR>
 
 " Prettify json
 map <leader>js  <Esc>:%!python -mjson.tool<CR>
