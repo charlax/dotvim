@@ -81,6 +81,8 @@ List of plugins
   test support inside your favorite editor.
 * [Eco](https://github.com/AndrewRadev/vim-eco): eco (embedded coffee-script)
   support for Vim
+* [Stylus](https://github.com/wavded/vim-stylus): syntax highlighting for
+  stylus
 
 How to try Vim
 ==============
