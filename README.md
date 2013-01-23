@@ -79,6 +79,8 @@ List of plugins
   file automatically when saving
 * [PyUnit](https://github.com/charlax/vim-pyunit): plugin enabling advanced unit
   test support inside your favorite editor.
+* [Python-Pep8-Indent](https://github.com/hynek/vim-python-pep8-indent) a nicer
+  Python indentation style for Vim.
 * [Eco](https://github.com/AndrewRadev/vim-eco): eco (embedded coffee-script)
   support for Vim
 * [Stylus](https://github.com/wavded/vim-stylus): syntax highlighting for
