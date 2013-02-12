@@ -61,3 +61,6 @@ cmap W! %!sudo tee > /dev/null %
 
 " Preview file
 nmap <Leader>P :Preview<CR>
+
+" Open NERDTree
+map <Leader>p :NERDTreeToggle<CR>
