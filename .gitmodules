@@ -103,3 +103,6 @@
 [submodule "bundle/eco"]
 	path = bundle/eco
 	url = git://github.com/AndrewRadev/vim-eco.git
+[submodule "bundle/jade"]
+	path = bundle/jade
+	url = git://github.com/digitaltoad/vim-jade.git

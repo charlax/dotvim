@@ -85,6 +85,8 @@ List of plugins
   support for Vim
 * [Stylus](https://github.com/wavded/vim-stylus): syntax highlighting for
   stylus
+* [Jade](https://github.com/digitaltoad/vim-jade.git): Vim Jade template engine
+  syntax highlighting and indentation
 
 How to try Vim
 ==============
