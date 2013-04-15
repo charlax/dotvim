@@ -34,7 +34,7 @@
 	url = https://github.com/tomtom/tlib_vim.git
 [submodule "bundle/snipmate-snippets"]
 	path = bundle/snipmate-snippets
-	url = https://github.com/honza/snipmate-snippets.git
+	url = git://github.com/honza/vim-snippets.git
 [submodule "bundle/applescript"]
 	path = bundle/applescript
 	url = https://github.com/vim-scripts/applescript.vim.git
@@ -93,7 +93,7 @@
 	url = git://github.com/vim-scripts/AutoTag.git
 [submodule "bundle/pyunit"]
 	path = bundle/pyunit
-	url = git@github.com:charlax/vim-pyunit.git
+	url = git://github.com/charlax/vim-pyunit.git
 [submodule "bundle/stylus"]
 	path = bundle/stylus
 	url = git://github.com/wavded/vim-stylus.git
