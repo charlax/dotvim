@@ -79,7 +79,6 @@ def install(args):
 
     os.system("sudo pip install flake8")
     os.system("sudo gem install bluecloth github-markup")
-    os.system("sudo easy_install rope ropevim")
 
 
 if __name__ == '__main__':
