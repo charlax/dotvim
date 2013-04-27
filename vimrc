@@ -94,6 +94,10 @@ let g:netrw_list_hide= '.*\.swp$,.*\.pyc$'
 " All folds open when open a file
 set foldlevelstart=20
 
+" More natural split opening
+set splitbelow
+set splitright
+
 " ============================================================
 " Wrapping, textwidth, text formatting
 " ============================================================
