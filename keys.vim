@@ -64,3 +64,6 @@ nmap <Leader>P :Preview<CR>
 
 " Open NERDTree
 map <Leader>p :NERDTreeToggle<CR>
+
+" Underline the current line with '='
+nmap <silent> <leader>ul :t.<CR>Vr=
