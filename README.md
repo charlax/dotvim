@@ -87,6 +87,8 @@ List of plugins
   stylus
 * [Jade](https://github.com/digitaltoad/vim-jade.git): Vim Jade template engine
   syntax highlighting and indentation
+* [vim-less](https://github.com/groenewege/vim-less): vim syntax for LESS
+  (dynamic CSS)
 
 How to try Vim
 ==============
