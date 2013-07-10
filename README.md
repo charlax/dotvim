@@ -89,6 +89,8 @@ List of plugins
   syntax highlighting and indentation
 * [vim-less](https://github.com/groenewege/vim-less): vim syntax for LESS
   (dynamic CSS)
+* [vim-gf-python](https://github.com/mkomitee/vim-gf-python.git): enhance
+  support for vim's 'gf' map in python
 
 How to try Vim
 ==============
