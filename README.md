@@ -77,8 +77,6 @@ List of plugins
   completion of words inside of a search
 * [AutoTag](https://github.com/vim-scripts/AutoTag): updates entries in a tags
   file automatically when saving
-* [PyUnit](https://github.com/charlax/vim-pyunit): plugin enabling advanced unit
-  test support inside your favorite editor.
 * [Python-Pep8-Indent](https://github.com/hynek/vim-python-pep8-indent) a nicer
   Python indentation style for Vim.
 * [Eco](https://github.com/AndrewRadev/vim-eco): eco (embedded coffee-script)
