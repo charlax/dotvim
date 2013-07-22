@@ -13,6 +13,9 @@ Tested on Mac Os X 10.6 and Ubuntu 12.04.
 
 On Mac Os X: needs [Homebrew](http://mxcl.github.com/homebrew/).
 
+You'll also need to install
+[Solarized](http://ethanschoonover.com/solarized) palettes for iTerm.
+
 Installing Vim on Mac Os X
 ==========================
 
