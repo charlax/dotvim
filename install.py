@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+import argparse
+import logging
 import os
 import platform
 import shutil
-import logging
-import argparse
 
 REPOSITORY = "git://github.com/charlax/dotvim.git"
 DOTFILES_PATH = os.path.join(os.environ["HOME"], ".vim")
@@ -77,6 +77,7 @@ def install(args):
     if system == "Linux":
         os.system("sudo apt-get install -q -y exuberant-ctags pandoc")
 
+    print "Installing flake8 and other packages."
     os.system("sudo pip install flake8")
     os.system("sudo gem install bluecloth github-markup")
 

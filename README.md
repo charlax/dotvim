@@ -1,7 +1,7 @@
 Installation
 ============
 
-    $ wget https://raw.github.com/charlax/dotvim/master/install.py
+    $ curl -O https://raw.github.com/charlax/dotvim/master/install.py
     $ python install.py
 
 You should read the script before executing it.
