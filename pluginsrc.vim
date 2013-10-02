@@ -12,3 +12,6 @@ let NERDTreeIgnore = ['\.pyc$']
 
 " Only the test file is prefixed with 'test_'
 let PyUnitTestsStructure = "disabled"
+
+" Do not conceal quotes in JSON
+let g:vim_json_syntax_conceal = 0
