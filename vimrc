@@ -26,7 +26,7 @@ if has("autocmd")
     au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 
     " Prose
-    au FileType {md,markdown,tex,txt} call s:setup_for_prose()
+    au FileType {md,markdown,tex,txt,rst} call s:setup_for_prose()
 
     " In Makefiles, use real tabs, not tabs expanded to spaces
     au FileType make set noexpandtab
