@@ -47,6 +47,7 @@ function! StripTrailingWhitespaces()
     %s/\s\+$//e
     call setpos('.', save_cursor)
 endfunction
+command! -range=% StripTrailingWhitespaces call StripTrailingWhitespaces()
 
 " Trim end lines
 function! TrimEndLines()
