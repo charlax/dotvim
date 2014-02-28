@@ -21,6 +21,9 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " Re-hardwrap paragraphs of text
 nnoremap <leader>q gqip
 
+" Re-hardwrap but first separate from next line
+nnoremap <leader>Q o<esc>kgqip
+
 " Re-indent file, keeping cursor position
 map <leader>= mzgg=G`z<CR>
 

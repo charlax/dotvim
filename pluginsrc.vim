@@ -6,7 +6,7 @@ let g:LatexBox_latexmk_options = '-pvc'
 
 " Shows 20 lines of ctrlp
 let g:ctrlp_max_height = 20
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|htmlcov'
+let g:ctrlp_custom_ignore = '([^\/]+\/)*_build\|node_modules\|DS_Store\|git\|htmlcov'
 
 " Filter out .pyc files in NERDTree
 let NERDTreeIgnore = ['\.pyc$']

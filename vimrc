@@ -103,8 +103,8 @@ set splitright
 " ============================================================
 
 " Softwrapping
-set textwidth=0
-set wrap
+setlocal textwidth=0
+setlocal wrap
 set colorcolumn=79
 highlight ColorColumn guibg=#eeeeee
 
@@ -120,7 +120,7 @@ set listchars=tab:▸\ ,eol:¬
 setlocal formatoptions=qrcn1
 
 function! s:setup_for_prose()
-    set textwidth=79
+    setlocal textwidth=79
     setlocal nolist linebreak
     setlocal spell
     " For bulleted list to get correct indentation
