@@ -34,7 +34,7 @@ I am using [Pathogen](https://github.com/tpope/vim-pathogen).
 Adding a plugin
 ---------------
 
-1. `git submodule add git://github.com/jcf/vim-latex.git bundle/latex`
+1. `git submodule add https://github.com/jcf/vim-latex.git bundle/latex`
 2. Add the description in `README`
 3. Make sure nothing else is staged and commit: `git commit -m "Add vim-latex plugin"`
 
@@ -57,39 +57,41 @@ Removing a plugin
 List of plugins
 ---------------
 
+* [AutoTag](https://github.com/vim-scripts/AutoTag): updates entries in a tags
+  file automatically when saving
 * [Cocoa](http://www.vim.org/scripts/script.php?script_id=2674): a collection
   of scripts designed to make it easier to develop Cocoa/Objective-C
   applications.
-* [ctrlp](https://github.com/kien/ctrlp.vim): full path fuzzy file, buffer,
-  mru and tag finder
-* [Tagbar](https://github.com/majutsushi/tagbar): Vim plugin that displays tags
-  in a window, ordered by class etc.
-* [Flake8](https://github.com/nvie/vim-flake8): runs the currently open file
-  through Flake8, a static syntax and style checker for Python source code.
 * [CoffeeScript](https://github.com/kchmck/vim-coffee-script): CoffeeScript
   support for Vim.
+* [ctrlp](https://github.com/kien/ctrlp.vim): full path fuzzy file, buffer, mru
+  and tag finder
+* [Eco](https://github.com/AndrewRadev/vim-eco): eco (embedded coffee-script)
+  support for Vim
+* [Flake8](https://github.com/nvie/vim-flake8): runs the currently open file
+  through Flake8, a static syntax and style checker for Python source code.
+* [Jade](https://github.com/digitaltoad/vim-jade.git): Vim Jade template engine
+  syntax highlighting and indentation
+* [json](https://github.com/elzr/vim-json): JSON highlighting script.
 * [Mako](https://github.com/sophacles/vim-bundle-mako): a collection of vim
   scripts for the mako templating engine.
 * [nerdtree](https://github.com/scrooloose/nerdtree): a tree explorer plugin.
-* [json](https://github.com/elzr/vim-json): JSON highlighting script.
+* [Python-Pep8-Indent](https://github.com/hynek/vim-python-pep8-indent) a nicer
+  Python indentation style for Vim.
 * [repeat](https://github.com/tpope/vim-repeat): enable repeating supported
   plugin maps with "."
 * [Solarized](https://github.com/altercation/vim-colors-solarized): precision
   colorscheme for the vim text editor
-* [AutoTag](https://github.com/vim-scripts/AutoTag): updates entries in a tags
-  file automatically when saving
-* [Python-Pep8-Indent](https://github.com/hynek/vim-python-pep8-indent) a nicer
-  Python indentation style for Vim.
-* [Eco](https://github.com/AndrewRadev/vim-eco): eco (embedded coffee-script)
-  support for Vim
 * [Stylus](https://github.com/wavded/vim-stylus): syntax highlighting for
   stylus
-* [Jade](https://github.com/digitaltoad/vim-jade.git): Vim Jade template engine
-  syntax highlighting and indentation
-* [vim-less](https://github.com/groenewege/vim-less): vim syntax for LESS
-  (dynamic CSS)
+* [Tagbar](https://github.com/majutsushi/tagbar): Vim plugin that displays tags
+  in a window, ordered by class etc.
+* [vim-arduino](https://github.com/sinisterstuf/vim-arduino.git): compile and
+  deploy arduino sketches in Vim
 * [vim-gf-python](https://github.com/mkomitee/vim-gf-python.git): enhance
   support for vim's 'gf' map in python
+* [vim-less](https://github.com/groenewege/vim-less): vim syntax for LESS
+  (dynamic CSS)
 
 How to try Vim
 ==============
@@ -105,7 +107,8 @@ If you want to try Vim, just follow these steps:
 4. Along the way, add plugins and improve your `.vimrc` little by little,
    making sure you understand and comment all your options.
 
-Feel free to read my article: [Why I use Vim](http://blog.d3in.org/post/14220797290/why-i-keep-on-using-vim-instead-of-going-back-to)
+Feel free to read my article: [Why I use
+Vim](http://blog.d3in.org/post/14220797290/why-i-keep-on-using-vim-instead-of-going-back-to)
 
 Reference card
 ==============
