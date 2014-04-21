@@ -44,8 +44,8 @@ if has("autocmd")
     au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
           \| exe "normal! g`\"" | endif
 
-    autocmd FileType arduino,c,cpp,java,php,python,javascript,coffee,eco,html,css,mako,sql,json,rst,cucumber autocmd BufWritePre <buffer> :call StripTrailingWhitespaces()
-    autocmd FileType arduino,c,cpp,java,php,python,javascript,coffee,eco,html,css,mako,sql,json,rst,cucumber autocmd BufWritePre <buffer> :call TrimEndLines()
+    autocmd FileType arduino,c,cpp,java,php,python,javascript,coffee,eco,html,css,mako,sql,json,rst,cucumber,yaml autocmd BufWritePre <buffer> :call StripTrailingWhitespaces()
+    autocmd FileType arduino,c,cpp,java,php,python,javascript,coffee,eco,html,css,mako,sql,json,rst,cucumber,yaml autocmd BufWritePre <buffer> :call TrimEndLines()
 
 endif
 
