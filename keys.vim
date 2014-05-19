@@ -70,3 +70,7 @@ map <Leader>p :NERDTreeToggle<CR>
 
 " Underline the current line with '='
 nmap <silent> <leader>ul :t.<CR>Vr=
+
+" Reselect visual block after indent change
+vnoremap < <gv
+vnoremap > >gv

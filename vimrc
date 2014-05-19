@@ -163,12 +163,16 @@ set statusline+=line:\ %l/%L\ %P\ col:\ %c\ \     " cursor column, line, total l
 " Provide some context when editing
 set scrolloff=5
 
-" Relative numbering of lines
+" Absolute line numbers in insert mode, relative otherwise for easy movement
 set relativenumber
+au InsertEnter * :set number
+au InsertLeave * :set relativenumber
 
 " Fixing Vim's regex handling
 nnoremap / /\v
 vnoremap / /\v
+" Assume /g on :s subsitutions
+set gdefault
 
 " ============================================================
 " Paths
