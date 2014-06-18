@@ -16,3 +16,8 @@ let PyUnitTestsStructure = "disabled"
 
 " Do not conceal quotes in JSON
 let g:vim_json_syntax_conceal = 0
+
+" RTFHighlight
+let g:rtfh_theme = 'moe'
+let g:rtfh_font = 'Consolas'
+let g:rtfh_size = '34'

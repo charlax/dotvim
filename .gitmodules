@@ -106,3 +106,6 @@
 [submodule "bundle/vim-arduino"]
 	path = bundle/vim-arduino
 	url = https://github.com/sinisterstuf/vim-arduino.git
+[submodule "bundle/rtf-highlight"]
+	path = bundle/rtf-highlight
+	url = https://github.com/jdonaldson/rtf-highlight.git

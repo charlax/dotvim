@@ -80,6 +80,8 @@ List of plugins
   Python indentation style for Vim.
 * [repeat](https://github.com/tpope/vim-repeat): enable repeating supported
   plugin maps with "."
+* [rtf-highlight](https://github.com/jdonaldson/rtf-highlight.git): Syntax
+  Highlighting to RTF for vim
 * [Solarized](https://github.com/altercation/vim-colors-solarized): precision
   colorscheme for the vim text editor
 * [Stylus](https://github.com/wavded/vim-stylus): syntax highlighting for

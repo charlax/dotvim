@@ -74,3 +74,6 @@ nmap <silent> <leader>ul :t.<CR>Vr=
 " Reselect visual block after indent change
 vnoremap < <gv
 vnoremap > >gv
+
+" Highlight and copy as RTF
+vnoremap <leader>h :RTFHighlight python<CR>
