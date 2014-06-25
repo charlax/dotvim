@@ -47,7 +47,8 @@ def clone_dotfile(repo, path):
         os.system("cd %s && git checkout master && git pull" % path)
 
     if not os.path.exists(path):
-        raise Exception("Dotfiles path '%s' does not exist" % path)
+        raise Exception("Dotfiles path '%s' does not exist. "
+                        "Might be a git error, see above." % path)
 
 
 def install(args):
