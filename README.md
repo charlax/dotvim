@@ -57,8 +57,6 @@ Removing a plugin
 List of plugins
 ---------------
 
-* [AutoTag](https://github.com/vim-scripts/AutoTag): updates entries in a tags
-  file automatically when saving
 * [Cocoa](http://www.vim.org/scripts/script.php?script_id=2674): a collection
   of scripts designed to make it easier to develop Cocoa/Objective-C
   applications.

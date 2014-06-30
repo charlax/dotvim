@@ -185,6 +185,9 @@ set directory=~/.vim/temp/temp
 " .netrwhist
 let g:netrw_home = expand('~/.vim/temp/')
 
+" tags
+set tags=./.tags;,./.tags_env;
+
 " My other functions
 
 source $HOME/.vim/my_functions.vim
