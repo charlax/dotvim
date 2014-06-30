@@ -71,6 +71,12 @@ map <Leader>p :NERDTreeToggle<CR>
 " Underline the current line with '='
 nmap <silent> <leader>ul :t.<CR>Vr=
 
+" Underline the current line with '-'
+nmap <silent> <leader>uL :t.<CR>Vr-
+
+" Underline the current line with '^'
+nmap <silent> <leader>Ul :t.<CR>Vr-
+
 " Reselect visual block after indent change
 vnoremap < <gv
 vnoremap > >gv
