@@ -1,5 +1,7 @@
 " Fast saving
 nmap <leader>w :w!<cr>
+nmap <leader>. :w<cr>
+nmap <leader>m :wq<cr>
 
 " To do things right
 nnoremap <up> <nop>
