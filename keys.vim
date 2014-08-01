@@ -13,6 +13,11 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 
+" Map space to move by one screen
+nnoremap <space> <C-f>
+" Should only work in GVim
+nnoremap <S-space> <C-b>
+
 " Movement by screen line instead of file line
 nnoremap j gj
 nnoremap k gk
