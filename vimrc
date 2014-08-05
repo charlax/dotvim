@@ -188,7 +188,7 @@ set directory=~/.vim/temp/temp
 let g:netrw_home = expand('~/.vim/temp/')
 
 " tags
-set tags=./.tags;,./.tags_env;
+set tags=./tags;,./tags_env;
 
 " My other functions
 
