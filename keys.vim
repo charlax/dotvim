@@ -83,7 +83,10 @@ nmap <silent> <leader>ul :t.<CR>Vr=
 nmap <silent> <leader>uL :t.<CR>Vr-
 
 " Underline the current line with '^'
-nmap <silent> <leader>Ul :t.<CR>V/^
+nmap <silent> <leader>Ul :t.<CR>Vr^
+
+" Underline the current line with '^'
+nmap <silent> <leader>UL :t.<CR>Vr"
 
 " Reselect visual block after indent change
 vnoremap < <gv

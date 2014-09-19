@@ -46,7 +46,6 @@ if has("autocmd")
     au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
           \| exe "normal! g`\"" | endif
 
-    autocmd FileType arduino,c,cpp,java,php,python,javascript,coffee,eco,html,css,mako,sql,json,rst,cucumber,yaml,zsh autocmd BufWritePre <buffer> :call StripTrailingWhitespaces()
     autocmd FileType arduino,c,cpp,java,php,python,javascript,coffee,eco,html,css,mako,sql,json,rst,cucumber,yaml,zsh autocmd BufWritePre <buffer> :call TrimEndLines()
 
 endif
@@ -81,7 +80,10 @@ set tabstop=4 shiftwidth=4
 set softtabstop=4 " makes the spaces feel like real tabs
 set expandtab
 
-" backspace through everything in insert mode
+" Remove trailing whitespace before save
+autocmd BufWritePre <buffer> :call StripTrailingWhitespaces()
+
+" Backspace through everything in insert mode
 set backspace=indent,eol,start
 
 " No bell
