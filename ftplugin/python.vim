@@ -10,6 +10,8 @@ command! -range RemoveExtraEqualSpace <line1>,<line2>s/ \+= \+/=/g
 map <Leader>d :call InsertPDBLine()<CR>
 
 function! InsertPDBLine()
-      let trace = expand("import ipdb; ipdb.set_trace()  # FIXME REMOVE")
-        execute "normal o".trace
-    endfunction
+    let trace = expand("import ipdb; ipdb.set_trace()  # FIXME REMOVE")
+    execute "normal o".trace
+endfunction
+
+autocmd BufWritePost *.py call Flake8()
