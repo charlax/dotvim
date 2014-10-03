@@ -81,7 +81,7 @@ set softtabstop=4 " makes the spaces feel like real tabs
 set expandtab
 
 " Remove trailing whitespace before save
-autocmd BufWritePre <buffer> :call StripTrailingWhitespaces()
+autocmd BufWritePre * :call StripTrailingWhitespaces()
 
 " Backspace through everything in insert mode
 set backspace=indent,eol,start
