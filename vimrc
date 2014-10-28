@@ -175,8 +175,6 @@ au InsertLeave * :set relativenumber
 " Fixing Vim's regex handling
 nnoremap / /\v
 vnoremap / /\v
-" Assume /g on :s subsitutions
-set gdefault
 
 " ============================================================
 " Paths
