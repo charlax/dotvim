@@ -14,4 +14,6 @@ function! InsertPDBLine()
     execute "normal o".trace
 endfunction
 
-autocmd BufWritePost *.py call Flake8()
+" autocmd BufWritePost *.py call Flake8()
+" Show errors in gutter
+let g:flake8_show_in_gutter=1
