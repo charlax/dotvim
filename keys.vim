@@ -1,3 +1,6 @@
+" To check if a key is used:
+" :verbose map <key>
+
 " Fast saving
 nmap <leader>w :w!<cr>
 nmap <leader>. :w<cr>
@@ -47,11 +50,11 @@ nnoremap <c-l> <c-w>l
 " CtrlPTags
 nnoremap <leader>t :CtrlPTag<CR>
 
-" C-\ - Open the definition in a new tab
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+" Open the tag definition in a new tab
+nnoremap <leader>] :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
-" A-] - Open the definition in a vertical split
-map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+" Open the tag definition in a vertical split (this is <A-]>).
+nnoremap ‘ :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e
