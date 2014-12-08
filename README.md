@@ -8,7 +8,7 @@ You should read the script before executing it.
 Prerequisites
 =============
 
-Tested on Mac Os X 10.6 and Ubuntu 12.04.
+Tested on Mac Os X 10.6, 10.10 and Ubuntu 12.04.
 
 On Mac Os X: needs [Homebrew](http://mxcl.github.com/homebrew/).
 
