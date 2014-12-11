@@ -68,7 +68,8 @@ map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 noremap <leader>i :s/^/\V
 
 " Prettify json
-map <leader>js  <Esc>:%!python -mjson.tool<CR>
+map <leader>js <Esc>:%!python -mjson.tool<CR>
+vnoremap <leader>pp <Esc>:'<,'>!pypprint<CR>
 
 " Use :W! to write to a file using sudo if you forgot to 'sudo vim file'
 cmap W! %!sudo tee > /dev/null %
