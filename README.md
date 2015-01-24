@@ -77,20 +77,23 @@ List of plugins
   Python indentation style for Vim.
 * [repeat](https://github.com/tpope/vim-repeat): enable repeating supported
   plugin maps with "."
-* [rtf-highlight](https://github.com/jdonaldson/rtf-highlight.git): Syntax
-  Highlighting to RTF for vim
+* [rtf-highlight](https://github.com/jdonaldson/rtf-highlight.git): syntax
+  highlighting to RTF for vim
 * [Solarized](https://github.com/altercation/vim-colors-solarized): precision
   colorscheme for the vim text editor
 * [Stylus](https://github.com/wavded/vim-stylus): syntax highlighting for
   stylus
 * [Tagbar](https://github.com/majutsushi/tagbar): Vim plugin that displays tags
   in a window, ordered by class etc.
+* [ultisnips](https://github.com/SirVer/ultisnips): snippet engine
 * [vim-arduino](https://github.com/sinisterstuf/vim-arduino.git): compile and
   deploy arduino sketches in Vim
 * [vim-gf-python](https://github.com/mkomitee/vim-gf-python.git): enhance
   support for vim's 'gf' map in python
 * [vim-less](https://github.com/groenewege/vim-less): vim syntax for LESS
   (dynamic CSS)
+* [vim-snippets](https://github.com/honza/vim-snippets): snippets file for various
+  programming languages
 
 How to try Vim
 ==============
