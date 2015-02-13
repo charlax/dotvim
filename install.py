@@ -29,7 +29,7 @@ def symlink(source, target):
 
         if os.path.exists(backup):
             raise Exception("Can't backup to %s: file already exists." %
-                    backup)
+                            backup)
 
         shutil.move(target, backup)
 
@@ -86,7 +86,7 @@ def install(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Install charlax's dotvim.")
     parser.add_argument("--only-symlink", action="store_true",
-            help="Only symlink the files")
+                        help="Only symlink the files")
     args = parser.parse_args()
 
     install(args)
