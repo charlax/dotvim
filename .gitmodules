@@ -103,3 +103,6 @@
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
+[submodule "thrift.vim"]
+	path = thrift.vim
+	url = git@github.com:solarnz/thrift.vim.git

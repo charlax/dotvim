@@ -85,6 +85,8 @@ List of plugins
   stylus
 * [Tagbar](https://github.com/majutsushi/tagbar): Vim plugin that displays tags
   in a window, ordered by class etc.
+* [thrift.vim](https://github.com/solarnz/thrift.vim.git): syntax highlighting
+  for thrift definition files.
 * [ultisnips](https://github.com/SirVer/ultisnips): snippet engine
 * [vim-arduino](https://github.com/sinisterstuf/vim-arduino.git): compile and
   deploy arduino sketches in Vim
