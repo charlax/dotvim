@@ -60,42 +60,43 @@ List of plugins
   of scripts designed to make it easier to develop Cocoa/Objective-C
   applications.
 * [CoffeeScript](https://github.com/kchmck/vim-coffee-script): CoffeeScript
-  support for Vim.
+  support.
 * [ctrlp](https://github.com/kien/ctrlp.vim): full path fuzzy file, buffer, mru
   and tag finder
 * [Eco](https://github.com/AndrewRadev/vim-eco): eco (embedded coffee-script)
-  support for Vim
+  support.
 * [Flake8](https://github.com/nvie/vim-flake8): runs the currently open file
   through Flake8, a static syntax and style checker for Python source code.
-* [Jade](https://github.com/digitaltoad/vim-jade.git): Vim Jade template engine
+* [Jade](https://github.com/digitaltoad/vim-jade.git): Jade template engine
   syntax highlighting and indentation
 * [json](https://github.com/elzr/vim-json): JSON highlighting script.
-* [Mako](https://github.com/sophacles/vim-bundle-mako): a collection of vim
+* [Mako](https://github.com/sophacles/vim-bundle-mako): a collection of
   scripts for the mako templating engine.
 * [nerdtree](https://github.com/scrooloose/nerdtree): a tree explorer plugin.
 * [Python-Pep8-Indent](https://github.com/hynek/vim-python-pep8-indent) a nicer
-  Python indentation style for Vim.
+  Python indentation style.
 * [repeat](https://github.com/tpope/vim-repeat): enable repeating supported
   plugin maps with "."
 * [rtf-highlight](https://github.com/jdonaldson/rtf-highlight.git): syntax
-  highlighting to RTF for vim
+  highlighting to RTF
 * [Solarized](https://github.com/altercation/vim-colors-solarized): precision
-  colorscheme for the vim text editor
+  colorscheme
 * [Stylus](https://github.com/wavded/vim-stylus): syntax highlighting for
-  stylus
-* [Tagbar](https://github.com/majutsushi/tagbar): Vim plugin that displays tags
+  stylus.
+* [Tagbar](https://github.com/majutsushi/tagbar): displays tags
   in a window, ordered by class etc.
 * [thrift.vim](https://github.com/solarnz/thrift.vim.git): syntax highlighting
   for thrift definition files.
 * [ultisnips](https://github.com/SirVer/ultisnips): snippet engine
 * [vim-arduino](https://github.com/sinisterstuf/vim-arduino.git): compile and
-  deploy arduino sketches in Vim
+  deploy Arduino sketches.
 * [vim-gf-python](https://github.com/mkomitee/vim-gf-python.git): enhance
-  support for vim's 'gf' map in python
-* [vim-less](https://github.com/groenewege/vim-less): vim syntax for LESS
-  (dynamic CSS)
+  support for Vim's 'gf' map in python.
+* [vim-less](https://github.com/groenewege/vim-less): syntax for LESS
+  (dynamic CSS).
 * [vim-snippets](https://github.com/honza/vim-snippets): snippets file for various
-  programming languages
+  programming languages.
+* [xmledit](https://github.com/sukima/xmledit/): help edit XML files.
 
 How to try Vim
 ==============

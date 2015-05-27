@@ -106,3 +106,6 @@
 [submodule "bundle/thrift.vim"]
 	path = bundle/thrift.vim
 	url = https://github.com/solarnz/thrift.vim.git
+[submodule "bundle/xmledit"]
+	path = bundle/xmledit
+	url = https://github.com/sukima/xmledit.git
