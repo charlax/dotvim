@@ -39,6 +39,10 @@ if has("autocmd")
     " Yaml
     au FileType yaml set softtabstop=2 tabstop=2 shiftwidth=2 expandtab autoindent
 
+    " XML
+    au FileType xml set softtabstop=2 tabstop=2 shiftwidth=2 expandtab autoindent
+    au FileType xsd set softtabstop=2 tabstop=2 shiftwidth=2 expandtab autoindent
+
     " Json
     au FileType json set softtabstop=2 tabstop=2 shiftwidth=2 expandtab autoindent
 
