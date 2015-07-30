@@ -4,9 +4,10 @@ set nocompatible
 syntax enable
 set encoding=utf-8
 
-" Mapping leader to comma
-let mapleader = ","
-let maplocalleader = ","
+" Mapping leader to comma. Make sure no shortcut mapped in insert mode is
+" uses leader, otherwise you might trigger shortcuts while typing.
+let mapleader = "\<Space>"
+let maplocalleader = "\<Space>"
 
 " Using tpope's Pathogen to load all the plugins
 runtime bundle/vim-pathogen/autoload/pathogen.vim

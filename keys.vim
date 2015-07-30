@@ -3,6 +3,7 @@
 
 " Fast saving
 nmap <leader>w :w!<cr>
+nmap <leader>s :w<cr>
 nmap <leader>. :w<cr>
 imap <leader>. <ESC>:w<cr>
 nmap <leader>m :wq<cr>
@@ -36,7 +37,7 @@ nnoremap <leader>q gqip
 nnoremap <leader>Q o<esc>kgqip
 
 " Re-indent file, keeping cursor position
-map <leader>= mzgg=G`z<CR>
+nmap <leader>= mzgg=G`z<CR>
 
 " Reselect the text that was just pasted
 nnoremap <leader>v V`]
@@ -100,10 +101,15 @@ vnoremap > >gv
 " Move lines up and down
 nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
-inoremap <leader>j <Esc>:m .+1<CR>==gi
-inoremap <leader>k <Esc>:m .-2<CR>==gi
 vnoremap <leader>j :m '>+1<CR>gv=gv
 vnoremap <leader>k :m '<-2<CR>gv=gv
 
 " Highlight and copy as RTF
 vnoremap <leader>h :RTFHighlight python<CR>
+
+" Expand region
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+
+" Remove highlighting after search
+map <Leader>n :noh<CR>
