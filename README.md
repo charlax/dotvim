@@ -65,9 +65,6 @@ List of plugins
   and tag finder
 * [Eco](https://github.com/AndrewRadev/vim-eco): eco (embedded coffee-script)
   support.
-* [expand-region](https://github.com/terryma/vim-expand-region.git): allows
-  you to visually select increasingly larger regions of text using the same
-  key combination.
 * [Flake8](https://github.com/nvie/vim-flake8): runs the currently open file
   through Flake8, a static syntax and style checker for Python source code.
 * [Jade](https://github.com/digitaltoad/vim-jade.git): Jade template engine
