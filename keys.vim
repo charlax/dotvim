@@ -5,7 +5,6 @@
 nmap <leader>w :w!<cr>
 nmap <leader>s :w<cr>
 nmap <leader>. :w<cr>
-imap <leader>. <ESC>:w<cr>
 nmap <leader>m :wq<cr>
 
 " To do things right
