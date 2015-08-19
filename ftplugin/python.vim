@@ -8,7 +8,7 @@ setl formatoptions=cq textwidth=72 foldignore= wildignore+=*.py[co]
 command! -range RemoveExtraEqualSpace <line1>,<line2>s/ \+= \+/=/g
 
 map <Leader>d :call InsertPDBLine()<CR>
-map <Leader>pep :let g:flake8_on_save = 0
+map <Leader>pep :let g:flake8_on_save = 1
 
 function! InsertPDBLine()
     let trace = expand("import ipdb; ipdb.set_trace()  # FIXME REMOVE")
@@ -17,7 +17,8 @@ endfunction
 
 autocmd BufWritePost *.py call MaybeFlake8()
 
-let g:flake8_on_save = 1
+" Defaults to being disabled, flake8 is too slow and blocks
+let g:flake8_on_save = 0
 function! MaybeFlake8()
     if g:flake8_on_save
         call Flake8()
