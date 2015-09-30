@@ -162,20 +162,17 @@ set wildmode=list:longest,full
 
 " Status bar
 set laststatus=2
-set statusline=%F                     " full path to file
-set statusline+=%h%m%r                " flags
-set statusline+=\ %y                  " filetype
-set statusline+=\ %{fugitive#statusline()} " Current branch
-set statusline+=%=                    " right-align
-set statusline+=line:\ %l/%L\ %P\ col:\ %c\ \     " cursor column, line, total lines, %
+set statusline=%y                      " filetype
+set statusline+=\ %F                   " full path to file
+set statusline+=%h%m%r                 " flags
+set statusline+=%=                     " right-align
+set statusline+=%l/%L\ (%P)\ c\ %c\ \  " cursor column, line, total lines, %
 
 " Provide some context when editing
 set scrolloff=5
 
-" Absolute line numbers in insert mode, relative otherwise for easy movement
-set relativenumber
-au InsertEnter * :set number
-au InsertLeave * :set relativenumber
+" Line numbers
+set number
 
 " Fixing Vim's regex handling
 nnoremap / /\v
