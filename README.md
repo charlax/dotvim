@@ -115,6 +115,10 @@ If you want to try Vim, just follow these steps:
 Feel free to read my article: [Why I use
 Vim](http://blog.d3in.org/post/14220797290/why-i-keep-on-using-vim-instead-of-going-back-to)
 
+Here's some other good articles:
+
+* [A Good Vimrc](http://dougblack.io/words/a-good-vimrc.html)
+
 Reference card
 ==============
 
