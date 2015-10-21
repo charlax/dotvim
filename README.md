@@ -90,6 +90,7 @@ List of plugins
 * [ultisnips](https://github.com/SirVer/ultisnips): snippet engine
 * [vim-arduino](https://github.com/sinisterstuf/vim-arduino.git): compile and
   deploy Arduino sketches.
+* [vim-go](https://github.com/fatih/vim-go.git): go development plugin
 * [vim-gf-python](https://github.com/mkomitee/vim-gf-python.git): enhance
   support for Vim's 'gf' map in python.
 * [vim-less](https://github.com/groenewege/vim-less): syntax for LESS
