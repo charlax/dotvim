@@ -62,8 +62,6 @@ map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 " To prefix lines
 noremap <leader>i :s/^/\V
 
-" Prettify json
-map <leader>js <Esc>:%!python -mjson.tool<CR>
 " Prettify Python
 vnoremap <leader>pp <Esc>:'<,'>!pypprint<CR>
 
