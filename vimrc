@@ -121,12 +121,12 @@ highlight ColorColumn guibg=#eeeeee
 set list
 set listchars=tab:▸\ ,eol:¬
 
+" :help fo-table
 " q: Allow formatting of comments with "gq".
-" r: Automatically insert the current comment leader after hitting <Enter>
 " c: Auto-wrap comments using textwidth
 " n: When formatting text, recognize numbered lists.
 " 1: Don't break a line after a one-letter word.
-setlocal formatoptions=qrcn1
+setlocal formatoptions=qcn1
 
 function! s:setup_for_prose()
     setlocal textwidth=79
