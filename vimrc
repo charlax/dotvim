@@ -9,7 +9,7 @@ set encoding=utf-8
 let mapleader = "\<Space>"
 let maplocalleader = "\<Space>"
 
-" To disable a plugin, add it's bundle name to the following list
+" To disable a plugin, add its bundle name to the following list
 let g:pathogen_disabled = []
 
 if v:version <= '704'
