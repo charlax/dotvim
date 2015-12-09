@@ -71,3 +71,16 @@ function! DisableDisplayWrapping()
     nunmap <buffer> k
   endif
 endfunction
+
+" Wrap in '' and add trailing comma
+function! SQLListify()
+    %s/\(\S*\)/'\1',/g
+    $s/,$/
+endfunction
+command! SQLListify call SQLListify()
+
+" Format all uuids
+function! FormatUUIDS()
+    %s/\(\w\{8\}\)\(\w\{4\}\)\(\w\{4\}\)\(\w\{4\}\)\(\w\{12\}\)/\1-\2-\3-\4-\5/g
+endfunction
+command! FormatUUIDS call FormatUUIDS()
