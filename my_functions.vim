@@ -81,6 +81,14 @@ command! SQLListify call SQLListify()
 
 " Format all uuids
 function! FormatUUIDS()
-    %s/\(\w\{8\}\)\(\w\{4\}\)\(\w\{4\}\)\(\w\{4\}\)\(\w\{12\}\)/\1-\2-\3-\4-\5/g
+    %s/\<
+      \\([0-9A-Fa-f]\{8\}
+      \\)\([0-9A-Fa-f]\{4\}\)
+      \\([0-9A-Fa-f]\{4\}\)
+      \\([0-9A-Fa-f]\{4\}\)
+      \\([0-9A-Fa-f]\{12\}\)
+      \\>
+      \/\1-\2-\3-\4-\5
+      \/g
 endfunction
 command! FormatUUIDS call FormatUUIDS()
