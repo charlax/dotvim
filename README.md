@@ -95,6 +95,8 @@ List of plugins
   support for Vim's 'gf' map in python.
 * [vim-less](https://github.com/groenewege/vim-less): syntax for LESS
   (dynamic CSS).
+* [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors.git):
+  True Sublime Text style multiple selections for Vim
 * [vim-snippets](https://github.com/honza/vim-snippets): snippets file for various
   programming languages.
 * [xmledit](https://github.com/sukima/xmledit/): help edit XML files.
