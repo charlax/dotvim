@@ -17,3 +17,4 @@ Cheatsheet
 
 ```
 :g/^$/d
+```
