@@ -12,3 +12,8 @@ Cheatsheet
 ```
 <ctrl+v><tab>
 ```
+
+## Delete empty lines
+
+```
+:g/^$/d
