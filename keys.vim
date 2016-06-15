@@ -105,3 +105,7 @@ vmap <C-v> <Plug>(expand_region_shrink)
 
 " Remove highlighting after search
 map <Leader>n :noh<CR>
+
+" Copy filename to clipboard
+nmap ,cs :let @*=expand("%")<CR>
+nmap ,cl :let @*=expand("%:p")<CR>
