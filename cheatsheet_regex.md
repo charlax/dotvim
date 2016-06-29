@@ -1,3 +1,7 @@
+# Cheatsheet for regex
+
+Inspired by [vimtips](http://rayninfo.co.uk/vimtips.html).
+
 ## Replace regex
 
 Replace all date in format `YYYYMMDD` to `MM/DD/YYYY`:
@@ -10,4 +14,19 @@ Replace all date in format `YYYYMMDD` to `MM/DD/YYYY`:
 
 ```
 :%s/(.*)//g
+```
+
+## Grab email only, replacing the whole line
+
+E.g. on the following file:
+
+```
+Charlax <toaster@toasting.org>
+```
+
+Execute:
+
+```
+:%s/.*<//g
+:%s/>//g
 ```
