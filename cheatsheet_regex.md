@@ -30,3 +30,18 @@ Execute:
 :%s/.*<//g
 :%s/>//g
 ```
+
+## Delete everything after a character
+
+E.g.:
+
+```
+* Toaster: 1
+* Toaster: 2
+```
+
+To delete everything after `:`:
+
+```
+:%s/:.*//
+```
