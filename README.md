@@ -48,8 +48,8 @@ Removing a plugin
 -----------------
 
 1. Remove submodule from `.gitmodules`
-2. `git rm --cached path_to_plugin`
-3. `rm path_to_plugin`
+2. `git rm --cached bundle/path_to_plugin`
+3. `rm -Rf bundle/path_to_plugin`
 4. Remove the description in `README`, and look for other mention of the plugin
 5. Commit (including `.gitmodules`) and delete the files
 
@@ -91,8 +91,6 @@ List of plugins
 * [vim-arduino](https://github.com/sinisterstuf/vim-arduino.git): compile and
   deploy Arduino sketches.
 * [vim-go](https://github.com/fatih/vim-go.git): go development plugin
-* [vim-gf-python](https://github.com/mkomitee/vim-gf-python.git): enhance
-  support for Vim's 'gf' map in python.
 * [vim-less](https://github.com/groenewege/vim-less): syntax for LESS
   (dynamic CSS).
 * [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors.git):
