@@ -88,9 +88,6 @@
 [submodule "bundle/less"]
 	path = bundle/less
 	url = git://github.com/groenewege/vim-less.git
-[submodule "bundle/gf-python"]
-	path = bundle/gf-python
-	url = https://github.com/mkomitee/vim-gf-python.git
 [submodule "bundle/vim-arduino"]
 	path = bundle/vim-arduino
 	url = https://github.com/sinisterstuf/vim-arduino.git
