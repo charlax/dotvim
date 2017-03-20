@@ -55,9 +55,6 @@
 [submodule "bundle/flake8"]
 	path = bundle/flake8
 	url = git://github.com/nvie/vim-flake8.git
-[submodule "bundle/coffee-script"]
-	path = bundle/coffee-script
-	url = git://github.com/kchmck/vim-coffee-script.git
 [submodule "bundle/mako"]
 	path = bundle/mako
 	url = git://github.com/sophacles/vim-bundle-mako.git

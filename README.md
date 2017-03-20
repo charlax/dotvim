@@ -62,8 +62,6 @@ List of plugins
 * [Cocoa](http://www.vim.org/scripts/script.php?script_id=2674): a collection
   of scripts designed to make it easier to develop Cocoa/Objective-C
   applications.
-* [CoffeeScript](https://github.com/kchmck/vim-coffee-script): CoffeeScript
-  support.
 * [ctrlp](https://github.com/kien/ctrlp.vim): full path fuzzy file, buffer, mru
   and tag finder
 * [Eco](https://github.com/AndrewRadev/vim-eco): eco (embedded coffee-script)
