@@ -76,9 +76,6 @@
 [submodule "bundle/python-ident"]
 	path = bundle/python-ident
 	url = git://github.com/hynek/vim-python-pep8-indent.git
-[submodule "bundle/eco"]
-	path = bundle/eco
-	url = git://github.com/AndrewRadev/vim-eco.git
 [submodule "bundle/less"]
 	path = bundle/less
 	url = git://github.com/groenewege/vim-less.git

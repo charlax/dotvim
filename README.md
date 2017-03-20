@@ -64,8 +64,6 @@ List of plugins
   applications.
 * [ctrlp](https://github.com/kien/ctrlp.vim): full path fuzzy file, buffer, mru
   and tag finder
-* [Eco](https://github.com/AndrewRadev/vim-eco): eco (embedded coffee-script)
-  support.
 * [Flake8](https://github.com/nvie/vim-flake8): runs the currently open file
   through Flake8, a static syntax and style checker for Python source code.
 * [json](https://github.com/elzr/vim-json): JSON highlighting script.
