@@ -47,11 +47,14 @@ Upgrading all plugins
 Removing a plugin
 -----------------
 
-1. Remove submodule from `.gitmodules`
-2. `git rm --cached bundle/path_to_plugin`
-3. `rm -Rf bundle/path_to_plugin`
-4. Remove the description in `README`, and look for other mention of the plugin
-5. Commit (including `.gitmodules`) and delete the files
+Run:
+
+    $ MODULE=bundle/YOUR_MODULE
+    $ git submodule deinit -f $MODULE && rm -rf .git/modules/$MODULE && git rm -f $MODULE
+    $ git commit -am "Remove $MODULE"
+
+Remove the description in `README`, and look for other mention of the plugin by
+finding all occurrences of its name in the repo (e.g. using `ack` or `ag`).
 
 List of plugins
 ---------------
@@ -67,8 +70,6 @@ List of plugins
   support.
 * [Flake8](https://github.com/nvie/vim-flake8): runs the currently open file
   through Flake8, a static syntax and style checker for Python source code.
-* [Jade](https://github.com/digitaltoad/vim-jade.git): Jade template engine
-  syntax highlighting and indentation
 * [json](https://github.com/elzr/vim-json): JSON highlighting script.
 * [Mako](https://github.com/sophacles/vim-bundle-mako): a collection of
   scripts for the mako templating engine.
