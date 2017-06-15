@@ -45,3 +45,9 @@ To delete everything after `:`:
 ```
 :%s/:.*//
 ```
+
+## Replace newline character "^M" and "^@"
+
+```
+:%s/<Ctrl-V><Ctrl-M>/\r/g
+```
