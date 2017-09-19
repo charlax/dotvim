@@ -137,7 +137,7 @@ setlocal formatoptions=qcn1
 
 function! s:setup_for_prose()
     setlocal textwidth=79
-    setlocal nolist linebreak
+    setlocal linebreak
     setlocal spell
     " For bulleted list to get correct indentation
     setlocal autoindent
