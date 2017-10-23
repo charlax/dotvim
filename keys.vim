@@ -2,7 +2,7 @@
 " :verbose map <key>
 
 " Fast saving
-nmap <leader>w :w!<cr>
+nmap <leader>w :w<cr>
 nmap <leader>s :w<cr>
 nmap <leader>. :w<cr>
 nmap zz :w<cr>
