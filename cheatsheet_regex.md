@@ -1,3 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+# Table of Contents
+
+- [Cheatsheet for regex](#cheatsheet-for-regex)
+  - [Replace regex](#replace-regex)
+  - [Delete everything in parentheses](#delete-everything-in-parentheses)
+  - [Grab email only, replacing the whole line](#grab-email-only-replacing-the-whole-line)
+  - [Delete everything after a character](#delete-everything-after-a-character)
+  - [Replace newline character "^M" and "^@"](#replace-newline-character-%5Em-and-%5E)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Cheatsheet for regex
 
 Inspired by [vimtips](http://rayninfo.co.uk/vimtips.html).
