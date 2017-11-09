@@ -4,10 +4,6 @@ let g:LatexBox_viewer = 'skim'
 " Auto-update when file has changed
 let g:LatexBox_latexmk_options = '-pvc'
 
-" Shows 20 lines of ctrlp
-let g:ctrlp_max_height = 20
-let g:ctrlp_custom_ignore = '\v[\/](_build|DS_Store|htmlcov|env|node_modules|target|dist|cover)|(\.(swp|ico|git|svn))$'
-
 " Filter out .pyc files in NERDTree
 let NERDTreeIgnore = ['\.pyc$']
 
