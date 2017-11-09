@@ -46,9 +46,6 @@
 	path = bundle/cocoa
 	url = git://github.com/msanders/cocoa.vim.git
     ignore = untracked
-[submodule "bundle/ctrlp"]
-	path = bundle/ctrlp
-	url = https://github.com/ctrlpvim/ctrlp.vim.git
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
@@ -103,3 +100,6 @@
 [submodule "bundle/vim-multiple-cursors"]
 	path = bundle/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule "bundle/fzf"]
+	path = bundle/fzf
+	url = https://github.com/junegunn/fzf.vim.git

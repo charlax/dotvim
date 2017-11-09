@@ -62,10 +62,9 @@ List of plugins
 * [Cocoa](http://www.vim.org/scripts/script.php?script_id=2674): a collection
   of scripts designed to make it easier to develop Cocoa/Objective-C
   applications.
-* [ctrlp](https://github.com/kien/ctrlp.vim): full path fuzzy file, buffer, mru
-  and tag finder
 * [Flake8](https://github.com/nvie/vim-flake8): runs the currently open file
   through Flake8, a static syntax and style checker for Python source code.
+* [FZF](https://github.com/junegunn/fzf.vim): fuzzy file finder
 * [json](https://github.com/elzr/vim-json): JSON highlighting script.
 * [Mako](https://github.com/sophacles/vim-bundle-mako): a collection of
   scripts for the mako templating engine.

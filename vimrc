@@ -1,6 +1,9 @@
 " Must be first.
 set nocompatible
 
+" Include more folders in the path
+set rtp+=/usr/local/opt/fzf
+
 syntax enable
 set encoding=utf-8
 

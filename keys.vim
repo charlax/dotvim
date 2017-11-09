@@ -45,6 +45,11 @@ nnoremap <c-l> <c-w>l
 
 " CtrlPTags
 nnoremap <leader>t :CtrlPTag<CR>
+nmap ; :Buffers<CR>
+nmap <Leader>t :Files<CR>
+" Mimick ctrl-p
+nmap <c-p> :Files<CR>
+nmap <Leader>r :Tags<CR>
 
 " Open the tag definition in a new tab
 nnoremap <leader>] :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
