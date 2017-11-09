@@ -12,17 +12,46 @@ set encoding=utf-8
 let mapleader = "\<Space>"
 let maplocalleader = "\<Space>"
 
-" To disable a plugin, add its bundle name to the following list
-let g:pathogen_disabled = []
+" Specify a directory for plugins (for vim-plug)
+call plug#begin('~/.vim/plugged')
 
-if v:version <= '704'
-    call add(g:pathogen_disabled, 'ultisnips')
-endif
+Plug 'altercation/vim-colors-solarized'
+Plug 'elzr/vim-json'
+Plug 'ervandew/supertab'
+Plug 'greyblake/vim-preview'
+Plug 'groenewege/vim-less'
+Plug 'hynek/vim-python-pep8-indent'
+Plug 'majutsushi/tagbar'
+Plug 'msanders/cocoa.vim'
+Plug 'nvie/vim-flake8'
+Plug 'scrooloose/nerdtree'
+Plug 'sophacles/vim-bundle-mako'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'vim-scripts/LaTeX-Box'
+Plug 'wavded/vim-stylus'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'SirVer/ultisnips'
+Plug 'fatih/vim-go'
+Plug 'honza/vim-snippets'
+Plug 'jdonaldson/rtf-highlight'
+Plug 'junegunn/fzf.vim'
+Plug 'mileszs/ack.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'sinisterstuf/vim-arduino'
+Plug 'solarnz/thrift.vim'
+Plug 'sukima/xmledit'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'timcharper/textile.vim'
+Plug 'tomtom/tlib_vim'
+Plug 'vim-scripts/applescript.vim'
 
-" Using tpope's Pathogen to load all the plugins
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-call pathogen#helptags()
+" Initialize plugin system
+call plug#end()
+
 
 " ============================================================
 " Filetype detection

@@ -28,33 +28,14 @@ If you use `pythonbrew`, desactivate it: `pythonbrew off`.
 Plugins
 =======
 
-I am using [Pathogen](https://github.com/tpope/vim-pathogen).
+I am using [vim-plug](https://github.com/junegunn/vim-plug).
 
-Adding a plugin
----------------
-
-1. `git submodule add https://github.com/jcf/vim-latex.git bundle/latex`
-2. Add the description in `README`
-3. Make sure nothing else is staged and commit: `git commit -m "Add vim-latex plugin"`
-
-Upgrading all plugins
----------------------
-
-    $ ./update.sh
-    $ git add .
-    $ git commit -m "Update plugins"
-
-Removing a plugin
------------------
-
-Run:
-
-    $ MODULE=bundle/YOUR_MODULE
-    $ git submodule deinit -f $MODULE && rm -rf .git/modules/$MODULE && git rm -f $MODULE
-    $ git commit -am "Remove $MODULE"
-
-Remove the description in `README`, and look for other mention of the plugin by
-finding all occurrences of its name in the repo (e.g. using `ack` or `ag`).
+* Add a plugin by adding a `Plug` line in `vimrc`.
+* Update plugins with `:PlugUpdate`.
+* Upgrade vim-plug from time to time with `:PlugUpgrade`.
+* Remove a plugin by removing the line, running `:PlugClean` and removing the
+  description from the `README.md`. Look for other mentions of the plugin in
+  the repo by using `ag`.
 
 List of plugins
 ---------------

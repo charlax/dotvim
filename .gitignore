@@ -1,3 +1,6 @@
 .netrwhist
 .vim_mru_files
 temp/
+
+# Plugins
+plugged/
