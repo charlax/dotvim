@@ -16,38 +16,38 @@ let maplocalleader = "\<Space>"
 call plug#begin('~/.vim/plugged')
 
 Plug 'altercation/vim-colors-solarized'
-Plug 'elzr/vim-json'
+Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'ervandew/supertab'
 Plug 'greyblake/vim-preview'
 Plug 'groenewege/vim-less'
-Plug 'hynek/vim-python-pep8-indent'
+Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
 Plug 'majutsushi/tagbar'
-Plug 'msanders/cocoa.vim'
-Plug 'nvie/vim-flake8'
+Plug 'msanders/cocoa.vim', { 'for': 'cocoa' }
+Plug 'nvie/vim-flake8', { 'for': 'python' }
 Plug 'scrooloose/nerdtree'
-Plug 'sophacles/vim-bundle-mako'
+Plug 'sophacles/vim-bundle-mako', { 'for': 'mako' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'vim-scripts/LaTeX-Box'
-Plug 'wavded/vim-stylus'
+Plug 'vim-scripts/LaTeX-Box', { 'for': 'latex' }
+Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'SirVer/ultisnips'
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'honza/vim-snippets'
 Plug 'jdonaldson/rtf-highlight'
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'sinisterstuf/vim-arduino'
-Plug 'solarnz/thrift.vim'
-Plug 'sukima/xmledit'
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'sinisterstuf/vim-arduino', { 'for': 'arduino' }
+Plug 'solarnz/thrift.vim', { 'for': 'thrift' }
+Plug 'sukima/xmledit', { 'for': 'xml' }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'timcharper/textile.vim'
 Plug 'tomtom/tlib_vim'
-Plug 'vim-scripts/applescript.vim'
+Plug 'vim-scripts/applescript.vim', { 'for': 'applescript' }
 
 " Initialize plugin system
 call plug#end()
