@@ -1,9 +1,6 @@
 " Must be first.
 set nocompatible
 
-" Include more folders in the path
-set rtp+=/usr/local/opt/fzf
-
 syntax enable
 set encoding=utf-8
 
@@ -38,6 +35,7 @@ Plug 'SirVer/ultisnips'
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'honza/vim-snippets'
 Plug 'jdonaldson/rtf-highlight'
+Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
