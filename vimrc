@@ -81,6 +81,9 @@ if has("autocmd")
     au FileType xml set softtabstop=2 tabstop=2 shiftwidth=2 expandtab autoindent
     au FileType xsd set softtabstop=2 tabstop=2 shiftwidth=2 expandtab autoindent
 
+	" ZSH
+	au FileType zsh set expandtab
+
     " Json
     au FileType json set softtabstop=2 tabstop=2 shiftwidth=2 expandtab autoindent
 
