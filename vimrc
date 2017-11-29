@@ -37,7 +37,6 @@ Plug 'solarnz/thrift.vim', { 'for': 'thrift' }
 Plug 'sophacles/vim-bundle-mako', { 'for': 'mako' }
 Plug 'sukima/xmledit', { 'for': 'xml' }
 Plug 'terryma/vim-multiple-cursors'
-Plug 'timcharper/textile.vim'
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -46,7 +45,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/LaTeX-Box', { 'for': 'latex' }
 Plug 'vim-scripts/applescript.vim', { 'for': 'applescript' }
-Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 
 " Initialize plugin system
 call plug#end()
