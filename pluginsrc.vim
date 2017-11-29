@@ -20,3 +20,6 @@ let g:rtfh_size = '34'
 
 " Use ag instead of ack
 let g:ackprg = 'ag --vimgrep'
+
+" Use JSX syntax highlighting in all files
+let g:jsx_ext_required = 0

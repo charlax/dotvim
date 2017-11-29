@@ -30,6 +30,7 @@ Plug 'mileszs/ack.vim'
 Plug 'msanders/cocoa.vim', { 'for': 'cocoa' }
 Plug 'nvie/vim-flake8', { 'for': 'python' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'scrooloose/nerdtree'
 Plug 'sinisterstuf/vim-arduino', { 'for': 'arduino' }
 Plug 'solarnz/thrift.vim', { 'for': 'thrift' }

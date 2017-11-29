@@ -49,6 +49,7 @@ List of plugins
   through Flake8, a static syntax and style checker for Python source code.
 * [FZF](https://github.com/junegunn/fzf.vim): fuzzy file finder
 * [json](https://github.com/elzr/vim-json): JSON highlighting script.
+* [JSX](https://github.com/mxw/vim-jsx): React JSX syntax highlighting and indenting
 * [Mako](https://github.com/sophacles/vim-bundle-mako): a collection of
   scripts for the mako templating engine.
 * [nerdtree](https://github.com/scrooloose/nerdtree): a tree explorer plugin.
