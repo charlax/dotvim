@@ -12,40 +12,40 @@ let maplocalleader = "\<Space>"
 " Specify a directory for plugins (for vim-plug)
 call plug#begin('~/.vim/plugged')
 
+Plug '/usr/local/opt/fzf'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'SirVer/ultisnips'
 Plug 'altercation/vim-colors-solarized'
 Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'ervandew/supertab'
+Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'greyblake/vim-preview'
 Plug 'groenewege/vim-less'
+Plug 'honza/vim-snippets'
 Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
+Plug 'jdonaldson/rtf-highlight'
+Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'
+Plug 'mileszs/ack.vim'
 Plug 'msanders/cocoa.vim', { 'for': 'cocoa' }
 Plug 'nvie/vim-flake8', { 'for': 'python' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'scrooloose/nerdtree'
+Plug 'sinisterstuf/vim-arduino', { 'for': 'arduino' }
+Plug 'solarnz/thrift.vim', { 'for': 'thrift' }
 Plug 'sophacles/vim-bundle-mako', { 'for': 'mako' }
+Plug 'sukima/xmledit', { 'for': 'xml' }
+Plug 'terryma/vim-multiple-cursors'
+Plug 'timcharper/textile.vim'
+Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/LaTeX-Box', { 'for': 'latex' }
-Plug 'wavded/vim-stylus', { 'for': 'stylus' }
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'SirVer/ultisnips'
-Plug 'fatih/vim-go', { 'for': 'go' }
-Plug 'honza/vim-snippets'
-Plug 'jdonaldson/rtf-highlight'
-Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
-Plug 'mileszs/ack.vim'
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'sinisterstuf/vim-arduino', { 'for': 'arduino' }
-Plug 'solarnz/thrift.vim', { 'for': 'thrift' }
-Plug 'sukima/xmledit', { 'for': 'xml' }
-Plug 'terryma/vim-multiple-cursors'
-Plug 'timcharper/textile.vim'
-Plug 'tomtom/tlib_vim'
 Plug 'vim-scripts/applescript.vim', { 'for': 'applescript' }
+Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 
 " Initialize plugin system
 call plug#end()
