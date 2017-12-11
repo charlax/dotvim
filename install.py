@@ -70,17 +70,11 @@ def install(args):
         if not os.path.exists(d):
             os.makedirs(d)
 
-    os.system("cd ~/.vim && git submodule update --init --recursive")
-
     if system == "Darwin":
         os.system("brew install ctags pandoc")
 
     if system == "Linux":
         os.system("sudo apt-get install -q -y exuberant-ctags pandoc")
-
-    print "Installing flake8 and other packages."
-    os.system("sudo pip install flake8")
-    os.system("sudo gem install bluecloth github-markup")
 
 
 if __name__ == '__main__':

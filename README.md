@@ -21,7 +21,13 @@ Installing Vim on Mac Os X
 You need [Homebrew](http://mxcl.github.com/homebrew/).
 
     $ brew install macvim --override-system-vim
-    $ brew linkapps
+
+Then open vim and run:
+
+    :PlugInstall
+
+Reinstalling
+------------
 
 It is a good idea to reinstall MacVim from time to time:
 
