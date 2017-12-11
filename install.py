@@ -7,7 +7,7 @@ import os
 import platform
 import shutil
 
-REPOSITORY = "git://github.com/charlax/dotvim.git"
+REPOSITORY = "https://github.com/charlax/dotvim.git"
 DOTFILES_PATH = os.path.join(os.environ["HOME"], ".vim")
 FILES = {
     "~/.vim/vimrc": "~/.vimrc",
