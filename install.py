@@ -65,6 +65,9 @@ def install(args):
     if args.only_symlink:
         return
 
+    print("You can ignore any error - plugins haven't been installed yet.")
+    os.system("vim +PlugInstall +qall")
+
     for d in ("~/.vim/temp/temp", "~/.vim/temp/backup"):
         d = os.path.expanduser(d)
         if not os.path.exists(d):
