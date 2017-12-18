@@ -115,3 +115,18 @@ map <Leader>n :noh<CR>
 " Copy filename to clipboard
 nmap ,cs :let @*=expand("%")<CR>
 nmap ,cl :let @*=expand("%:p")<CR>
+
+if has("gui_macvim")
+    " cmd + tab number jumps to tab
+    " D maps to command key in MacVim
+    noremap <D-1> 1gt
+    noremap <D-2> 2gt
+    noremap <D-3> 3gt
+    noremap <D-4> 4gt
+    noremap <D-5> 5gt
+    noremap <D-6> 6gt
+    noremap <D-7> 7gt
+    noremap <D-8> 8gt
+    noremap <D-9> 9gt
+    noremap <D-0> :tablast<cr>
+end
