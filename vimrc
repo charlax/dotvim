@@ -18,7 +18,7 @@ Plug 'SirVer/ultisnips'
 Plug 'altercation/vim-colors-solarized'
 Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'ervandew/supertab'
-Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
 Plug 'greyblake/vim-preview'
 Plug 'groenewege/vim-less'
 Plug 'honza/vim-snippets'
