@@ -18,8 +18,11 @@ set visualbell
 " Start without the toolbar
 set guioptions-=T
 
-" Change tab label to just filename
-set guitablabel=%t%m
+" Change tab label to tab number, filename with parent directory, modified
+function! GuiTabLabel()
+     return expand('%:p:.')
+endfunction
+set guitablabel=%N.\ %{GuiTabLabel()}%m
 
 if has("gui_macvim")
     " Fullscreen takes up entire screen
