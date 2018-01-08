@@ -15,6 +15,7 @@ call plug#begin('~/.vim/plugged')
 Plug '/usr/local/opt/fzf'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'SirVer/ultisnips'
+Plug 'chaoren/vim-wordmotion', { 'for': 'go' }
 Plug 'altercation/vim-colors-solarized'
 Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'ervandew/supertab'

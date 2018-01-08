@@ -83,6 +83,7 @@ List of plugins
   True Sublime Text style multiple selections for Vim
 * [vim-snippets](https://github.com/honza/vim-snippets): snippets file for various
   programming languages.
+* [vim-wordmotion](https://github.com/chaoren/vim-wordmotion): more useful word motions for Vim
 * [xmledit](https://github.com/sukima/xmledit/): help edit XML files.
 
 How to try Vim
