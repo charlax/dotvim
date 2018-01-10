@@ -13,6 +13,8 @@ let maplocalleader = "\<Space>"
 call plug#begin('~/.vim/plugged')
 
 Plug '/usr/local/opt/fzf'
+Plug 'kana/vim-textobj-user'
+Plug 'glts/vim-textobj-comment'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'SirVer/ultisnips'
 Plug 'chaoren/vim-wordmotion', { 'for': 'go' }

@@ -25,6 +25,9 @@ nnoremap k gk
 " Strip all trailing whitespace in the current file
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
+" Comment out the selection
+vnoremap // gc
+
 " Re-hardwrap paragraphs of text
 nnoremap <leader>q gqip
 

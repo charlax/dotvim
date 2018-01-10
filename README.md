@@ -85,6 +85,8 @@ List of plugins
   programming languages.
 * [vim-wordmotion](https://github.com/chaoren/vim-wordmotion): more useful word motions for Vim
 * [xmledit](https://github.com/sukima/xmledit/): help edit XML files.
+* [vim-textobj-comment](https://github.com/glts/vim-textobj-comment): text objects for comments
+* [vim-textobj-user](https://github.com/kana/vim-textobj-user): create your own text objects (required by `vim-textobj-comment`).
 
 How to try Vim
 ==============
@@ -115,6 +117,7 @@ Keyboard shortcuts
 
 * `<leader>pw`: show the Python documentation for the word under the cursor.
 * `<F7>` runs `flake8` on the current file.
+* `qgic` rewraps the comment block (thanks to `vim-textobj-comment`)
 
 Acknowledgments
 ===============
