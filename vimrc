@@ -18,7 +18,7 @@ Plug 'glts/vim-textobj-comment'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'SirVer/ultisnips'
 Plug 'chaoren/vim-wordmotion', { 'for': 'go' }
-Plug 'altercation/vim-colors-solarized'
+Plug 'lifepillar/vim-solarized8'
 Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'ervandew/supertab'
 Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
@@ -103,12 +103,13 @@ endif
 " ============================================================
 
 
-if has('gui_running')
+set termguicolors
+if has('gui_running') || has('gui_vimr')
     set background=light
 else
     set background=dark
 endif
-colorscheme solarized
+colorscheme solarized8
 
 " display incomplete commands
 set showcmd

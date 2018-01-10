@@ -8,23 +8,15 @@ You should read the script before executing it.
 Prerequisites
 =============
 
-Tested on Mac Os X 10.6, 10.10 and Ubuntu 12.04.
-
-On Mac Os X: needs [Homebrew](http://mxcl.github.com/homebrew/).
-
-You'll also need to install
-[Solarized](http://ethanschoonover.com/solarized) palettes for iTerm.
-
-Installing Vim on Mac Os X
-==========================
+Install MacVim on Mac Os X
+--------------------------
 
 You need [Homebrew](http://mxcl.github.com/homebrew/).
 
     $ brew install macvim --override-system-vim
 
-Then open vim and run:
-
-    :PlugInstall
+As of writing, the fzf plugins does not work correctly in MacVim. You can use
+VimR instead (those dotfiles have been tested with it).
 
 Reinstalling
 ------------
@@ -65,8 +57,8 @@ List of plugins
   plugin maps with "."
 * [rtf-highlight](https://github.com/jdonaldson/rtf-highlight.git): syntax
   highlighting to RTF
-* [Solarized](https://github.com/altercation/vim-colors-solarized): precision
-  colorscheme
+* [Solarized8](https://github.com/lifepillar/vim-solarized8): optimized
+  solarized color schemes
 * [Stylus](https://github.com/wavded/vim-stylus): syntax highlighting for
   stylus.
 * [Tagbar](https://github.com/majutsushi/tagbar): displays tags

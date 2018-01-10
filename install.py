@@ -11,16 +11,16 @@ REPOSITORY = "https://github.com/charlax/dotvim.git"
 DOTFILES_PATH = os.path.join(os.environ["HOME"], ".vim")
 FILES = {
     "~/.vim/vimrc": "~/.vimrc",
-    "~/.vim/gvimrc": "~/.gvimrc", }
+    "~/.vim/gvimrc": "~/.gvimrc",
+    "~/.vim/config/nvim/init.vim": "~/.config/nvim/init.vim",
+}
 
 
 def symlink(source, target):
     """Symlink vim configuration files."""
-
     source, target = map(os.path.expanduser, (source, target))
 
     if os.path.exists(target):
-
         if os.path.islink(target) and os.path.realpath(target) == source:
             logging.info("%s exists" % target)
             return
@@ -40,7 +40,6 @@ def symlink(source, target):
 
 def clone_dotfile(repo, path):
     """Clone or update the dotfiles directory."""
-
     if not os.path.exists(path):
         os.system("git clone %s %s" % (repo, path))
     else:
@@ -53,17 +52,14 @@ def clone_dotfile(repo, path):
 
 def install(args):
     """Install the vimrc files."""
-
-    system = platform.system()
-
-    clone_dotfile(REPOSITORY, DOTFILES_PATH)
-
     # Backup and link the files
     for source, target in FILES.items():
         symlink(source, target)
 
     if args.only_symlink:
         return
+
+    clone_dotfile(REPOSITORY, DOTFILES_PATH)
 
     print("You can ignore any error - plugins haven't been installed yet.")
     os.system("vim +PlugInstall +qall")
@@ -73,11 +69,15 @@ def install(args):
         if not os.path.exists(d):
             os.makedirs(d)
 
+    system = platform.system()
     if system == "Darwin":
         os.system("brew install ctags pandoc")
 
     if system == "Linux":
         os.system("sudo apt-get install -q -y exuberant-ctags pandoc")
+
+    print("Installing neovim Python package")
+    os.system("pip3 install --user neovim")
 
 
 if __name__ == '__main__':
