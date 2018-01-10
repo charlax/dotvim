@@ -118,6 +118,8 @@ map <Leader>n :noh<CR>
 nmap ,cs :let @*=expand("%")<CR>
 nmap ,cl :let @*=expand("%:p")<CR>
 
+" Tabs
+
 if has("gui_macvim")
     " cmd + tab number jumps to tab
     " D maps to command key in MacVim
@@ -132,3 +134,13 @@ if has("gui_macvim")
     noremap <D-9> 9gt
     noremap <D-0> :tablast<cr>
 end
+
+" Note: VimR and Neovim return false for has('gui_running')
+if has('gui_vimr')
+    nnoremap <D-A-Left> :tabp<CR>
+    vnoremap <D-A-Left> :tabp<CR>
+    inoremap <D-A-Left> :tabp<CR>
+    nnoremap <D-A-Right> :tabn<CR>
+    vnoremap <D-A-Right> :tabn<CR>
+    inoremap <D-A-Right> :tabn<CR>
+endif
