@@ -46,11 +46,11 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" fzf
+" fzf (mimicking some ctrlp mappings)
 nmap ; :Buffers<CR>
-nmap <Leader>t :Files<CR>
-" Mimick ctrl-p
 nmap <c-p> :Files<CR>
+nmap <c-t> :Tags<CR>
+nmap <Leader>t :Files<CR>
 nmap <Leader>T :Tags<CR>
 
 " Open the tag definition in a new tab
@@ -139,8 +139,8 @@ end
 if has('gui_vimr')
     nnoremap <D-A-Left> :tabp<CR>
     vnoremap <D-A-Left> :tabp<CR>
-    inoremap <D-A-Left> :tabp<CR>
+    inoremap <D-A-Left> <ESC>:tabp<CR>
     nnoremap <D-A-Right> :tabn<CR>
     vnoremap <D-A-Right> :tabn<CR>
-    inoremap <D-A-Right> :tabn<CR>
+    inoremap <D-A-Right> <ESC>:tabn<CR>
 endif
