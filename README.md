@@ -40,6 +40,8 @@ I am using [vim-plug](https://github.com/junegunn/vim-plug).
 List of plugins
 ---------------
 
+* [deoplete](https://github.com/Shougo/deoplete.nvim): asynchronous completion framework
+* [deoplete-go](https://github.com/zchee/deoplete-go): asynchronous Go completion for Neovim
 * [Cocoa](http://www.vim.org/scripts/script.php?script_id=2674): a collection
   of scripts designed to make it easier to develop Cocoa/Objective-C
   applications.

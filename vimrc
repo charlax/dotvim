@@ -49,6 +49,11 @@ Plug 'tpope/vim-surround'
 Plug 'vim-scripts/LaTeX-Box', { 'for': 'latex' }
 Plug 'vim-scripts/applescript.vim', { 'for': 'applescript' }
 
+if has("nvim")
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'zchee/deoplete-go', { 'do': 'make'}
+endif
+
 " Initialize plugin system
 call plug#end()
 
