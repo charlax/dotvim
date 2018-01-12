@@ -16,15 +16,14 @@ Plug '/usr/local/opt/fzf'
 Plug 'kana/vim-textobj-user'
 Plug 'glts/vim-textobj-comment'
 Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 Plug 'chaoren/vim-wordmotion', { 'for': 'go' }
 Plug 'lifepillar/vim-solarized8'
 Plug 'elzr/vim-json', { 'for': 'json' }
-Plug 'ervandew/supertab'
 Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
 Plug 'greyblake/vim-preview'
 Plug 'groenewege/vim-less'
-Plug 'honza/vim-snippets'
+" Plug 'honza/vim-snippets'
 Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
 Plug 'jdonaldson/rtf-highlight'
 Plug 'junegunn/fzf.vim'
@@ -34,7 +33,7 @@ Plug 'msanders/cocoa.vim', { 'for': 'cocoa' }
 Plug 'nvie/vim-flake8', { 'for': 'python' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'sinisterstuf/vim-arduino', { 'for': 'arduino' }
 Plug 'solarnz/thrift.vim', { 'for': 'thrift' }
 Plug 'sophacles/vim-bundle-mako', { 'for': 'mako' }
@@ -43,7 +42,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/LaTeX-Box', { 'for': 'latex' }

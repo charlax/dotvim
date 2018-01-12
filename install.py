@@ -79,6 +79,10 @@ def install(args):
     print("Installing neovim Python package")
     os.system("pip3 install --user neovim")
 
+    print("Installing gocode")
+    os.system("go get -u github.com/nsf/gocode")
+
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Install charlax's dotvim.")

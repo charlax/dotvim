@@ -118,6 +118,22 @@ map <Leader>n :noh<CR>
 nmap ,cs :let @*=expand("%")<CR>
 nmap ,cl :let @*=expand("%:p")<CR>
 
+" Do not use <tab> for UltiSnips - conflicts with other completion
+let g:UltiSnipsExpandTrigger="<leader>C"
+let g:UltiSnipsJumpForwardTrigger="<leader>B"
+let g:UltiSnipsJumpBackwardTrigger="<leader>Z"
+
+" Do not automatically provide completion - complete only on tab (deoplete)
+let g:deoplete#disable_auto_complete = 1
+inoremap <silent><expr> <TAB>
+    \ pumvisible() ? "\<C-n>" :
+    \ <SID>check_back_space() ? "\<TAB>" :
+    \ deoplete#mappings#manual_complete()
+function! s:check_back_space() abort "{{{
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~ '\s'
+endfunction"}}}
+
 " Tabs
 
 if has("gui_macvim")
