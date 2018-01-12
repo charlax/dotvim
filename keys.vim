@@ -123,19 +123,13 @@ let g:UltiSnipsExpandTrigger="<leader>C"
 let g:UltiSnipsJumpForwardTrigger="<leader>B"
 let g:UltiSnipsJumpBackwardTrigger="<leader>Z"
 
-" Do not automatically provide completion - complete only on tab (deoplete)
-let g:deoplete#disable_auto_complete = 1
-inoremap <silent><expr> <TAB>
-    \ pumvisible() ? "\<C-n>" :
-    \ <SID>check_back_space() ? "\<TAB>" :
-    \ deoplete#mappings#manual_complete()
-function! s:check_back_space() abort "{{{
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~ '\s'
-endfunction"}}}
+" Autocomplete (deoplete)
+" use tab to forward cycle
+inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+" use tab to backward cycle
+inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 
 " Tabs
-
 if has("gui_macvim")
     " cmd + tab number jumps to tab
     " D maps to command key in MacVim
