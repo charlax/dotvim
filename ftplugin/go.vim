@@ -12,3 +12,7 @@ nmap <leader>c <Plug>(go-coverage)
 
 let g:go_fmt_command = "goimports"
 call deoplete#enable()
+
+" Wrap comments, even though Golang has no maximum line length, they are
+" easier to read when they fit on one screen.
+setl formatoptions=cq textwidth=72
