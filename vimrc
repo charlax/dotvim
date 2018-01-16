@@ -21,6 +21,7 @@ Plug 'chaoren/vim-wordmotion', { 'for': 'go' }
 Plug 'lifepillar/vim-solarized8'
 Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
+Plug 'Glench/Vim-Jinja2-Syntax', { 'for': 'jinja2' }
 Plug 'greyblake/vim-preview'
 Plug 'groenewege/vim-less'
 " Plug 'honza/vim-snippets'
