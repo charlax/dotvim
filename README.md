@@ -107,8 +107,14 @@ Here's some other good articles:
 Reference card
 ==============
 
-Keyboard shortcuts
-------------------
+Vim shortcuts
+-------------
+
+* `<C-w>`: deletes one word backward (in insert mode)
+* `<C-u>`: deletes one line (in insert mode)
+
+Custom keyboard shortcuts
+-------------------------
 
 * `<leader>pw`: show the Python documentation for the word under the cursor.
 * `<F7>` runs `flake8` on the current file.
