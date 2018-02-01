@@ -52,6 +52,8 @@ Plug 'vim-scripts/applescript.vim', { 'for': 'applescript' }
 if has("nvim")
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'zchee/deoplete-go', { 'do': 'make'}
+
+    :call deoplete#enable()
 endif
 
 " Initialize plugin system
