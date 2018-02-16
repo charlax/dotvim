@@ -58,7 +58,9 @@ endif
 " Initialize plugin system
 call plug#end()
 
-:call deoplete#enable()
+if has("nvim")
+    :call deoplete#enable()
+endif
 
 " ============================================================
 " Filetype detection
