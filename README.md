@@ -112,6 +112,9 @@ Vim shortcuts
 
 * `<C-w>`: deletes one word backward (in insert mode)
 * `<C-u>`: deletes one line (in insert mode)
+* `fa` goes to the next `a` character on the same line (in command mode)
+* `"kyy` copies the current line into register `k`
+* `"kp` paste the content of the register `k`
 
 Custom keyboard shortcuts
 -------------------------
