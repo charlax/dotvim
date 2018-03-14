@@ -30,7 +30,8 @@ Plugins
 
 I am using [vim-plug](https://github.com/junegunn/vim-plug).
 
-* Add a plugin by adding a `Plug` line in `vimrc`.
+* Add a plugin by adding a `Plug` line in `vimrc`, then add its description
+  below.
 * Update plugins with `:PlugUpdate`.
 * Upgrade vim-plug from time to time with `:PlugUpgrade`.
 * Remove a plugin by removing the line, running `:PlugClean` and removing the
@@ -40,6 +41,7 @@ I am using [vim-plug](https://github.com/junegunn/vim-plug).
 List of plugins
 ---------------
 
+* [ALE](https://github.com/w0rp/ale): Asynchronous Lint Engine
 * [deoplete](https://github.com/Shougo/deoplete.nvim): asynchronous completion framework
 * [deoplete-go](https://github.com/zchee/deoplete-go): asynchronous Go completion for Neovim
 * [Cocoa](http://www.vim.org/scripts/script.php?script_id=2674): a collection

@@ -23,3 +23,10 @@ let g:ackprg = 'ag --vimgrep'
 
 " Use JSX syntax highlighting in all files
 let g:jsx_ext_required = 0
+
+" Linting
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = ['prettier']
+let g:ale_fixers['javascript.jsx'] = ['prettier']
+let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_use_local_config = 1

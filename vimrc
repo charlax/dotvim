@@ -48,11 +48,11 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/LaTeX-Box', { 'for': 'latex' }
 Plug 'vim-scripts/applescript.vim', { 'for': 'applescript' }
+Plug 'w0rp/ale'
 
 if has("nvim")
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'zchee/deoplete-go', { 'do': 'make'}
-
 endif
 
 " Initialize plugin system
