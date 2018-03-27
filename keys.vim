@@ -154,3 +154,7 @@ if has('gui_vimr')
     vnoremap <D-A-Right> :tabn<CR>
     inoremap <D-A-Right> <ESC>:tabn<CR>
 endif
+
+" I never use Ex mode, and it conflicts with my keyboard habits with French
+" layout
+noremap Q A
