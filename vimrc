@@ -88,12 +88,15 @@ if has("autocmd")
     " Yaml
     au FileType yaml set softtabstop=2 tabstop=2 shiftwidth=2 expandtab autoindent
 
-    " XML
+    " HTML, XML, etc.
     au FileType xml set softtabstop=2 tabstop=2 shiftwidth=2 expandtab autoindent
     au FileType xsd set softtabstop=2 tabstop=2 shiftwidth=2 expandtab autoindent
 
-	" ZSH
-	au FileType zsh set expandtab
+    " SQL
+    au FileType sql set softtabstop=4 tabstop=4 shiftwidth=4 expandtab autoindent
+
+    " ZSH
+    au FileType zsh set expandtab
 
     " Json
     au FileType json set softtabstop=2 tabstop=2 shiftwidth=2 expandtab autoindent
