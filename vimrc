@@ -80,7 +80,7 @@ if has("autocmd")
     au FileType {md,markdown,tex,txt,rst} call s:setup_for_prose()
 
     " In Makefiles, use real tabs, not tabs expanded to spaces
-    au FileType make set noexpandtab
+    au FileType make set noexpandtab ts=4
 
     " Use tabs in Applescript
     au FileType applescript set noexpandtab smartindent
