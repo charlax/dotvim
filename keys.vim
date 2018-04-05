@@ -1,6 +1,10 @@
 " To check if a key is used:
 " :verbose map <key>
 
+" Make `jj` and `jk` throw you into normal mode
+inoremap jj <esc>
+inoremap jk <esc>
+
 " Fast saving
 nmap <leader>w :w<cr>
 nmap <leader>s :w<cr>
