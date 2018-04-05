@@ -42,8 +42,12 @@ List of plugins
 ---------------
 
 * [ALE](https://github.com/w0rp/ale): Asynchronous Lint Engine
-* [deoplete](https://github.com/Shougo/deoplete.nvim): asynchronous completion framework
-* [deoplete-go](https://github.com/zchee/deoplete-go): asynchronous Go completion for Neovim
+* [auto-pairs](https://github.com/jiangmiao/auto-pairs): insert or delete
+  brackets, parens, quotes in pair
+* [deoplete](https://github.com/Shougo/deoplete.nvim): asynchronous completion
+  framework
+* [deoplete-go](https://github.com/zchee/deoplete-go): asynchronous Go
+  completion for Neovim
 * [Cocoa](http://www.vim.org/scripts/script.php?script_id=2674): a collection
   of scripts designed to make it easier to develop Cocoa/Objective-C
   applications.
@@ -51,9 +55,10 @@ List of plugins
   through Flake8, a static syntax and style checker for Python source code.
 * [FZF](https://github.com/junegunn/fzf.vim): fuzzy file finder
 * [json](https://github.com/elzr/vim-json): JSON highlighting script.
-* [JSX](https://github.com/mxw/vim-jsx): React JSX syntax highlighting and indenting
-* [Mako](https://github.com/sophacles/vim-bundle-mako): a collection of
-  scripts for the mako templating engine.
+* [JSX](https://github.com/mxw/vim-jsx): React JSX syntax highlighting and
+  indenting
+* [Mako](https://github.com/sophacles/vim-bundle-mako): a collection of scripts
+  for the mako templating engine.
 * [nerdtree](https://github.com/scrooloose/nerdtree): a tree explorer plugin.
 * [Python-Pep8-Indent](https://github.com/hynek/vim-python-pep8-indent) a nicer
   Python indentation style.
@@ -65,25 +70,29 @@ List of plugins
   solarized color schemes
 * [Stylus](https://github.com/wavded/vim-stylus): syntax highlighting for
   stylus.
-* [Tagbar](https://github.com/majutsushi/tagbar): displays tags
-  in a window, ordered by class etc.
+* [Tagbar](https://github.com/majutsushi/tagbar): displays tags in a window,
+  ordered by class etc.
 * [thrift.vim](https://github.com/solarnz/thrift.vim.git): syntax highlighting
   for thrift definition files.
 * [ultisnips](https://github.com/SirVer/ultisnips): snippet engine
 * [vim-arduino](https://github.com/sinisterstuf/vim-arduino.git): compile and
   deploy Arduino sketches.
 * [vim-go](https://github.com/fatih/vim-go.git): go development plugin
-* [vim-jinja2-syntax](https://github.com/Glench/Vim-Jinja2-Syntax): an up-to-date jinja2 syntax file
-* [vim-less](https://github.com/groenewege/vim-less): syntax for LESS
-  (dynamic CSS).
+* [vim-jinja2-syntax](https://github.com/Glench/Vim-Jinja2-Syntax): an
+  up-to-date jinja2 syntax file
+* [vim-less](https://github.com/groenewege/vim-less): syntax for LESS (dynamic
+  CSS).
 * [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors.git):
   True Sublime Text style multiple selections for Vim
-* [vim-snippets](https://github.com/honza/vim-snippets): snippets file for various
-  programming languages.
-* [vim-wordmotion](https://github.com/chaoren/vim-wordmotion): more useful word motions for Vim
+* [vim-snippets](https://github.com/honza/vim-snippets): snippets file for
+  various programming languages.
+* [vim-wordmotion](https://github.com/chaoren/vim-wordmotion): more useful word
+  motions for Vim
 * [xmledit](https://github.com/sukima/xmledit/): help edit XML files.
-* [vim-textobj-comment](https://github.com/glts/vim-textobj-comment): text objects for comments
-* [vim-textobj-user](https://github.com/kana/vim-textobj-user): create your own text objects (required by `vim-textobj-comment`).
+* [vim-textobj-comment](https://github.com/glts/vim-textobj-comment): text
+  objects for comments
+* [vim-textobj-user](https://github.com/kana/vim-textobj-user): create your own
+  text objects (required by `vim-textobj-comment`).
 
 How to try Vim
 ==============
