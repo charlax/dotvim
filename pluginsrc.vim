@@ -44,7 +44,7 @@ endfunction
 
 " Enable Deoplete when selecting multiple cursors ends
 function! Multiple_cursors_after()
-    if exists('*deoplete#enable')
+    if exists('*deoplete#toggle')
         exe 'call deoplete#toggle()'
     elseif exists(':NeoCompleteUnlock') == 2
         exe 'NeoCompleteUnlock'
