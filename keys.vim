@@ -123,9 +123,10 @@ nmap ,cs :let @*=expand("%")<CR>
 nmap ,cl :let @*=expand("%:p")<CR>
 
 " Do not use <tab> for UltiSnips - conflicts with other completion
-let g:UltiSnipsExpandTrigger="<leader>C"
-let g:UltiSnipsJumpForwardTrigger="<leader>B"
-let g:UltiSnipsJumpBackwardTrigger="<leader>Z"
+" Do not use leader as well - messes up with insertion mode
+let g:UltiSnipsExpandTrigger="<c-@>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Autocomplete (deoplete)
 " use tab to forward cycle

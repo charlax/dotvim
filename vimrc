@@ -4,8 +4,8 @@ set nocompatible
 syntax enable
 set encoding=utf-8
 
-" Mapping leader to comma. Make sure no shortcut mapped in insert mode is
-" uses leader, otherwise you might trigger shortcuts while typing.
+" Make sure no shortcut mapped in insert mode is
+" using leader, otherwise you might trigger shortcuts while typing.
 let mapleader = "\<Space>"
 let maplocalleader = "\<Space>"
 
@@ -16,7 +16,7 @@ Plug '/usr/local/opt/fzf'
 Plug 'kana/vim-textobj-user'
 Plug 'glts/vim-textobj-comment'
 Plug 'MarcWeber/vim-addon-mw-utils'
-" Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 Plug 'chaoren/vim-wordmotion', { 'for': 'go' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'lifepillar/vim-solarized8'
@@ -25,7 +25,7 @@ Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
 Plug 'Glench/Vim-Jinja2-Syntax', { 'for': 'jinja2' }
 Plug 'greyblake/vim-preview'
 Plug 'groenewege/vim-less'
-" Plug 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
 Plug 'jdonaldson/rtf-highlight'
 Plug 'junegunn/fzf.vim'
