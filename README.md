@@ -41,6 +41,8 @@ I am using [vim-plug](https://github.com/junegunn/vim-plug).
 List of plugins
 ---------------
 
+Check the `vimrc` for an up-to-date list and description.
+
 * [ALE](https://github.com/w0rp/ale): Asynchronous Lint Engine
 * [auto-pairs](https://github.com/jiangmiao/auto-pairs): insert or delete
   brackets, parens, quotes in pair
