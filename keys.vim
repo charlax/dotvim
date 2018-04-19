@@ -51,7 +51,7 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
 " fzf (mimicking some ctrlp mappings)
-nmap ; :Buffers<CR>
+nmap ; :Ag<CR>
 nmap <c-p> :Files<CR>
 nmap <c-t> :Tags<CR>
 nmap <Leader>t :Files<CR>
