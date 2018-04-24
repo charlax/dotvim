@@ -64,3 +64,12 @@ To delete everything after `:`:
 ```
 :%s/<Ctrl-V><Ctrl-M>/\r/g
 ```
+
+## Add a unique id to Markdown title
+
+This is a good example of a complex regex which uses `\=` to trigger vim
+command execution.
+
+```
+%s%^\(#\+.*\)$%\=submatch(1).' (id::'.substitute(system('LC_ALL=C tr -cd "[:alnum:]" < /dev/urandom | fold -w15 | head -n1'), '\n','','g').')'%g
+```
