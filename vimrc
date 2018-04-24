@@ -76,6 +76,7 @@ if has("autocmd")
     " Custom initialization
     au BufRead,BufNewFile *.applescript setf applescript
     au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
+
     " Varnish
     au BufRead,BufNewFile *.vcl setf c
 
