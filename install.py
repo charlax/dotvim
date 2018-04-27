@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import argparse
@@ -19,6 +19,7 @@ FILES = {
 def symlink(source, target):
     """Symlink vim configuration files."""
     source, target = map(os.path.expanduser, (source, target))
+    print("Will symlink %s to %s" % (source, target))
 
     if os.path.exists(target):
         if os.path.islink(target) and os.path.realpath(target) == source:
@@ -53,7 +54,7 @@ def clone_dotfile(repo, path):
 def install(args):
     """Install the vimrc files."""
     # Backup and link the files
-    os.mkdirs("~/.config/nvim/")
+    os.makedirs(os.path.expanduser("~/.config/nvim/"), exist_ok=True)
     for source, target in FILES.items():
         symlink(source, target)
 
