@@ -28,8 +28,8 @@ def symlink(source, target):
         backup = target + ".old"
 
         if os.path.exists(backup):
-            raise Exception("Can't backup to %s: file already exists." %
-                            backup)
+            raise Exception(
+                "Can't backup to %s: file already exists." % backup)
 
         shutil.move(target, backup)
 
@@ -53,6 +53,7 @@ def clone_dotfile(repo, path):
 def install(args):
     """Install the vimrc files."""
     # Backup and link the files
+    os.mkdirs("~/.config/nvim/")
     for source, target in FILES.items():
         symlink(source, target)
 
@@ -83,11 +84,10 @@ def install(args):
     os.system("go get -u github.com/nsf/gocode")
 
 
-
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Install charlax's dotvim.")
-    parser.add_argument("--only-symlink", action="store_true",
-                        help="Only symlink the files")
+    parser.add_argument(
+        "--only-symlink", action="store_true", help="Only symlink the files")
     args = parser.parse_args()
 
     install(args)
