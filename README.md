@@ -45,8 +45,6 @@ List of plugins
 Check the `vimrc` for an up-to-date list and description.
 
 * [ALE](https://github.com/w0rp/ale): Asynchronous Lint Engine
-* [auto-pairs](https://github.com/jiangmiao/auto-pairs): insert or delete
-  brackets, parens, quotes in pair
 * [deoplete](https://github.com/Shougo/deoplete.nvim): asynchronous completion
   framework
 * [deoplete-go](https://github.com/zchee/deoplete-go): asynchronous Go
