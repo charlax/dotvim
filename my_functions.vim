@@ -94,7 +94,7 @@ endfunction
 command! FormatUUIDS call FormatUUIDS()
 
 " Insert a uuid
-function InsertUUID()
+function! InsertUUID()
     let cmd = 'uuidgen | tr "[:upper:]" "[:lower:]"'
     let result = substitute(system(cmd), '[\]\|[[:cntrl:]]', '', 'g')
     silent exec ":normal i" . result
@@ -102,7 +102,7 @@ endfunction
 command! InsertUUID call InsertUUID()
 
 " Replace with new uuid
-function ReplaceWithUUID()
+function! ReplaceWithUUID()
     silent execute "normal! di\""
     call InsertUUID()
 endfunction
