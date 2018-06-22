@@ -52,6 +52,8 @@ Plug 'vim-scripts/applescript.vim', { 'for': 'applescript' }
 Plug 'w0rp/ale'
 " Automatically discover and properly update ctags files on save
 Plug 'craigemery/vim-autotag'
+" Terraform files
+Plug 'hashivim/vim-terraform'
 
 if has("nvim")
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
