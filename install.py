@@ -84,6 +84,12 @@ def install(args):
     print("Installing gocode")
     os.system("go get -u github.com/nsf/gocode")
 
+    print("Installing spell files: check install.py")
+    # wget http://ftp.vim.org/vim/runtime/spell/fr.latin1.spl
+    # wget http://ftp.vim.org/vim/runtime/spell/fr.latin1.sug
+    # wget http://ftp.vim.org/vim/runtime/spell/fr.utf-8.spl
+    # wget http://ftp.vim.org/vim/runtime/spell/fr.utf-8.sug
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Install charlax's dotvim.")

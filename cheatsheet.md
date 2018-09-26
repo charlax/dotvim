@@ -39,3 +39,10 @@ Cheatsheet
 
 * `:g/^` acts on every line that matches the `^` regex.
 * `norm o` execute the command `o` in normal mode
+
+
+## Change spellcheck lang
+
+```
+:setlocal spell spelllang=fr
+```
