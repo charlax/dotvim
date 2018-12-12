@@ -53,6 +53,8 @@ Plug 'w0rp/ale'
 Plug 'craigemery/vim-autotag'
 " Terraform files
 Plug 'hashivim/vim-terraform'
+" Typescript
+Plug 'leafgarland/typescript-vim'
 
 if has("nvim")
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
