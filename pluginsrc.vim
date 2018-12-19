@@ -60,3 +60,6 @@ function! Multiple_cursors_after()
         exe 'NeoCompleteUnlock'
     endif
 endfunction
+
+" Disable typescript indentation
+let g:typescript_indent_disable = 1
