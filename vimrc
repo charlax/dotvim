@@ -246,6 +246,8 @@ vnoremap / /\v
 
 " where to put backup files.
 set backupdir=~/.vim/temp/backup
+" useful for webpack-dev-server
+set backupcopy=yes
 " where to put swap files.
 set directory=~/.vim/temp/temp
 " .netrwhist
