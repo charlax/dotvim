@@ -63,3 +63,7 @@ endfunction
 
 " Disable typescript indentation
 let g:typescript_indent_disable = 1
+
+" See https://github.com/jiangmiao/auto-pairs/issues/88, can't type a with
+" circumflex without this.
+let g:AutoPairsShortcutBackInsert=''
