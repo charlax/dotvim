@@ -59,14 +59,15 @@ Plug 'leafgarland/typescript-vim'
 if has("nvim")
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'zchee/deoplete-go', { 'do': 'make'}
+else
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
 endif
+let g:deoplete#enable_at_startup = 1
 
 " Initialize plugin system
 call plug#end()
-
-if has("nvim")
-    :call deoplete#enable()
-endif
 
 " ============================================================
 " Filetype detection
