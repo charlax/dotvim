@@ -50,7 +50,7 @@ Plug 'vim-scripts/LaTeX-Box', { 'for': 'latex' }
 Plug 'vim-scripts/applescript.vim', { 'for': 'applescript' }
 Plug 'w0rp/ale'
 " Automatically discover and properly update ctags files on save
-Plug 'craigemery/vim-autotag'
+Plug 'ludovicchabant/vim-gutentags'
 " Terraform files
 Plug 'hashivim/vim-terraform'
 " Typescript
