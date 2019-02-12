@@ -28,8 +28,13 @@ let g:jsx_ext_required = 0
 let g:ale_fixers = {
             \ 'javascript': ['prettier'],
             \ 'javascript.jsx': ['prettier'],
+            \ 'typescript': ['prettier'],
             \ 'python': ['black'],
             \}
+let g:ale_linters = {
+            \ 'typescript': ['tslint', 'tsserver', 'typecheck'],
+            \}
+
 let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_use_local_config = 1
 let g:ale_python_auto_pipenv = 1
@@ -60,9 +65,6 @@ function! Multiple_cursors_after()
         exe 'NeoCompleteUnlock'
     endif
 endfunction
-
-" Disable typescript indentation
-let g:typescript_indent_disable = 1
 
 " See https://github.com/jiangmiao/auto-pairs/issues/88, can't type a with
 " circumflex without this.
