@@ -55,6 +55,8 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'hashivim/vim-terraform'
 " Typescript
 Plug 'leafgarland/typescript-vim'
+" .editorconfig support
+Plug 'editorconfig/editorconfig-vim'
 
 if has("nvim")
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }

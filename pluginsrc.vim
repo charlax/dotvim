@@ -70,3 +70,5 @@ endfunction
 " See https://github.com/jiangmiao/auto-pairs/issues/88, can't type a with
 " circumflex without this.
 let g:AutoPairsShortcutBackInsert=''
+
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
