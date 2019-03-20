@@ -32,7 +32,7 @@ let g:ale_fixers = {
             \ 'python': ['black'],
             \}
 let g:ale_linters = {
-            \ 'typescript': ['tslint', 'tsserver', 'typecheck'],
+            \ 'typescript': ['eslint', 'tsserver', 'typecheck'],
             \ 'javascript': ['eslint', 'flow'],
             \}
 
