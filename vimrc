@@ -17,7 +17,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'glts/vim-textobj-comment'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'SirVer/ultisnips'
-Plug 'jiangmiao/auto-pairs', {'for': 'javascript'}
+Plug 'jiangmiao/auto-pairs', {'for': ['javascript', 'typescript']}
 Plug 'lifepillar/vim-solarized8'
 Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
