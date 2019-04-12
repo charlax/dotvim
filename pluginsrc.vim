@@ -72,3 +72,16 @@ endfunction
 let g:AutoPairsShortcutBackInsert=''
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+" Configuration for vim-gutentags
+let g:gutentags_file_list_command = {
+ \ 'markers': {
+     \ '.git': 'git ls-files',
+     \ '.hg': 'hg files',
+     \ },
+ \ }
+
+" fzf
+" Make :Ag not match file names, only the file content
+" https://github.com/junegunn/fzf.vim/issues/346
+command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
