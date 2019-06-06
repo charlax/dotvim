@@ -85,3 +85,20 @@ let g:gutentags_file_list_command = {
 " Make :Ag not match file names, only the file content
 " https://github.com/junegunn/fzf.vim/issues/346
 command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
+
+" auto close HTML tags
+let g:closetag_filenames = '*.html,*.jsx,*.tsx,*.js'
+let g:closetag_regions =  {
+\ 'typescript.tsx': 'jsxRegion,tsxRegion',
+\ 'javascript.jsx': 'jsxRegion',
+\ }
+
+" highlight matching HTML tags
+let g:mta_filetypes = {
+            \ 'javascript.jsx': 1,
+            \ 'typescript': 1,
+            \ 'html' : 1,
+            \ 'xhtml' : 1,
+            \ 'xml' : 1,
+            \ 'jinja' : 1,
+            \ }

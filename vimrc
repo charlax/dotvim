@@ -57,6 +57,10 @@ Plug 'hashivim/vim-terraform'
 Plug 'leafgarland/typescript-vim'
 " .editorconfig support
 Plug 'editorconfig/editorconfig-vim'
+" Match HTML tags
+Plug 'Valloric/MatchTagAlways'
+" Auto close HTML tags
+Plug 'alvan/vim-closetag'
 
 if has("nvim")
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
