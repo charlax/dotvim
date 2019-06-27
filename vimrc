@@ -184,7 +184,6 @@ set splitright
 setlocal textwidth=0
 setlocal wrap
 set colorcolumn=79
-highlight ColorColumn guibg=#eeeeee
 
 " Showing invisible characters with the same characters that TextMate uses
 set list
