@@ -79,7 +79,7 @@ def install(args):
         os.system("sudo apt-get install -q -y exuberant-ctags pandoc")
 
     print("Installing neovim Python package")
-    os.system("pip3 install --user neovim")
+    os.system("pip3 install --user neovim pynvim")
 
     print("Installing gocode")
     os.system("go get -u github.com/nsf/gocode")
