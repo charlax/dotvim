@@ -61,6 +61,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'Valloric/MatchTagAlways'
 " Auto close HTML tags
 Plug 'alvan/vim-closetag'
+" Clojure REPL
+Plug 'tpope/vim-fireplace'
 
 if has("nvim")
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
