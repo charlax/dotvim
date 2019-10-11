@@ -29,8 +29,7 @@ def symlink(source, target):
         backup = target + ".old"
 
         if os.path.exists(backup):
-            raise Exception(
-                "Can't backup to %s: file already exists." % backup)
+            raise Exception("Can't backup to %s: file already exists." % backup)
 
         shutil.move(target, backup)
 
@@ -47,8 +46,10 @@ def clone_dotfile(repo, path):
         os.system("cd %s && git checkout master && git pull" % path)
 
     if not os.path.exists(path):
-        raise Exception("Dotfiles path '%s' does not exist. "
-                        "Might be a git error, see above." % path)
+        raise Exception(
+            "Dotfiles path '%s' does not exist. "
+            "Might be a git error, see above." % path
+        )
 
 
 def install(args):
@@ -76,7 +77,8 @@ def install(args):
         os.system("brew install ctags pandoc")
 
     if system == "Linux":
-        os.system("sudo apt-get install -q -y exuberant-ctags pandoc")
+        # vim-nox is Vim with scripting support
+        os.system("sudo apt-get install -q -y exuberant-ctags pandoc vim-nox")
 
     print("Installing neovim Python package")
     os.system("pip3 install --user neovim pynvim")
@@ -91,10 +93,11 @@ def install(args):
     # wget http://ftp.vim.org/vim/runtime/spell/fr.utf-8.sug
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Install charlax's dotvim.")
     parser.add_argument(
-        "--only-symlink", action="store_true", help="Only symlink the files")
+        "--only-symlink", action="store_true", help="Only symlink the files"
+    )
     args = parser.parse_args()
 
     install(args)
