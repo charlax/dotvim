@@ -55,6 +55,8 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'hashivim/vim-terraform'
 " Typescript
 Plug 'leafgarland/typescript-vim'
+" Typescript with react
+Plug 'peitalin/vim-jsx-typescript'
 " .editorconfig support
 Plug 'editorconfig/editorconfig-vim'
 " Match HTML tags
