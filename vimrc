@@ -13,63 +13,107 @@ let maplocalleader = "\<Space>"
 call plug#begin('~/.vim/plugged')
 
 Plug '/usr/local/opt/fzf'
-Plug 'kana/vim-textobj-user'
-Plug 'glts/vim-textobj-comment'
-Plug 'MarcWeber/vim-addon-mw-utils'
+
+" Create your own text objects
+" Plug 'kana/vim-textobj-user'
+
+" text objects for comments
+" Plug 'glts/vim-textobj-comment'
+
+" interpret a file by function and cache file automatically
+" Plug 'MarcWeber/vim-addon-mw-utils'
+"
 Plug 'SirVer/ultisnips'
-Plug 'jiangmiao/auto-pairs', {'for': ['javascript', 'typescript']}
-Plug 'lifepillar/vim-solarized8'
-Plug 'elzr/vim-json', { 'for': 'json' }
-Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
-Plug 'Glench/Vim-Jinja2-Syntax', { 'for': 'jinja2' }
-Plug 'greyblake/vim-preview'
-Plug 'groenewege/vim-less'
 Plug 'honza/vim-snippets'
+
+" insert or delete brackets, parens, quotes in pair
+Plug 'jiangmiao/auto-pairs', {'for': ['javascript', 'typescript']}
+
+Plug 'lifepillar/vim-solarized8'
+
+Plug 'elzr/vim-json', { 'for': 'json' }
+
+Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
+
+Plug 'Glench/Vim-Jinja2-Syntax', { 'for': 'jinja2' }
+
+Plug 'greyblake/vim-preview'
+
+" Syntax for LESS (dynamic CSS)
+" Plug 'groenewege/vim-less'
+"
 Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
-Plug 'jdonaldson/rtf-highlight'
-Plug 'junegunn/fzf.vim'
-Plug 'majutsushi/tagbar'
-Plug 'mileszs/ack.vim'
-Plug 'msanders/cocoa.vim', { 'for': 'cocoa' }
 Plug 'nvie/vim-flake8', { 'for': 'python' }
+
+Plug 'jdonaldson/rtf-highlight'
+
+Plug 'junegunn/fzf.vim'
+
+Plug 'majutsushi/tagbar'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+Plug 'mileszs/ack.vim'
+
+Plug 'msanders/cocoa.vim', { 'for': 'cocoa' }
+
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'maxmellon/vim-jsx-pretty', { 'for': 'javascript' }
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
 Plug 'sinisterstuf/vim-arduino', { 'for': 'arduino' }
+
 Plug 'solarnz/thrift.vim', { 'for': 'thrift' }
+
 Plug 'sophacles/vim-bundle-mako', { 'for': 'mako' }
+
 Plug 'sukima/xmledit', { 'for': 'xml' }
-Plug 'terryma/vim-multiple-cursors'
+
+" True Sublime Text style multiple selections for Vim
+" Plug 'terryma/vim-multiple-cursors'
+
 Plug 'tomtom/tlib_vim'
+
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+
 Plug 'vim-scripts/LaTeX-Box', { 'for': 'latex' }
+
 Plug 'vim-scripts/applescript.vim', { 'for': 'applescript' }
+
 Plug 'w0rp/ale'
+
 " Automatically discover and properly update ctags files on save
 Plug 'ludovicchabant/vim-gutentags'
+
 " Terraform files
 Plug 'hashivim/vim-terraform'
+
 " Typescript
 Plug 'leafgarland/typescript-vim'
+
 " Typescript with react
 Plug 'peitalin/vim-jsx-typescript'
+
 " .editorconfig support
 Plug 'editorconfig/editorconfig-vim'
+
 " Match HTML tags
-Plug 'Valloric/MatchTagAlways'
+" Plug 'Valloric/MatchTagAlways'
+
 " Auto close HTML tags
-Plug 'alvan/vim-closetag'
+" Plug 'alvan/vim-closetag'
+
 " Clojure REPL
 Plug 'tpope/vim-fireplace'
 
 if has("nvim")
+    " asynchronous completion framework for neovim/Vim8
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'zchee/deoplete-go', { 'do': 'make'}
 else
+    " asynchronous completion framework for neovim/Vim8
     Plug 'Shougo/deoplete.nvim'
     Plug 'roxma/nvim-yarp'
     Plug 'roxma/vim-hug-neovim-rpc'
