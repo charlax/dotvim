@@ -29,10 +29,13 @@ let g:ale_fixers = {
             \ 'javascript': ['prettier'],
             \ 'javascript.jsx': ['prettier'],
             \ 'typescript': ['prettier'],
+            \ 'typescriptreact': ['prettier'],
+            \ 'typescript.tsx': ['prettier'],
             \ 'python': ['black'],
             \}
 let g:ale_linters = {
             \ 'typescript': ['eslint', 'tsserver', 'typecheck'],
+            \ 'typescriptreact': ['eslint', 'tsserver', 'typecheck'],
             \ 'javascript': ['eslint', 'flow'],
             \}
 
@@ -90,12 +93,15 @@ command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : 
 let g:closetag_filenames = '*.html,*.jsx,*.tsx,*.js'
 let g:closetag_regions =  {
 \ 'typescript.tsx': 'jsxRegion,tsxRegion',
+\ 'typescriptreact': 'jsxRegion,tsxRegion',
 \ 'javascript.jsx': 'jsxRegion',
 \ }
 
 " highlight matching HTML tags
 let g:mta_filetypes = {
             \ 'javascript.jsx': 1,
+            \ 'typescript.tsx': 1,
+            \ 'typescriptreact': 1,
             \ 'typescript': 1,
             \ 'html' : 1,
             \ 'xhtml' : 1,

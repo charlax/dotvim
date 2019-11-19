@@ -15,19 +15,19 @@ call plug#begin('~/.vim/plugged')
 Plug '/usr/local/opt/fzf'
 
 " Create your own text objects
-" Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-user'
 
 " text objects for comments
-" Plug 'glts/vim-textobj-comment'
+Plug 'glts/vim-textobj-comment'
 
 " interpret a file by function and cache file automatically
-" Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'MarcWeber/vim-addon-mw-utils'
 "
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 " insert or delete brackets, parens, quotes in pair
-Plug 'jiangmiao/auto-pairs', {'for': ['javascript', 'typescript']}
+Plug 'jiangmiao/auto-pairs', {'for': ['javascript', 'typescript', 'typescriptreact', 'typescript.tsx']}
 
 Plug 'lifepillar/vim-solarized8'
 
@@ -55,9 +55,6 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'mileszs/ack.vim'
 
 Plug 'msanders/cocoa.vim', { 'for': 'cocoa' }
-
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'maxmellon/vim-jsx-pretty', { 'for': 'javascript' }
 
 Plug 'sinisterstuf/vim-arduino', { 'for': 'arduino' }
 
@@ -90,20 +87,28 @@ Plug 'ludovicchabant/vim-gutentags'
 " Terraform files
 Plug 'hashivim/vim-terraform'
 
-" Typescript
-Plug 'leafgarland/typescript-vim'
+"""""""""""""""""""""""""""""""""""""""""
+" Front-end dev
+"""""""""""""""""""""""""""""""""""""""""
 
-" Typescript with react
-Plug 'peitalin/vim-jsx-typescript'
+" Note: do not use 'for'
+Plug 'pangloss/vim-javascript'
+Plug 'maxmellon/vim-jsx-pretty'
+" Plug 'leafgarland/typescript-vim'  " does not work since typescriptreact
+Plug 'HerringtonDarkholme/yats.vim'
+
+" Match HTML tags
+Plug 'Valloric/MatchTagAlways'
+
+" Auto close HTML tags
+Plug 'alvan/vim-closetag'
+
+"""""""""""""""""""""""""""""""""""""""""
+" Other
+"""""""""""""""""""""""""""""""""""""""""
 
 " .editorconfig support
 Plug 'editorconfig/editorconfig-vim'
-
-" Match HTML tags
-" Plug 'Valloric/MatchTagAlways'
-
-" Auto close HTML tags
-" Plug 'alvan/vim-closetag'
 
 " Clojure REPL
 Plug 'tpope/vim-fireplace'
