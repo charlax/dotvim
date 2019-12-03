@@ -70,7 +70,7 @@ def install_prerequisites():
     print(color.green(f"\nInstalling dependencies for {system}..."))
 
     if system == "Darwin":
-        run(["brew", "install", "macvim", "go", "ctags", "pandoc"])
+        run(["brew", "install", "macvim", "go", "ctags", "pandoc", "fzf"])
 
     if system == "Linux":
         # vim-nox is Vim with scripting support
