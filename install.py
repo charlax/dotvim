@@ -6,6 +6,10 @@ import logging
 import os
 import platform
 import shutil
+import subprocess
+from typing import List
+
+import color
 
 REPOSITORY = "https://github.com/charlax/dotvim.git"
 DOTFILES_PATH = os.path.join(os.environ["HOME"], ".vim")
@@ -14,6 +18,12 @@ FILES = {
     "~/.vim/gvimrc": "~/.gvimrc",
     "~/.vim/config/nvim/init.vim": "~/.config/nvim/init.vim",
 }
+
+
+def run(cmd: List[str], *args, **kwargs) -> int:
+    kwargs.setdefault("check", True)
+    print(f"> {' '.join(cmd)}")
+    return subprocess.run(cmd, *args, **kwargs)
 
 
 def symlink(source, target):
@@ -54,6 +64,9 @@ def clone_dotfile(repo, path):
 
 def install(args):
     """Install the vimrc files."""
+    print(color.green("\nInstalling dependencies..."))
+    run(["brew", "install", "macvim", "go"])
+
     # Backup and link the files
     os.makedirs(os.path.expanduser("~/.config/nvim/"), exist_ok=True)
     for source, target in FILES.items():
