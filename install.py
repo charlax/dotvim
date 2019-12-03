@@ -50,6 +50,8 @@ def symlink(source, target):
 
 def clone_dotfile(repo, path):
     """Clone or update the dotfiles directory."""
+    print(color.green("\nCloning dotfiles..."))
+
     if not os.path.exists(path):
         os.system("git clone %s %s" % (repo, path))
     else:
@@ -62,12 +64,34 @@ def clone_dotfile(repo, path):
         )
 
 
+def install_prerequisites():
+    system = platform.system()
+
+    print(color.green(f"\nInstalling dependencies for {system}..."))
+
+    if system == "Darwin":
+        run(["brew", "install", "macvim", "go", "ctags", "pandoc"])
+
+    if system == "Linux":
+        # vim-nox is Vim with scripting support
+        run(["sudo", "apt-get", "install", "-q", "-y", "exuberant-ctags", "pandoc", "vim-nox"])
+
+    print("\nInstalling neovim Python package")
+    run("pip3 install --user neovim pynvim".split(" "))
+
+    print("\nInstalling gocode")
+    run("go get -u github.com/nsf/gocode".split(" "))
+
+
 def install(args):
     """Install the vimrc files."""
-    print(color.green("\nInstalling dependencies..."))
-    run(["brew", "install", "macvim", "go"])
+    if not args.only_symlink:
+        install_prerequisites()
+        clone_dotfile(REPOSITORY, DOTFILES_PATH)
 
     # Backup and link the files
+    print(color.green("\nSymlinking..."))
+
     os.makedirs(os.path.expanduser("~/.config/nvim/"), exist_ok=True)
     for source, target in FILES.items():
         symlink(source, target)
@@ -75,8 +99,7 @@ def install(args):
     if args.only_symlink:
         return
 
-    clone_dotfile(REPOSITORY, DOTFILES_PATH)
-
+    print(color.green("\nInstaling plugins..."))
     print("You can ignore any error - plugins haven't been installed yet.")
     os.system("vim +PlugInstall +qall")
 
@@ -85,21 +108,7 @@ def install(args):
         if not os.path.exists(d):
             os.makedirs(d)
 
-    system = platform.system()
-    if system == "Darwin":
-        os.system("brew install ctags pandoc")
-
-    if system == "Linux":
-        # vim-nox is Vim with scripting support
-        os.system("sudo apt-get install -q -y exuberant-ctags pandoc vim-nox")
-
-    print("Installing neovim Python package")
-    os.system("pip3 install --user neovim pynvim")
-
-    print("Installing gocode")
-    os.system("go get -u github.com/nsf/gocode")
-
-    print("Installing spell files: check install.py")
+    # print("Installing spell files: check install.py")
     # wget http://ftp.vim.org/vim/runtime/spell/fr.latin1.spl
     # wget http://ftp.vim.org/vim/runtime/spell/fr.latin1.sug
     # wget http://ftp.vim.org/vim/runtime/spell/fr.utf-8.spl
