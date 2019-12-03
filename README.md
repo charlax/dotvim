@@ -11,20 +11,7 @@ Prerequisites
 Install MacVim on Mac Os X
 --------------------------
 
-You need [Homebrew](http://mxcl.github.com/homebrew/). This will install vim,
-neovim, vimr and macvim:
-
-    $ ./install_osx.sh
-
-As of writing, the fzf plugins does not work correctly in MacVim. You can use
-VimR instead (those dotfiles have been tested with it).
-
-Reinstalling
-------------
-
-It is a good idea to reinstall MacVim from time to time:
-
-    $ brew reinstall macvim
+You need [Homebrew](http://mxcl.github.com/homebrew/). Dependencies will be installed automatically.
 
 Plugins
 =======
