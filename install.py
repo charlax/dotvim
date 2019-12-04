@@ -67,14 +67,27 @@ def clone_dotfile(repo, path):
 def install_prerequisites():
     system = platform.system()
 
-    print(color.green(f"\nInstalling dependencies for {system}..."))
+    print(color.green(f"\nInstalling Vim dependencies for {system}..."))
 
     if system == "Darwin":
         run(["brew", "install", "macvim", "go", "ctags", "pandoc", "fzf"])
 
     if system == "Linux":
         # vim-nox is Vim with scripting support
-        run(["sudo", "apt-get", "install", "-q", "-y", "exuberant-ctags", "pandoc", "vim-nox"])
+        run(
+            [
+                "sudo",
+                "apt-get",
+                "install",
+                "-q",
+                "-y",
+                "exuberant-ctags",
+                "pandoc",
+                "vim-nox",
+                "python3-pip",
+                "golang",
+            ]
+        )
 
     print("\nInstalling neovim Python package")
     run("pip3 install --user neovim pynvim".split(" "))
