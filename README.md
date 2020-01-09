@@ -1,3 +1,11 @@
+MOVED TO DOTFILES
+=================
+
+ ⚠️   ⚠️   ⚠️
+
+ This repository has been moved to
+ [charles/dotfiles](https://github.com/charlax/dotfiles)
+
 Installation
 ============
 
